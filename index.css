@@ -569,6 +569,10 @@ footer {
     font-size: 14px;
   }
 
+  .info p {
+    font-size: 8px;
+  }
+
   .boxes {
     grid-template-columns: 1fr;
   }
@@ -602,9 +606,15 @@ footer {
     font-size: 10px;
   }
 
+  .about-me p {
+    font-size: 10px;
+  }
+
+  
+
   .languages,
   .tools {
-    width: 100%;
+    width: 90%;
   }
 
   .navbar {
@@ -698,12 +708,19 @@ footer {
   font-size: 5px;
 } 
 
+  footer p {
+  font-size: 10px;
+  color: rgb(255, 255, 255);
+  margin: 5px 0;
+}
+
 
   .hero {
     flex-direction: column;
     text-align: center;
   }
 }
+
 
 
 
