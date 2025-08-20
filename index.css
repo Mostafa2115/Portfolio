@@ -552,7 +552,7 @@ footer {
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 430px) {
   body {
     font-size: 8px;
   }
@@ -709,7 +709,7 @@ footer {
 } 
 
   footer p {
-  font-size: 10px;
+  font-size: 7px;
   color: rgb(255, 255, 255);
   margin: 5px 0;
 }
@@ -720,6 +720,7 @@ footer {
     text-align: center;
   }
 }
+
 
 
 
