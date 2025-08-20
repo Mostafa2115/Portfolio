@@ -1,98 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mostafa Mahmoud</title>
-  <link rel="stylesheet" href="index.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-</head>
-<body>
-  <nav class="navbar">
-  <div class="logo"><img src="images/157222523.png" alt="LOGO" width="35" height="35"/></div>
-  <ul class="nav-links">
-    <li><a href="#">Home</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact Me</a></li>
-  </ul>
-</nav>
-
-  <header class="hero">
-    <div class="profile-pic">
-      <img src="images/17505030996291111.png" alt="this is me" width="400" height="400"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mostafa Mahmoud</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar2">
+      <div class="logo">
+        <img src="images/logo.png" alt="LOGO" width="35" height="35" />
+      </div>
+      <button class="open-btn" id="openSidebar" onclick="openNav()">☰</button>
+    </nav>
+    <div id="mySidebar" class="sidebar">
+      <button class="close-btn" id="closeSidebar" onclick="closeNav()">
+        Back
+      </button>
+      <a href="#">Home</a>
+      <a href="#about-me">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact Me</a>
     </div>
-    <div class="info">
-      <h1>Hi, I'm <span>Mostafa Mahmoud</span></h1>
-      <h3 id="type-target" class="typing"></h3>
-      <script src="index.js" defer></script>
-      <p>Welcome to my portfolio! I am a passionate backend developer with a focus on creating efficient and scalable APIs.</p>
-      <div class="social-icons">
-  <a href="https://www.linkedin.com/in/mostafa-mahmoud-5i"><i class="fab fa-linkedin-in"></i></a>
-  <a href="https://github.com/Mostafa2115"><i class="fab fa-github"></i></a>
-  <a href="https://www.facebook.com/profile.php?id=100052563858061&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
-  <a href="https://t.me/Mostafa_754"><i class="fab fa-telegram"></i></a>
-  <a href="https://instagram.com/mostafa__.75"><i class="fab fa-instagram"></i></a>
-</div>
 
-<a href="https://flowcv.com/resume/rh8fe90babm9" class="view-btn" download>View CV</a>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/logo.png" alt="LOGO" width="35" height="35" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+    </nav>
 
-    </div>
-  </header>
+    <header class="hero">
+      <div class="profile-pic">
+        <img
+          src="images/profile_pic.png"
+          alt="this is me"
+          width="400"
+          height="400"
+        />
+      </div>
+      <div class="info">
+        <h1>Hi, I'm <span>Mostafa Mahmoud</span></h1>
+        <h3 id="type-target" class="typing"></h3>
+        <script src="index.js" defer></script>
+        <p>
+          I am proficient in various technologies, including HTML, CSS,
+          JavaScript, and PHP, allowing me to create seamless user experiences
+          and robust server-side functionality.
+        </p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/mostafa-mahmoud-5i"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="https://github.com/Mostafa2115"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100052563858061&mibextid=ZbWKwL"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://instagram.com/mostafa__.75"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://codeforces.com/profile/Mostafa3X"
+            target="_blank"
+            rel="noopener"
+          >
+            <iconify-icon
+              icon="simple-icons:codeforces"
+              class="cf-icon"
+            ></iconify-icon>
+          </a>
+        </div>
 
-  
+        <a
+          href="https://flowcv.com/resume/rh8fe90babm9"
+          class="view-btn"
+          download
+          >View CV</a
+        >
+      </div>
+    </header>
+    <section id="about-me" class="about-me">
+      <h2>About Me</h2>
+      <p>
+        Welcome to my portfolio! I'm Mostafa Mahmoud, I'm a computer science
+        student and problem solver, competitive and creative programmer with a
+        passion for learning and experiencing new things, Detail-oriented,
+        organized, I interested in Web development and especialy Backend
+        development. Attended Faculty of Computer science and Information,
+        Zagazig University
+      </p>
+      <br />
+      <h4>Experiences</h4>
+      <div class="experience-blocks">
+        <div class="card">
+          <img
+            src="images/icpc.jpeg"
+            alt="ICPC Logo"
+          />
+          <a href="https://icpczagazig.org/?fbclid=IwY2xjawMTFBhleHRuA2FlbQIxMABicmlkETF1MnY2SDV6RDRSeFVVbE94AR7V-IDuB4KN3nHunoFQV4CRx8_GCg4tfnw6ugrwjnzqSFljO6zRorC-jTbAaQ_aem_2sjMhuwFd13-MJ9j14Qsgg" target="_blank"
+            ><h3>ICPC Zagazig Community</h3></a
+          >
+          <p>Technical Team Member</p>
+          <p class="card-description">
+            Participated in various competitive programming contests. I enhanced
+            my problem-solving skills and learned advanced algorithms, data
+            structures.
+          </p>
+        </div>
 
-  <section id="skills" class="skills">
-  <h2>Skills</h2>
-  <div class="languages">
-    <h4>Languages</h4>
-    <div class="icon-grid">
-      <img src="https://skillicons.dev/icons?i=cpp&perline=11"/>
-      <img src="https://skillicons.dev/icons?i=python&perline=11"/>
-      <img src="https://skillicons.dev/icons?i=html&perline=11"/>
-      <img src="https://skillicons.dev/icons?i=css&perline=11"/>
-      <img src="https://skillicons.dev/icons?i=js&perline=11"/>
-      <img src="https://skillicons.dev/icons?i=java&perline=11"/>
-      <img src="https://skillicons.dev/icons?i=php&perline=11"/>
-    </div>
-  </div>
-  <div class="tools">
-    <h4>Tools & Technologies</h4>
-    <div class="icon-grid">
-      <img src="https://skillicons.dev/icons?i=mysql&perline=11"/>
-      <img src="https://skillicons.dev/icons?i=laravel&perline=11"/>
-      <img src="https://skillicons.dev/icons?i=tailwind&perline=11"/>
-      <img src="https://skillicons.dev/icons?i=git&perline=11"/>
-    </div>
-  </div>
-  </section>
+        <div class="card">
+          <img
+            src="images/ieee.jpeg"
+            alt="IEEE CS Logo"
+          />
+          <a href="https://www.ieee-zsb.org/chapters/cs" target="_blank"
+            ><h3>IEEE-CS Zagazig Student Chapter</h3></a
+          >
+          <p>Back-End Member</p>
+          <p class="card-description">
+            Contributed to backend development tasks and collaborated on various
+            projects. I learned MySQL, PHP, Laravel, NodeJs and ExpressJs.
+          </p>
+        </div>
 
-  <section class="projects" id="projects">
-    <h2>Projects</h2>
-    <div class="boxes">
-      <div class="box"><img src="images/Screenshot 2025-08-05 232314.png" alt="" width="250" height="150"><a href="https://github.com/Mostafa2115/Hogwarts-for-programming">Hogwarts-for-programming</a></div>
-      <div class="box"><img src="images/Screenshot 2025-08-05 233009.png" alt="" width="150" height="150"><a href="https://github.com/Mostafa2115/Balloon-Game">Balloon-Game</a></div>
-      <div class="box"><img src="images/Screenshot 2025-08-05 233516.png" alt="" width="220" height="150"><a href="https://github.com/Mostafa2115/E-Commerce-Platform">E-commerce-Platform</a></div>
-    </div>
-  </section>
+        <div class="card">
+          <img
+            src="images/gdg.jpeg"
+            alt="GDG Logo"
+          />
+          <a href="https://www.facebook.com/Google.DSC.Zagazig" target="_blank"
+            ><h3>GDG On-Campus Zagazig</h3></a
+          >
+          <p>Front-End Member</p>
+          <p class="card-description">
+            Worked on front-end development tasks and collaborated with team
+            members on various projects. I learned HTML, CSS, JavaScript.
+          </p>
+        </div>
 
-  <section class="contact" id="contact">
-    <h2>Contact Me</h2>
-    <!-- send form data to my email -->
-    <form action="https://formsubmit.co/mostafaamahmoud075@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+        <div class="card">
+          <img
+            src="images/iti.jpeg"
+            alt="ITI Logo"
+          />
+          <a href="https://www.facebook.com/ITIZagazigBranch" target="_blank"
+            ><h3>ITI - Information Technology Institute Zagazig</h3></a
+          >
+          <p>Full Stack .NET Trainee</p>
+          <p class="card-description">
+            Gained hands-on experience in web development and worked on
+            real-world projects. I learned C#, ASP.NET, and SQL Server.
+          </p>
+        </div>
+      </div>
+      <p>
+        Currently, I'm focused on enhancing my skills in PHP Laravel Framework,
+        with a particular interest in API development, backend technologies and
+        I am learning .NET Framework with C#. I enjoy tackling complex problems
+        and am always eager to learn new technologies and methodologies.
+      </p>
+    </section>
 
-  <footer>
-    <p>© 2025 Mostafa Mahmoud. All rights reserved.</p>
-  </footer>
-</body>
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <div class="languages">
+        <h4>Languages</h4>
+        <div class="icon-grid">
+          <img src="https://skillicons.dev/icons?i=cpp&perline=11" />
+          <img src="https://skillicons.dev/icons?i=python&perline=11" />
+          <img src="https://skillicons.dev/icons?i=html&perline=11" />
+          <img src="https://skillicons.dev/icons?i=css&perline=11" />
+          <img src="https://skillicons.dev/icons?i=js&perline=11" />
+          <img src="https://skillicons.dev/icons?i=java&perline=11" />
+          <img src="https://skillicons.dev/icons?i=php&perline=11" />
+          <img src="https://skillicons.dev/icons?i=cs&perline=11" />
+        </div>
+      </div>
+      <div class="tools">
+        <h4>Tools & Technologies</h4>
+        <div class="icon-grid">
+          <img src="https://skillicons.dev/icons?i=mysql&perline=11" />
+          <img src="https://skillicons.dev/icons?i=mongodb&perline=11" />
+          <img src="https://skillicons.dev/icons?i=laravel&perline=11" />
+          <img src="https://skillicons.dev/icons?i=dotnet&perline=11" />
+          <img src="https://skillicons.dev/icons?i=nodejs&perline=11" />
+          <img src="https://skillicons.dev/icons?i=express&perline=11" />
+          <img src="https://skillicons.dev/icons?i=tailwind&perline=11" />
+          <img src="https://skillicons.dev/icons?i=git&perline=11" />
+          <img src="https://skillicons.dev/icons?i=github&perline=11" />
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <h2>Projects</h2>
+      <div class="boxes">
+        <div class="box">
+          <img
+            src="images/proj1.png"
+            alt=""
+            width="250"
+            height="150"
+          />
+          <h4>Hogwarts-for-programming</h4>
+          <a href="https://github.com/Mostafa2115/Hogwarts-for-programming"
+            >Source Code</a
+          >
+        </div>
+        <div class="box">
+          <img
+            src="images/proj2.png"
+            alt=""
+            width="150"
+            height="150"
+          />
+          <h4>Balloon-Game</h4>
+          <a href="https://github.com/Mostafa2115/Balloon-Game">Source Code</a>
+        </div>
+        <div class="box">
+          <img
+            src="images/proj3.png"
+            alt=""
+            width="220"
+            height="150"
+          />
+          <h4>E-commerce-Platform</h4>
+          <a href="https://github.com/Mostafa2115/E-Commerce-Platform"
+            >Source Code</a
+          >
+        </div>
+        <div class="box">
+          <img
+            src="images/proj4.png"
+            alt=""
+            width="220"
+            height="150"
+          />
+          <h4>The-Cafe</h4>
+          <a href="https://github.com/Mostafa2115/The_Cafe">Source Code</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Contact Me</h2>
+      <form
+        action="https://formsubmit.co/mostafaamohmoud075@gmail.com"
+        method="POST"
+      >
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>© 2025 Mostafa Mahmoud. All rights reserved.</p>
+      <p>
+        <iconify-icon icon="mdi:email" class="email-icon"></iconify-icon>
+        mostafaamohmoud075@gmail.com
+      </p>
+    </footer>
+  </body>
 </html>
-
-
-
