@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   padding: 0;
@@ -23,6 +24,7 @@ h3 {
   font-family: 'Press Start 2P', cursive;
   font-size: 18px;
 }
+
 
 h1 span {
   
@@ -57,12 +59,11 @@ h1 span {
   height: 400px;
   border-radius: 50%;
   border: 3px solid #ffffff;
-  box-shadow: #ffffff 0px 0px 20px;
   margin-right: 75px;
 }
 
 .profile-pic img:hover {
-  
+  box-shadow: #ffffff 0px 0px 20px;
   transform: scale(1.05);
   transition: transform 0.3s;
 }
@@ -102,7 +103,16 @@ h1 span {
 .social-icons a:hover {
   background-color: #ffffff;
   color: #0d0d0d;
+  .cf-icon {
+    color: #000000;
+  }
 }
+
+.social-icons a .cf-icon {
+  font-size:21px;
+  color:#ffffff;
+}
+
 
 .view-btn {
   display: inline-block;
@@ -112,8 +122,9 @@ h1 span {
   color: #ffffff;
   border-radius: 30px;
   text-decoration: none;
-  font-weight: bold;
   transition: all 0.3s;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
 }
 
 .view-btn:hover {
@@ -121,11 +132,115 @@ h1 span {
   color: #0d0d0d;
 }
 
-
-
-.projects, .skills, .contact {
+.projects, .skills, .contact, .about-me {
   padding: 40px 20px;
   text-align: center;
+  justify-content: center;
+}
+
+.about-me {
+  background-color: #1a1a1a;
+  padding: 40px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.about-me p {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 10px;
+  padding: 30px;
+}
+
+.about-me h4 {
+    text-align: center;
+    font-size: 12px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 50px;
+    padding: 10px;
+    width: 32%;
+    margin: auto;
+    box-shadow: #ffffff 0px 0px 10px;
+    margin-bottom: 20px;
+  
+
+  }
+
+.experience-blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  background: inherit;
+}
+
+.card {
+  background: #000000;
+  color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 0;
+  transition: box-shadow 0.3s, transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  height: 95%;
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+
+.card h3 {
+  font-size: 0.8rem;
+  color: #ffffff;
+  margin-bottom: 8px;
+  font-weight: lighter;
+  padding: 5px;
+}
+
+.card .card-description {
+  font-size: 0.5rem;
+  color: #ffffff;
+  margin: 15px;
+  font-weight: lighter;
+  border: 1px solid #666;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #1a1a1a;
+}
+
+.card a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.card h3:hover {
+  transition: color 0.3s;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.card p {
+  font-size: 0.75rem;
+  color: #666;
+  margin-bottom: 15px;
+  
+}
+
+.card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid #ffffff;
+
 }
 
 .projects  {
@@ -160,8 +275,11 @@ h1 span {
   color: #fff;
 }
 
+.box h4 {
+  font-size: 12px;
+}
+
 .box:hover {
-  color: #000000;
   box-shadow: 0 0 10px rgba(255, 255, 255);
   transition: transform 0.3s, box-shadow 0.3s;
   transform: scale(1.02);
@@ -198,6 +316,7 @@ h1 span {
 
 .languages {
   background-color: #1a1a1a;
+  padding: 20px;
   padding-bottom: 30px;
   border: 2px solid #ffffff;
   border-radius: 10px;
@@ -208,6 +327,7 @@ h1 span {
 
 .tools {
   background-color: #1a1a1a;
+  padding: 20px;
   padding-bottom: 30px;
   border: 2px solid #ffffff;
   border-radius: 10px;
@@ -241,6 +361,7 @@ form {
   border: #ffffff 5px solid;
   padding: 20px;
   border-radius: 50px;
+  background-color: #1a1a1a;
 }
 
 form:hover {
@@ -250,7 +371,7 @@ form:hover {
 
 input, textarea {
   padding: 10px;
-  background-color: #1a1a1a;
+  background-color: #000000;
   color: white;
   border: 1px solid #ffffff;
   border-radius: 50px;
@@ -260,9 +381,17 @@ button {
   padding: 10px;
   background-color: #fff9f9;
   color: rgb(0, 0, 0);
-  border: none;
   border-radius: 50px;
   cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+}
+
+button:hover {
+  background-color: #000000;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+
 }
 
 footer {
@@ -273,16 +402,25 @@ footer {
   color: #888;
 }
 
+.email-icon {
+  font-size: 13px;
+  color: #888;
+  transition: color 0.3s ease;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000000;
+  background-color: #1a1a1a;
   padding: 10px 30px;
   position: sticky;
   top: 0;
   z-index: 100;
-  /* border-bottom: 1px solid #ff2e2e; */
+  border-bottom: 1px solid white;
+
+
+
 }
 
 .logo img {
@@ -296,6 +434,19 @@ footer {
   transform: scale(1.1);
   transition: transform 0.3s;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.logo:hover {
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .nav-links {
@@ -320,6 +471,7 @@ footer {
   
 }
 
+
 .icon-grid {
   display: flex;
   flex-wrap: wrap;
@@ -342,6 +494,12 @@ footer {
   transform: scale(1.1);
   box-shadow: 0 0 10px #ffffff;
 }
+
+.navbar2 , .sidebar {
+  display: none;
+}
+
+
 
 @media (max-width: 1024px) {
   .hero {
@@ -372,7 +530,7 @@ footer {
     max-width: 90%;
   }
 
-    .navbar {
+  .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -428,12 +586,20 @@ footer {
   .view-btn {
     padding: 8px 15px;
     font-size: 10px;
+    font-family: 'Press Start 2P';
   }
 
   .social-icons a {
     width: 30px;
     height: 30px;
     font-size: 14px;
+    .cf-icon {
+      font-size: 14px;
+    }
+  }
+
+  .about-me h4 {
+    font-size: 10px;
   }
 
   .languages,
@@ -441,25 +607,92 @@ footer {
     width: 100%;
   }
 
-    .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  .navbar {
+  display: none;
 }
 
-.nav-links {
+  .navbar2 {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
   align-items: center;
-  gap: 10px;
-  flex-wrap: nowrap; 
-  overflow-x: auto;   
-  white-space: nowrap;
-  max-width: 100%;
-  box-sizing: border-box;
+  justify-content: space-between;
+  background: #1a1a1a;
   padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid white;
+  
 }
+
+.logo img {
+  border-radius: 50%;
+}
+
+.open-btn {
+  background: #111;
+  color: white;
+  font-size: 20px;
+  border: 1px solid white;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.open-btn:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  transition: box-shadow 0.3s;
+  border: 1px solid #ffffff;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #1c1c1c;
+  transition: 0.3s;
+  padding-top: 60px;
+  z-index: 1000;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+}
+
+.sidebar a {
+  display: block;
+  padding: 12px 20px;
+  color: #ddd;
+  text-decoration: none;
+  font-size: 12px;
+  transition: color 0.3s;
+  text-align: center;
+  position: relative;
+  margin: 0 40px;
+}
+
+.sidebar a:hover {
+  color: #000000;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+  position: absolute;
+  font-family: 'Press Start 2P', cursive;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
 
 .nav-links a {
   font-size: 5px;
@@ -471,14 +704,6 @@ footer {
     text-align: center;
   }
 }
-
-
-
-
-
-
-
-
 
 
 
