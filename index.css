@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #000000;
-  background-image: url('background.jpg');
+  background-image: url('images/background.jpg');
   background-size: cover;
   background-attachment: fixed;
   color: #fff;
@@ -785,3 +785,4 @@ footer p {
     text-align: center;
   }
 }
+
