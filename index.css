@@ -3,6 +3,9 @@ body {
   margin: 0;
   padding: 0;
   background-color: #000000;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-attachment: fixed;
   color: #fff;
   font-family: 'Press Start 2P', cursive;
   font-size: 10px;
@@ -22,6 +25,10 @@ h2 {
 h3 {
   color: #ffffff;
   font-family: 'Press Start 2P', cursive;
+  font-size: 18px;
+}
+
+.info h1 {
   font-size: 18px;
 }
 
@@ -138,22 +145,43 @@ h1 span {
   justify-content: center;
 }
 
+.projects h2, .skills h2, .about-me h2 {
+  font-size: 25px;
+  border: 2px solid #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-bottom: 20px;
+  width: 32%;
+  box-shadow: #ffffff 0px 0px 10px;
+  background-color: #ffffff;
+  color: #000000;
+
+}
+
 .about-me {
-  background-color: #1a1a1a;
+  /* background-color: #1a1a1a; */
   padding: 40px;
   border-radius: 10px;
   margin-top: 20px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-  transition: box-shadow 0.3s;
+  /* box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  transition: box-shadow 0.3s; */
 }
 
 .about-me p {
   color: #ffffff;
   font-size: 14px;
   line-height: 1.5;
-  margin-top: 10px;
+  margin: 15px;
   padding: 30px;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  /* blur */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
+
 
 .about-me h4 {
     text-align: center;
@@ -182,6 +210,7 @@ h1 span {
   background: #000000;
   color: #ffffff;
   border-radius: 15px;
+  border: 1px solid #ffffff;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   text-align: center;
   padding: 20px;
@@ -201,7 +230,7 @@ h1 span {
 .card h3 {
   font-size: 0.8rem;
   color: #ffffff;
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
   font-weight: lighter;
   padding: 5px;
 }
@@ -227,12 +256,15 @@ h1 span {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-.card p {
-  font-size: 0.75rem;
-  color: #666;
-  margin-bottom: 15px;
-  
+.card .card-role {
+  font-size: 0.6rem;
+  color: #ffffff;
+  margin-bottom: 5px;
+  text-align: center;
+  padding: 5px;
+
 }
+
 
 .card img {
   width: 150px;
@@ -244,12 +276,12 @@ h1 span {
 }
 
 .projects  {
-  background-color: #1a1a1a;
+  /* background-color: #1a1a1a; */
   padding: 40px 20px;
   border-radius: 10px;
   margin-top: 20px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-  transition: box-shadow 0.3s;
+  /* box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  transition: box-shadow 0.3s; */
 }
 
 .projects  img {
@@ -298,6 +330,28 @@ h1 span {
   border-radius: 50px;
 }
 
+.box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.box ul li {
+  margin: 5px;
+  font-size: 8px;
+  padding: 3px 6px;
+  background-color: #1a1a1a;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+
+
+}
 .box a:hover {
   box-shadow: 0 0 10px rgba(255, 255, 255);
   transition: background-color 0.3s, color 0.3s;
@@ -402,10 +456,23 @@ footer {
   color: #888;
 }
 
-.email-icon {
-  font-size: 13px;
+footer p {
+  margin: 10px;
+}
+
+.footer-icon {
+  font-size: 20px;
   color: #888;
   transition: color 0.3s ease;
+}
+
+footer a {
+  text-decoration: none;
+
+}
+
+.footer-icon:hover {
+  color: #fff;
 }
 
 .navbar {
@@ -418,9 +485,6 @@ footer {
   top: 0;
   z-index: 100;
   border-bottom: 1px solid white;
-
-
-
 }
 
 .logo img {
@@ -436,18 +500,6 @@ footer {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-.logo:hover {
-  animation: rotate 2s linear infinite;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 .nav-links {
   list-style: none;
@@ -552,13 +604,17 @@ footer {
 
 }
 
-@media (max-width: 430px) {
+@media (max-width: 700px) {
   body {
     font-size: 8px;
   }
 
   h1 span {
-    font-size: 20px;
+    font-size: 25px;
+  }
+
+  .info h1 {
+    font-size: 15px;
   }
 
   h2 {
@@ -577,9 +633,13 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .box h4 {
+    font-size: 10px;
+  }
+
   .profile-pic img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
   }
 
   .icon-grid img {
@@ -603,18 +663,21 @@ footer {
   }
 
   .about-me h4 {
-    font-size: 10px;
+    font-size: 8px;
   }
 
   .about-me p {
     font-size: 10px;
   }
 
-  
-
   .languages,
   .tools {
-    width: 90%;
+    width: 85%;
+  }
+
+  .projects h2, .skills h2, .about-me h2 {
+    font-size: 18px;
+    width: 60%;
   }
 
   .navbar {
@@ -708,24 +771,17 @@ footer {
   font-size: 5px;
 } 
 
-  footer p {
+footer p {
   font-size: 7px;
-  color: rgb(255, 255, 255);
   margin: 5px 0;
 }
 
+.footer-icon {
+  font-size: 17px;
+}
 
   .hero {
     flex-direction: column;
     text-align: center;
   }
 }
-
-
-
-
-
-
-
-
-
