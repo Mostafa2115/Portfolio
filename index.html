@@ -18,7 +18,7 @@
   <body>
     <nav class="navbar2">
       <div class="logo">
-        <img src="images/logo.png" alt="LOGO" width="35" height="35" />
+        <img src="logo.png" alt="LOGO" width="35" height="35" />
       </div>
       <button class="open-btn" id="openSidebar" onclick="openNav()">☰</button>
     </nav>
@@ -35,7 +35,7 @@
 
     <nav class="navbar">
       <div class="logo">
-        <img src="images/logo.png" alt="LOGO" width="35" height="35" />
+        <img src="logo.png" alt="LOGO" width="35" height="35" />
       </div>
       <ul class="nav-links">
         <li><a href="#">Home</a></li>
@@ -48,18 +48,14 @@
 
     <header class="hero">
       <div class="profile-pic">
-        <img
-          src="images/profile_pic.png"
-          alt="this is me"
-          width="400"
-          height="400"
-        />
+        <img src="profile_pic.png" alt="this is me" width="400" height="400" />
       </div>
       <div class="info">
         <h1>Hi, I'm <span>Mostafa Mahmoud</span></h1>
         <h3 id="type-target" class="typing"></h3>
         <script src="index.js" defer></script>
         <p>
+          <!-- full stack developer description -->
           I am proficient in various technologies, including HTML, CSS,
           JavaScript, and PHP, allowing me to create seamless user experiences
           and robust server-side functionality.
@@ -106,20 +102,21 @@
         passion for learning and experiencing new things, Detail-oriented,
         organized, I interested in Web development and especialy Backend
         development. Attended Faculty of Computer science and Information,
-        Zagazig University
+        Zagazig University.<br />
+        Currently, I'm focused on enhancing my skills in PHP Laravel Framework,
+        with a particular interest in API development, backend technologies and
+        I am learning .NET Framework with C#. I enjoy tackling complex problems
+        and am always eager to learn new technologies and methodologies.
       </p>
       <br />
       <h4>Experiences</h4>
       <div class="experience-blocks">
         <div class="card">
-          <img
-            src="images/icpc.jpeg"
-            alt="ICPC Logo"
-          />
-          <a href="https://icpczagazig.org/?fbclid=IwY2xjawMTFBhleHRuA2FlbQIxMABicmlkETF1MnY2SDV6RDRSeFVVbE94AR7V-IDuB4KN3nHunoFQV4CRx8_GCg4tfnw6ugrwjnzqSFljO6zRorC-jTbAaQ_aem_2sjMhuwFd13-MJ9j14Qsgg" target="_blank"
+          <img src="icpc.jpeg" alt="ICPC Logo" />
+          <a href="https://www.computer.org/" target="_blank"
             ><h3>ICPC Zagazig Community</h3></a
           >
-          <p>Technical Team Member</p>
+          <p class="card-role">Technical Team Member</p>
           <p class="card-description">
             Participated in various competitive programming contests. I enhanced
             my problem-solving skills and learned advanced algorithms, data
@@ -128,14 +125,11 @@
         </div>
 
         <div class="card">
-          <img
-            src="images/ieee.jpeg"
-            alt="IEEE CS Logo"
-          />
-          <a href="https://www.ieee-zsb.org/chapters/cs" target="_blank"
+          <img src="ieee.jpeg" alt="IEEE CS Logo" />
+          <a href="https://www.computer.org/" target="_blank"
             ><h3>IEEE-CS Zagazig Student Chapter</h3></a
           >
-          <p>Back-End Member</p>
+          <p class="card-role">Back-End Member</p>
           <p class="card-description">
             Contributed to backend development tasks and collaborated on various
             projects. I learned MySQL, PHP, Laravel, NodeJs and ExpressJs.
@@ -143,14 +137,11 @@
         </div>
 
         <div class="card">
-          <img
-            src="images/gdg.jpeg"
-            alt="GDG Logo"
-          />
-          <a href="https://www.facebook.com/Google.DSC.Zagazig" target="_blank"
+          <img src="gdg.jpeg" alt="GDG Logo" />
+          <a href="https://developers.google.com/community/gdg" target="_blank"
             ><h3>GDG On-Campus Zagazig</h3></a
           >
-          <p>Front-End Member</p>
+          <p class="card-role">Front-End Member</p>
           <p class="card-description">
             Worked on front-end development tasks and collaborated with team
             members on various projects. I learned HTML, CSS, JavaScript.
@@ -158,26 +149,17 @@
         </div>
 
         <div class="card">
-          <img
-            src="images/iti.jpeg"
-            alt="ITI Logo"
-          />
-          <a href="https://www.facebook.com/ITIZagazigBranch" target="_blank"
+          <img src="iti.jpeg" alt="ITI Logo" />
+          <a href="https://iti.gov.eg/" target="_blank"
             ><h3>ITI - Information Technology Institute Zagazig</h3></a
           >
-          <p>Full Stack .NET Trainee</p>
+          <p class="card-role">Full Stack .NET Trainee</p>
           <p class="card-description">
             Gained hands-on experience in web development and worked on
             real-world projects. I learned C#, ASP.NET, and SQL Server.
           </p>
         </div>
       </div>
-      <p>
-        Currently, I'm focused on enhancing my skills in PHP Laravel Framework,
-        with a particular interest in API development, backend technologies and
-        I am learning .NET Framework with C#. I enjoy tackling complex problems
-        and am always eager to learn new technologies and methodologies.
-      </p>
     </section>
 
     <section id="skills" class="skills">
@@ -207,6 +189,7 @@
           <img src="https://skillicons.dev/icons?i=tailwind&perline=11" />
           <img src="https://skillicons.dev/icons?i=git&perline=11" />
           <img src="https://skillicons.dev/icons?i=github&perline=11" />
+          <img src="https://skillicons.dev/icons?i=vscode&perline=11" />
         </div>
       </div>
     </section>
@@ -215,47 +198,50 @@
       <h2>Projects</h2>
       <div class="boxes">
         <div class="box">
-          <img
-            src="images/proj1.png"
-            alt=""
-            width="250"
-            height="150"
-          />
+          <img src="proj1.png" alt="" width="250" height="150" />
           <h4>Hogwarts-for-programming</h4>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+            <li>MySQL</li>
+          </ul>
           <a href="https://github.com/Mostafa2115/Hogwarts-for-programming"
             >Source Code</a
           >
         </div>
         <div class="box">
-          <img
-            src="images/proj2.png"
-            alt=""
-            width="150"
-            height="150"
-          />
+          <img src="proj2.png" alt="" width="150" height="150" />
           <h4>Balloon-Game</h4>
+          <ul>
+            <li>Java</li>
+            <li>JavaFX</li>
+            <li>OOP</li>
+          </ul>
           <a href="https://github.com/Mostafa2115/Balloon-Game">Source Code</a>
         </div>
         <div class="box">
-          <img
-            src="images/proj3.png"
-            alt=""
-            width="220"
-            height="150"
-          />
+          <img src="proj3.png" alt="" width="220" height="150" />
           <h4>E-commerce-Platform</h4>
+          <ul>
+            <li>HTML</li>
+            <li>PHP</li>
+            <li>Laravel</li>
+            <li>Supabase</li>
+            <li>Tailwind CSS</li>
+          </ul>
           <a href="https://github.com/Mostafa2115/E-Commerce-Platform"
             >Source Code</a
           >
         </div>
         <div class="box">
-          <img
-            src="images/proj4.png"
-            alt=""
-            width="220"
-            height="150"
-          />
+          <img src="proj4.png" alt="" width="220" height="150" />
           <h4>The-Cafe</h4>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
           <a href="https://github.com/Mostafa2115/The_Cafe">Source Code</a>
         </div>
       </div>
@@ -276,10 +262,20 @@
 
     <footer>
       <p>© 2025 Mostafa Mahmoud. All rights reserved.</p>
-      <p>
-        <iconify-icon icon="mdi:email" class="email-icon"></iconify-icon>
-        mostafaamohmoud075@gmail.com
-      </p>
+      <a href="mailto:mostafaamohmoud075@gmail.com">
+        <iconify-icon icon="mdi:email" class="footer-icon"> </iconify-icon>
+      </a>
+      <a href="https://github.com/Mostafa2115">
+        <iconify-icon icon="mdi:github" class="footer-icon"></iconify-icon>
+      </a>
+      <a href="https://www.linkedin.com/in/mostafa2115/">
+        <iconify-icon icon="mdi:linkedin" class="footer-icon"></iconify-icon>
+      </a>
+      <a
+        href="https://www.facebook.com/profile.php?id=100052563858061&mibextid=ZbWKwL"
+      >
+        <iconify-icon icon="mdi:facebook" class="footer-icon"></iconify-icon>
+      </a>
     </footer>
   </body>
 </html>
