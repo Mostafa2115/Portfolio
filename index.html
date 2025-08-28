@@ -17,9 +17,11 @@
   </head>
   <body>
     <nav class="navbar2">
-      <div class="logo">
-        <img src="images/logo.png" alt="LOGO" width="35" height="35" />
-      </div>
+      <a href="#">
+        <div class="logo">
+          <img src="images/logo.png" alt="LOGO" width="35" height="35" />
+        </div>
+      </a>
       <button class="open-btn" id="openSidebar" onclick="openNav()">☰</button>
     </nav>
     <div id="mySidebar" class="sidebar">
@@ -34,9 +36,11 @@
     </div>
 
     <nav class="navbar">
-      <div class="logo">
-        <img src="images/logo.png" alt="LOGO" width="35" height="35" />
-      </div>
+      <a href="#">
+        <div class="logo">
+          <img src="images/logo.png" alt="LOGO" width="35" height="35" />
+        </div>
+      </a>
       <ul class="nav-links">
         <li><a href="#">Home</a></li>
         <li><a href="#about-me">About Me</a></li>
@@ -55,9 +59,10 @@
         <h3 id="type-target" class="typing"></h3>
         <script src="index.js" defer></script>
         <p>
-          I am proficient in various technologies, including HTML, CSS,
-          JavaScript, and PHP, allowing me to create seamless user experiences
-          and robust server-side functionality.
+          A Computer Science Student
+          <br />
+          I am a passionate Full Stack Developer with expertise in (Laravel -
+          NodeJs)
         </p>
         <div class="social-icons">
           <a href="https://www.linkedin.com/in/mostafa-mahmoud-5i"
@@ -84,38 +89,40 @@
             ></iconify-icon>
           </a>
         </div>
-
         <a
-          href="https://flowcv.com/resume/rh8fe90babm9"
-          class="view-btn"
-          download
-          >View CV</a
+          href="CV/Mostafa-Mahmoud-FlowCV-Resume.pdf"
+          class="download-btn"
+          download="Mostafa-Mahmoud-FlowCV-Resume.pdf"
+          >Download CV</a
         >
       </div>
     </header>
     <section id="about-me" class="about-me">
       <h2>About Me</h2>
-      <p>
+      <p class="about-text">
         Welcome to my portfolio! I'm Mostafa Mahmoud, I'm a computer science
         student and problem solver, competitive and creative programmer with a
         passion for learning and experiencing new things, Detail-oriented,
-        organized, I interested in Web development and especialy Backend
-        development. Attended Faculty of Computer science and Information,
-        Zagazig University.<br />
+        organized, I interested in Web development. I enjoy building dynamic and
+        responsive web applications that provide seamless user experiences.
+        Attended Faculty of Computer science and Information, Zagazig
+        University<br />
         Currently, I'm focused on enhancing my skills in PHP Laravel Framework,
         with a particular interest in API development, backend technologies and
         I am learning .NET Framework with C#. I enjoy tackling complex problems
-        and am always eager to learn new technologies and methodologies.
+        and am always eager to learn new technologies and methodologies
       </p>
       <br />
       <h4>Experiences</h4>
       <div class="experience-blocks">
         <div class="card">
-          <img src="images/icpc.jpeg" alt="ICPC Logo" />
-          <a href="https://www.computer.org/" target="_blank"
+          <a
+            href="https://icpczagazig.org/?fbclid=IwY2xjawMdO7pleHRuA2FlbQIxMABicmlkETFmZG15U0NBZ0VONXVYRDltAR769F2Df7kuSYMAUWf0EwwZfJWQ7xZyyZcOcpGjQAZ4h76vqLAQOpMy7tCeCQ_aem_1d3pNXPj5NaGnYO-ZG0qaQ"
+            target="_blank"
             ><h3>ICPC Zagazig Community</h3></a
           >
           <p class="card-role">Technical Team Member</p>
+          <p class="card-duration">Jan 2025 - Present</p>
           <p class="card-description">
             Participated in various competitive programming contests. I enhanced
             my problem-solving skills and learned advanced algorithms, data
@@ -124,35 +131,36 @@
         </div>
 
         <div class="card">
-          <img src="images/ieee.jpeg" alt="IEEE CS Logo" />
-          <a href="https://www.computer.org/" target="_blank"
+          <a href="https://www.ieee-zsb.org/chapters/cs" target="_blank"
             ><h3>IEEE-CS Zagazig Student Chapter</h3></a
           >
           <p class="card-role">Back-End Member</p>
+          <p class="card-duration">Nov 2024 - Present</p>
           <p class="card-description">
             Contributed to backend development tasks and collaborated on various
-            projects. I learned MySQL, PHP, Laravel, NodeJs and ExpressJs.
+            projects. I learned MySQL, PHP, Laravel, JavaScript, NodeJs and
+            ExpressJs.
           </p>
         </div>
 
         <div class="card">
-          <img src="images/gdg.jpeg" alt="GDG Logo" />
-          <a href="https://developers.google.com/community/gdg" target="_blank"
+          <a href="https://www.facebook.com/Google.DSC.Zagazig" target="_blank"
             ><h3>GDG On-Campus Zagazig</h3></a
           >
           <p class="card-role">Front-End Member</p>
+          <p class="card-duration">Apr 2025 - Aug 2025</p>
           <p class="card-description">
             Worked on front-end development tasks and collaborated with team
-            members on various projects. I learned HTML, CSS, JavaScript.
+            members on various projects. I learned HTML, CSS.
           </p>
         </div>
 
         <div class="card">
-          <img src="images/iti.jpeg" alt="ITI Logo" />
-          <a href="https://iti.gov.eg/" target="_blank"
-            ><h3>ITI - Information Technology Institute Zagazig</h3></a
+          <a href="https://www.facebook.com/ITIZagazigBranch" target="_blank"
+            ><h3>Information Technology Institute Zagazig</h3></a
           >
           <p class="card-role">Full Stack .NET Trainee</p>
+          <p class="card-duration">Jul 2025 - Sep 2025</p>
           <p class="card-description">
             Gained hands-on experience in web development and worked on
             real-world projects. I learned C#, ASP.NET, and SQL Server.
@@ -181,6 +189,7 @@
         <div class="icon-grid">
           <img src="https://skillicons.dev/icons?i=mysql&perline=11" />
           <img src="https://skillicons.dev/icons?i=mongodb&perline=11" />
+          <img src="https://skillicons.dev/icons?i=supabase&perline=11" />
           <img src="https://skillicons.dev/icons?i=laravel&perline=11" />
           <img src="https://skillicons.dev/icons?i=dotnet&perline=11" />
           <img src="https://skillicons.dev/icons?i=nodejs&perline=11" />
@@ -190,6 +199,19 @@
           <img src="https://skillicons.dev/icons?i=github&perline=11" />
           <img src="https://skillicons.dev/icons?i=vscode&perline=11" />
         </div>
+      </div>
+      <div class="other-skills">
+        <h4>Other Skills</h4>
+        <ul>
+          <li>Teamwork</li>
+          <li>Problem Solving</li>
+          <li>Competitive Programming</li>
+          <li>OOP with C++</li>
+          <li>Data Structures & Algorithms</li>
+          <li>Web Development</li>
+          <li>API Development</li>
+          <li>Mentoring</li>
+        </ul>
       </div>
     </section>
 
@@ -249,7 +271,7 @@
     <section class="contact" id="contact">
       <h2>Contact Me</h2>
       <form
-        action="https://formsubmit.co/mostafaamahmoud075@gmail.com"
+        action="https://formsubmit.co/mostafaamohmoud075@gmail.com"
         method="POST"
       >
         <input type="text" name="name" placeholder="Your Name" required />
@@ -261,7 +283,7 @@
 
     <footer>
       <p>© 2025 Mostafa Mahmoud. All rights reserved.</p>
-      <a href="mailto:mostafaamohmoud075@gmail.com">
+      <a href="mailto:mostafaamahmoud075@gmail.com">
         <iconify-icon icon="mdi:email" class="footer-icon"> </iconify-icon>
       </a>
       <a href="https://github.com/Mostafa2115">
@@ -276,8 +298,6 @@
         <iconify-icon icon="mdi:facebook" class="footer-icon"></iconify-icon>
       </a>
     </footer>
+    <script src="index.js"></script>
   </body>
 </html>
-
-
-
