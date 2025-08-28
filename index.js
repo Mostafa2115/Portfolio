@@ -1,3 +1,30 @@
+const elements = document.querySelectorAll(".box, .card");
+
+window.addEventListener("scroll", () => {
+  elements.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add("show");
+    } else {
+      el.classList.remove("show");
+    }
+  });
+});
+
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+  sections.forEach((sec) => {
+    const rect = sec.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      sec.classList.add("show");
+    } else {
+      sec.classList.remove("show");
+    }
+  });
+});
+
+
 if (!window.__SIDEBAR_INIT__) {
   window.__SIDEBAR_INIT__ = true;
 
@@ -51,3 +78,4 @@ if (!window.__SIDEBAR_INIT__) {
   if (openBtn)  openBtn.addEventListener("click", openNav);
   if (closeBtn) closeBtn.addEventListener("click", closeNav);
 }
+
