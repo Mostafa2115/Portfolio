@@ -1,9 +1,37 @@
 
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.box, .card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.box.show, .card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
 body {
   margin: 0;
   padding: 0;
   background-color: #000000;
-  background-image: url('images/background.jpg');
+  background-image: url('background.jpg');
   background-size: cover;
   background-attachment: fixed;
   color: #fff;
@@ -11,14 +39,9 @@ body {
   font-size: 10px;
 }
 
-h1, h2 {
-  color: #ffffff;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 20px;
-}
-
 h2 {
   font-size: 25px;
+  font-family: 'Press Start 2P', cursive;
   margin-bottom: 10px;
 }
 
@@ -30,10 +53,10 @@ h3 {
 
 .info h1 {
   font-size: 18px;
+  font-family: 'Press Start 2P', cursive;
 }
 
-
-h1 span {
+.info h1 span {
   
   color: #747474;
   font-weight: bold;
@@ -56,7 +79,6 @@ h1 span {
   align-items: center;
   justify-content: space-between;
   padding: 40px 20px;
-  /* background-color: #000000; */
   flex-wrap: wrap;
   gap: 30px;
 }
@@ -67,17 +89,10 @@ h1 span {
   border-radius: 50%;
   border: 3px solid #ffffff;
   margin-right: 75px;
-}
-
-.profile-pic img:hover {
   box-shadow: #ffffff 0px 0px 20px;
-  transform: scale(1.05);
-  transition: transform 0.3s;
 }
 
-.profile-pic {
-  flex-shrink: 0;
-}
+
 
 .info {
   flex: 1;
@@ -121,7 +136,7 @@ h1 span {
 }
 
 
-.view-btn {
+.download-btn {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 25px;
@@ -134,7 +149,7 @@ h1 span {
   font-size: 10px;
 }
 
-.view-btn:hover {
+.download-btn:hover {
   background-color: #ffffff;
   color: #0d0d0d;
 }
@@ -160,19 +175,16 @@ h1 span {
 }
 
 .about-me {
-  /* background-color: #1a1a1a; */
   padding: 40px;
   border-radius: 10px;
   margin-top: 20px;
-  /* box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-  transition: box-shadow 0.3s; */
 }
 
-.about-me p {
+.about-me .about-text {
   color: #ffffff;
-  font-size: 14px;
+  font-size: 10px;
   line-height: 1.5;
-  margin: 15px;
+  margin: 25px;
   padding: 30px;
   border: 1px solid #ffffff;
   border-radius: 10px;
@@ -216,7 +228,6 @@ h1 span {
   padding: 20px;
   padding-bottom: 0;
   transition: box-shadow 0.3s, transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out;
   height: 95%;
   margin-bottom: 10px;
 }
@@ -228,9 +239,11 @@ h1 span {
 
 
 .card h3 {
+  margin: 0;
+  display: block;
+  text-align: center;
   font-size: 0.8rem;
   color: #ffffff;
-  /* margin-bottom: 8px; */
   font-weight: lighter;
   padding: 5px;
 }
@@ -238,12 +251,22 @@ h1 span {
 .card .card-description {
   font-size: 0.5rem;
   color: #ffffff;
-  margin: 15px;
+  line-height: 1.5;
+  margin: 5px;
   font-weight: lighter;
   border: 1px solid #666;
   padding: 15px;
   border-radius: 5px;
   background-color: #1a1a1a;
+}
+
+.card .card-duration {
+  font-size: 0.6rem;
+  color: #ffffff;
+  margin-bottom: 5px;
+  text-align: center;
+  padding: 5px;
+  font-size: 7px;
 }
 
 .card a {
@@ -258,28 +281,19 @@ h1 span {
 
 .card .card-role {
   font-size: 0.6rem;
-  color: #ffffff;
-  margin-bottom: 5px;
+  color: #1a1a1a;
+  margin: 5px;
   text-align: center;
   padding: 5px;
-
+  background-color: #ffffff;
+  border-radius: 50px;
 }
 
-
-.card img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-  border: 2px solid #ffffff;
-
-}
 
 .projects  {
   padding: 40px 20px;
   border-radius: 10px;
   margin-top: 20px;
-  
 }
 
 .projects  img {
@@ -356,16 +370,6 @@ h1 span {
 }
 
 
-.skill-icons {
-  margin-top: 20px;
-  font-size: 30px;
-  color: #ffffff;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
 .languages {
   background-color: #1a1a1a;
   padding: 20px;
@@ -387,6 +391,40 @@ h1 span {
   width: 50%;
   margin: 30px auto;
   text-align: center;
+}
+
+.other-skills {
+  background-color: #1a1a1a;
+  padding: 20px;
+  padding-bottom: 30px;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  color: #fff;
+  width: 50%;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.other-skills ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.other-skills ul li {
+  margin: 5px;
+  font-size: 12px;
+  padding: 3px 6px;
+  color: #ffffff;
+  background-color: #000000;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 .timeline {
@@ -477,7 +515,7 @@ footer a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1a1a1a;
+  background-color: #000000;
   padding: 10px 30px;
   position: sticky;
   top: 0;
@@ -607,12 +645,12 @@ footer a {
     font-size: 8px;
   }
 
-  h1 span {
+  .info h1 span {
     font-size: 22px;
   }
 
   .info h1 {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   h2 {
@@ -645,7 +683,7 @@ footer a {
     height: 40px;
   }
 
-  .view-btn {
+  .download-btn {
     padding: 8px 15px;
     font-size: 10px;
     font-family: 'Press Start 2P';
@@ -664,13 +702,19 @@ footer a {
     font-size: 8px;
   }
 
-  .about-me p {
-    font-size: 6px;
+  .about-me .about-text {
+    font-size: 8px;
   }
 
   .languages,
-  .tools {
+  .tools,
+  .other-skills {
     width: 85%;
+  }
+
+  .other-skills ul li {
+    font-size: 8px;
+    padding: 4px;
   }
 
   .projects h2, .skills h2, .about-me h2 {
@@ -686,13 +730,14 @@ footer a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #1a1a1a;
+  background: #000000;
   padding: 10px;
   position: sticky;
   top: 0;
   z-index: 100;
   border-bottom: 1px solid white;
-  
+  backdrop-filter: blur(10px);
+
 }
 
 .logo img {
@@ -772,10 +817,11 @@ footer a {
 footer p {
   font-size: 7px;
   margin: 5px 0;
+  line-height: 1.2;
 }
 
 .footer-icon {
-  font-size: 17px;
+  font-size: 20px;
 }
 
   .hero {
@@ -783,8 +829,3 @@ footer p {
     text-align: center;
   }
 }
-
-
-
-
-
