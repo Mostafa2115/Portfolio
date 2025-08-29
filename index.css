@@ -723,9 +723,9 @@ footer a {
 
   .about-me .about-text {
     font-size: 7px;
-    margin: 15px 0;
+    margin: 5px 0;
     line-height: 1.4;
-    width: 84%;
+    width: 310px;
   }
 
   .languages,
@@ -791,7 +791,7 @@ footer a {
   z-index: 1000;
   box-shadow: -2px 0 5px rgba(0,0,0,0.5);
   border-radius: 15px;
-  height: 87%;
+  height: 88%;
 }
 
 .sidebar a {
@@ -849,6 +849,7 @@ footer p {
     text-align: center;
   }
 }
+
 
 
 
