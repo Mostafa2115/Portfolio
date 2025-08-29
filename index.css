@@ -143,7 +143,8 @@ h3 {
   margin-top: 10px;
   padding: 10px 25px;
   border: 2px solid #ffffff;
-  color: #ffffff;
+  color: #0d0d0d;
+  background-color: #ffffff;
   border-radius: 30px;
   text-decoration: none;
   transition: all 0.3s;
@@ -152,8 +153,7 @@ h3 {
 }
 
 .download-btn:hover {
-  background-color: #ffffff;
-  color: #0d0d0d;
+  box-shadow: 0 0 10px rgba(255, 255, 255);
 }
 
 .projects, .skills, .contact, .about-me {
@@ -723,6 +723,9 @@ footer a {
 
   .about-me .about-text {
     font-size: 7px;
+    margin: 15px 0;
+    line-height: 1.4;
+    width: 84%;
   }
 
   .languages,
@@ -788,7 +791,7 @@ footer a {
   z-index: 1000;
   box-shadow: -2px 0 5px rgba(0,0,0,0.5);
   border-radius: 15px;
-  height: 40%;
+  height: 87%;
 }
 
 .sidebar a {
@@ -813,7 +816,7 @@ footer a {
 .close-btn {
   position: absolute;
   font-family: 'Press Start 2P', cursive;
-  top: 10%;
+  top: 5%;
   left: 85%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -846,5 +849,6 @@ footer p {
     text-align: center;
   }
 }
+
 
 
