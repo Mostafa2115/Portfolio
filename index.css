@@ -723,7 +723,7 @@ footer a {
 
   .about-me .about-text {
     font-size: 7px;
-    margin: 5px 0;
+    margin: 5px 0 25px 0;
     line-height: 1.4;
     width: 82%;
   }
@@ -791,7 +791,7 @@ footer a {
   z-index: 1000;
   box-shadow: -2px 0 5px rgba(0,0,0,0.5);
   border-radius: 15px;
-  height: 100%;
+  height: 50%;
 }
 
 .sidebar a {
@@ -801,9 +801,9 @@ footer a {
   text-decoration: none;
   font-size: 12px;
   transition: color 0.3s;
-  text-align: center;
+  text-align: right;
   position: relative;
-  margin: 0 40px;
+  margin: 10px;
 }
 
 .sidebar a:hover {
@@ -816,7 +816,7 @@ footer a {
 .close-btn {
   position: absolute;
   font-family: 'Press Start 2P', cursive;
-  top: 5%;
+  top: 10%;
   left: 85%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -849,6 +849,7 @@ footer p {
     text-align: center;
   }
 }
+
 
 
 
