@@ -32,12 +32,20 @@ body {
   padding: 0;
   margin-top: 10px;
   background-color: #000000;
-  background-image: url('images/background.jpg');
   background-size: cover;
   background-attachment: fixed;
   color: #fff;
   font-family: 'Press Start 2P', cursive;
   font-size: 10px;
+}
+
+#tsparticles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
 }
 
 h2 {
@@ -191,7 +199,6 @@ h3 {
   border: 1px solid #ffffff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-  /* blur */
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
@@ -524,6 +531,7 @@ footer a {
   z-index: 100;
   border: 1px solid white;
   border-radius: 25px;
+  background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(100px);
 }
@@ -761,6 +769,7 @@ footer a {
   z-index: 100;
   border: 1px solid white;
   border-radius: 50px;
+  background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(100px);
 
@@ -803,7 +812,7 @@ footer a {
   transition: color 0.3s;
   text-align: right;
   position: relative;
-  margin: 10px;
+  margin: 20px 30px 0 30px;
 }
 
 .sidebar a:hover {
@@ -849,6 +858,7 @@ footer p {
     text-align: center;
   }
 }
+
 
 
 
