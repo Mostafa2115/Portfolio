@@ -68,8 +68,8 @@ if (!window.__SIDEBAR_INIT__) {
     
     sidebar.style.transform  = "translateX(-100%)";
     sidebar.style.left       = "-250px";
-    sidebar.style.width      = "0";
-    sidebar.style.display    = "none";
+    sidebar.style.width      = "100px";
+    sidebar.style.display    = "block";
     sidebar.style.right      = "-250px";
 
   }
@@ -78,4 +78,5 @@ if (!window.__SIDEBAR_INIT__) {
   if (openBtn)  openBtn.addEventListener("click", openNav);
   if (closeBtn) closeBtn.addEventListener("click", closeNav);
 }
+
 
