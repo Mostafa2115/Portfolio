@@ -1,3 +1,36 @@
+let particleNumber = 90;
+
+if (window.innerWidth <= 800) {
+  particleNumber = 40;
+}
+if (window.innerWidth <= 500) {
+  particleNumber = 20;
+}
+
+tsParticles.load("tsparticles", {
+  particles: {
+    number: { value: particleNumber },
+    size: { value: 3 },
+    move: {
+      enable: true,
+      speed: 1,
+    },
+    links: {
+      enable: true,
+      distance: 150,
+      color: "#ffffff",
+      opacity: 0.4,
+      width: 1,
+    },
+    color: {
+      value: "#ffffff",
+    },
+  },
+  background: {
+    color: "transparent",
+  },
+});
+
 const elements = document.querySelectorAll(".box, .card");
 
 window.addEventListener("scroll", () => {
@@ -78,5 +111,6 @@ if (!window.__SIDEBAR_INIT__) {
   if (openBtn)  openBtn.addEventListener("click", openNav);
   if (closeBtn) closeBtn.addEventListener("click", closeNav);
 }
+
 
 
