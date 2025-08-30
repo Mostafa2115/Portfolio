@@ -289,13 +289,13 @@ h3 {
 }
 
 .card .card-role {
-  font-size: 0.6rem;
-  color: #1a1a1a;
+  font-size: 0.4rem;
+  color: #808080;
   margin: 5px;
   text-align: center;
   padding: 5px;
-  background-color: #ffffff;
   border-radius: 50px;
+  font-weight: bolder;
 }
 
 
@@ -858,6 +858,7 @@ footer p {
     text-align: center;
   }
 }
+
 
 
 
