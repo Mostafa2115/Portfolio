@@ -100,7 +100,21 @@ h3 {
   border: 3px solid #ffffff;
   margin-right: 75px;
   box-shadow: #ffffff 0px 0px 20px;
+    animation: float 3s ease-in-out infinite;
 }
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px); 
+  }
+  100% {
+    transform: translateY(0px); 
+  }
+}
+
 
 
 
@@ -887,6 +901,7 @@ footer p {
     text-align: center;
   }
 }
+
 
 
 
