@@ -56,9 +56,9 @@ if (!window.__SIDEBAR_INIT__) {
     (function type() {
       if (i < text.length) {
         target.textContent += text.charAt(i++);
-        setTimeout(type, 50);
+        setTimeout(type, 100);
       } else {
-        setTimeout(() => { i = 0; target.textContent = ""; type(); }, 500);
+        setTimeout(() => { i = 0; target.textContent = ""; type(); }, 1000);
       }
     })();
   })();
@@ -97,6 +97,7 @@ if (!window.__SIDEBAR_INIT__) {
   if (openBtn)  openBtn.addEventListener("click", openNav);
   if (closeBtn) closeBtn.addEventListener("click", closeNav);
 }
+
 
 
 
