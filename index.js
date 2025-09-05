@@ -1,26 +1,11 @@
-let particleNumber = 90;
-
-if (window.innerWidth <= 800) {
-  particleNumber = 40;
-}
-if (window.innerWidth <= 500) {
-  particleNumber = 20;
-}
 
 tsParticles.load("tsparticles", {
   particles: {
-    number: { value: particleNumber },
-    size: { value: 3 },
+    number: { value: 80 },
+    size: { value: 1 },
     move: {
       enable: true,
-      speed: 1,
-    },
-    links: {
-      enable: true,
-      distance: 150,
-      color: "#ffffff",
-      opacity: 0.4,
-      width: 1,
+      speed: 0.2,
     },
     color: {
       value: "#ffffff",
@@ -63,8 +48,9 @@ if (!window.__SIDEBAR_INIT__) {
 
   
   (function () {
-    const text = "< Full Stack Developer >";
+    const text = "Full Stack .NET Developer";
     const target = document.getElementById("type-target");
+    target.style.textShadow = "#ffffff 0px 0px 25px";
     if (!target) return;
     let i = 0;
     (function type() {
@@ -111,6 +97,7 @@ if (!window.__SIDEBAR_INIT__) {
   if (openBtn)  openBtn.addEventListener("click", openNav);
   if (closeBtn) closeBtn.addEventListener("click", closeNav);
 }
+
 
 
 
