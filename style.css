@@ -372,6 +372,19 @@ h3 {
 
 }
 
+.box .proj-description {
+  font-size: 0.5rem;
+  color: #ffffff;
+  line-height: 1.5;
+  margin: 5px;
+  font-weight: lighter;
+  border: 1px solid #666;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #1a1a1a;
+}
+
+
 .box ul li {
   margin: 5px;
   font-size: 8px;
@@ -895,6 +908,7 @@ footer p {
     text-align: center;
   }
 }
+
 
 
 
