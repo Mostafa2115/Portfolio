@@ -349,15 +349,17 @@ h3 {
 }
 
 .box a {
+  display: flex;
   margin-top: 10px;
   font-weight: bold;
   text-align: center;
-  display: block;
   color: #000000;
   background-color: #ffffff;
   text-decoration: none;
   padding: 5px;
   border-radius: 50px;
+  top: 95%;
+  justify-content: center;
 }
 
 .box ul {
@@ -373,6 +375,7 @@ h3 {
 }
 
 .box .proj-description {
+  display: flex;
   font-size: 0.5rem;
   color: #ffffff;
   line-height: 1.5;
@@ -382,6 +385,9 @@ h3 {
   padding: 15px;
   border-radius: 5px;
   background-color: #1a1a1a;
+  height: 30%;
+  align-items: center;
+  top: 50%;
 }
 
 
@@ -408,7 +414,7 @@ h3 {
   border: 2px solid #ffffff;
   border-radius: 10px;
   color: #fff;
-  width: 90%;
+  width: 88%;
   margin: 0 auto;
 }
 
@@ -430,7 +436,7 @@ h3 {
   border: 2px solid #ffffff;
   border-radius: 10px;
   color: #fff;
-  width: 90%;
+  width: 88%;
   margin: 30px auto;
   text-align: center;
 }
@@ -452,7 +458,7 @@ h3 {
   border: 2px solid #ffffff;
   border-radius: 10px;
   color: #fff;
-  width: 90%;
+  width: 88%;
   margin: 30px auto;
   text-align: center;
 }
@@ -749,8 +755,16 @@ footer a {
     grid-template-columns: 1fr;
   }
 
+  .box {
+    height:max-content;
+  }
+
   .box h4 {
     font-size: 10px;
+  }
+
+  .box .proj-description {
+    font-size: 0.4rem;
   }
 
   .profile-pic img {
@@ -880,7 +894,7 @@ footer a {
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
-  font-size: 55px;
+  font-size: 50px;
   color: rgb(255, 255, 255);
   cursor: pointer;
   transition: color 0.3s;
@@ -908,6 +922,7 @@ footer p {
     text-align: center;
   }
 }
+
 
 
 
