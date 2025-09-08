@@ -48,7 +48,7 @@ if (!window.__SIDEBAR_INIT__) {
 
   
   (function () {
-    const text = "Full Stack Developer";
+    const text = "Full Stack .NET Developer";
     const target = document.getElementById("type-target");
     target.style.textShadow = "#ffffff 0px 0px 25px";
     if (!target) return;
@@ -97,6 +97,7 @@ if (!window.__SIDEBAR_INIT__) {
   if (openBtn)  openBtn.addEventListener("click", openNav);
   if (closeBtn) closeBtn.addEventListener("click", closeNav);
 }
+
 
 
 
