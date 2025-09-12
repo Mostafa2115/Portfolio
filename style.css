@@ -590,9 +590,11 @@ footer a {
   top: 10px;
   z-index: 100;
   border-radius: 25px;
+  border: 1px #ffffff solid;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(100px);
+  box-shadow: 0 10px 25px rgb(121, 121, 121,0.3);
 }
 
 .logo img {
@@ -834,10 +836,11 @@ footer a {
   top: 10px;
   z-index: 100;
   border-radius: 25px;
+  border: 1px #ffffff solid;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(100px);
-
+  box-shadow: 0 10px 25px rgb(121, 121, 121,0.3);
 }
 
 .logo img {
@@ -894,7 +897,7 @@ footer a {
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
-  font-size: 50px;
+  font-size: 40px;
   color: rgb(255, 255, 255);
   cursor: pointer;
   transition: color 0.3s;
@@ -922,6 +925,7 @@ footer p {
     text-align: center;
   }
 }
+
 
 
 
