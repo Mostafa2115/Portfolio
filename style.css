@@ -283,6 +283,7 @@ h3 {
   padding: 15px;
   border-radius: 5px;
   background-color: #1a1a1a;
+  box-shadow: 0 5px 10px rgba(81, 81, 81, 0.5);
 }
 
 .card .card-duration {
@@ -390,6 +391,7 @@ h3 {
   height: 35%;
   align-items: center;
   top: 50%;
+  box-shadow: 0 5px 20px rgba(81, 81, 81, 0.5);
 }
 
 
@@ -553,6 +555,28 @@ input, textarea {
   color: #ffffff;
   transition: background-color 0.3s, color 0.3s;
 
+}
+
+.contact-info {
+  text-align: left;
+  max-width: 400px;
+  margin: 20px auto 0 auto;
+  font-size: 10px;
+  line-height: 1.5;
+  color: #ffffff;
+  border: 5px solid #ffffff;
+  padding: 20px;
+  border-radius: 50px;
+  background-color: #1a1a1a;
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+
+}
+
+.info-icon {
+  margin-right: 5px;
+  margin-left: 5px;
+  color: #ffffff;
+  font-size: 15px;
 }
 
 footer {
@@ -927,6 +951,7 @@ footer p {
     text-align: center;
   }
 }
+
 
 
 
