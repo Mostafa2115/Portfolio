@@ -889,6 +889,9 @@ footer a {
   border: none;
 }
 
+.typing {
+    font-size: 14px;
+  }
 
 .sidebar {
   position: fixed;
@@ -961,6 +964,7 @@ footer p {
     text-align: center;
   }
 }
+
 
 
 
