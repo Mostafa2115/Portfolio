@@ -116,7 +116,13 @@ h3 {
 }
 
 
-
+.typing {
+  border-right: 2px solid #ffffff;
+  font-size: 17px;
+  width: fit-content;
+  animation: blink-caret 0.75s step-end infinite;
+  text-shadow: 0 0 25px #ffffff;
+}
 
 .info {
   flex: 1;
@@ -955,6 +961,7 @@ footer p {
     text-align: center;
   }
 }
+
 
 
 
