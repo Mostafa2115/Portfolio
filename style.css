@@ -784,7 +784,8 @@ footer a {
   }
 
   .info h1 span{
-    font-size: 21px;
+    font-size: 20px;
+    padding: 0px;
     
   }
 
@@ -975,6 +976,7 @@ footer p {
     text-align: center;
   }
 }
+
 
 
 
