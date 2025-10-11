@@ -762,10 +762,6 @@ footer a {
     font-size: 8px;
   }
 
-  .info h1 span {
-    font-size: 22px;
-  }
-
   .info h1 {
     font-size: 15px;
   }
@@ -817,8 +813,8 @@ footer a {
   }
 
   .profile-pic img {
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
   }
 
   .icon-grid img {
@@ -979,6 +975,7 @@ footer p {
     text-align: center;
   }
 }
+
 
 
 
