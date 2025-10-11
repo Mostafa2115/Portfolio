@@ -899,8 +899,8 @@ footer a {
   border: none;
 }
 
-.typing {
-    font-size: 14px;
+.subtitle {
+    font-size: 15px;
   }
 
 .sidebar {
@@ -974,6 +974,7 @@ footer p {
     text-align: center;
   }
 }
+
 
 
 
