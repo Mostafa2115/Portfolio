@@ -784,7 +784,7 @@ footer a {
   }
 
   .info h1 span{
-    font-size: 30px;
+    font-size: 21px;
     
   }
 
@@ -901,7 +901,7 @@ footer a {
 
 .subtitle {
     font-size: 12px;
-    padding: 5px;
+    padding: 7px;
   }
 
 .sidebar {
@@ -975,6 +975,7 @@ footer p {
     text-align: center;
   }
 }
+
 
 
 
