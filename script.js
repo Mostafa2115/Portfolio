@@ -47,43 +47,7 @@ if (!window.__SIDEBAR_INIT__) {
   window.__SIDEBAR_INIT__ = true;
 
   
-  const phrases = [
-    "Full Stack .NET Developer",
-    "Laravel Enthusiast",
-    "Problem Solver",
-  ];
-  let currentPhraseIndex = 0;
-  let currentCharIndex = 0;
-  const typingSpeed = 100;
-  const erasingSpeed = 50;
-  const delayBetweenPhrases = 1000;
-  const targetElement = document.getElementById("type-target");
-  function type() {
-    if (currentCharIndex < phrases[currentPhraseIndex].length) {
-      targetElement.textContent +=
-        phrases[currentPhraseIndex].charAt(currentCharIndex);
-      currentCharIndex++;
-      setTimeout(type, typingSpeed);
-    } else {
-      setTimeout(erase, delayBetweenPhrases);
-    }
-  }
-  function erase() {
-    if (currentCharIndex > 0) {
-      targetElement.textContent = phrases[currentPhraseIndex].substring(
-        0,
-        currentCharIndex - 1
-      );
-      currentCharIndex--;
-      setTimeout(erase, erasingSpeed);
-    } else {
-      currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-      setTimeout(type, typingSpeed);
-    }
-  }
-  document.addEventListener("DOMContentLoaded", () => {
-    if (phrases.length) setTimeout(type, delayBetweenPhrases);
-  });
+ 
 
   const sidebar  = document.getElementById("mySidebar");
   const openBtn  = document.getElementById("openSidebar");
@@ -119,6 +83,7 @@ if (!window.__SIDEBAR_INIT__) {
   if (openBtn)  openBtn.addEventListener("click", openNav);
   if (closeBtn) closeBtn.addEventListener("click", closeNav);
 }
+
 
 
 
