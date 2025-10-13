@@ -776,10 +776,11 @@ footer a {
   .info {
     padding: 10px;
     flex-direction: column;
-    text-align: center;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    margin: 0 auto; 
+    max-width: 90%;
 
   }
 
@@ -902,8 +903,7 @@ footer a {
 }
 
 .subtitle {
-    font-size: 12px;
-    padding: 0px 7px;
+    font-size: 13px;
   }
 
 .sidebar {
@@ -977,6 +977,7 @@ footer p {
     text-align: center;
   }
 }
+
 
 
 
