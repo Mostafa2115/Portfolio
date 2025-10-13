@@ -904,6 +904,8 @@ footer a {
 
 .subtitle {
     font-size: 13px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
 .sidebar {
@@ -977,6 +979,7 @@ footer p {
     text-align: center;
   }
 }
+
 
 
 
