@@ -774,7 +774,6 @@ footer a {
   }
 
   .info {
-    padding: 10px;
     flex-direction: column;
     display: flex;
     align-items: center;
@@ -979,6 +978,7 @@ footer p {
     text-align: center;
   }
 }
+
 
 
 
