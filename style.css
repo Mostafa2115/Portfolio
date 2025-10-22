@@ -854,6 +854,11 @@ footer a {
     width: 85%;
   }
 
+   .tools {
+    padding: 20px;
+  }
+
+
   .other-skills ul li {
     font-size: 8px;
     padding: 4px;
@@ -978,6 +983,7 @@ footer p {
     text-align: center;
   }
 }
+
 
 
 
