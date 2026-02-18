@@ -1,27 +1,10 @@
-tsParticles.load("tsparticles", {
-  particles: {
-    number: { value: 80 },
-    size: { value: 1 },
-    move: {
-      enable: true,
-      speed: 0.2,
-    },
-    color: {
-      value: "#ffffff",
-    },
-  },
-  background: {
-    color: "transparent",
-  },
-});
-
 const typeTarget = document.getElementById("type-target");
 if (typeTarget) {
   const texts = [
     "Full Stack .NET Developer",
     "ASP.NET Core & Laravel",
     "React.js Learner",
-    "Problem Solver"
+    "Problem Solver",
   ];
 
   let textIndex = 0;
@@ -56,6 +39,7 @@ if (typeTarget) {
     setTimeout(typeText, typingSpeed);
   }
 
+  // Start typing animation
   typeText();
 }
 
