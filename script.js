@@ -1,3 +1,20 @@
+tsParticles.load("tsparticles", {
+  particles: {
+    number: { value: 80 },
+    size: { value: 1 },
+    move: {
+      enable: true,
+      speed: 0.2,
+    },
+    color: {
+      value: "#ffffff",
+    },
+  },
+  background: {
+    color: "transparent",
+  },
+});
+
 const typeTarget = document.getElementById("type-target");
 if (typeTarget) {
   const texts = [
