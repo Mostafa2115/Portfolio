@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mostafa Mahmoud</title>
+    <link rel="icon" href="images/logo2.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -39,10 +41,9 @@
       </button>
       <a href="#">Home</a>
       <a href="#about-me">About Me</a>
-      <a href="#experience">Experience</a>
+      <a href="#experience">Experiences</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
-      <a href="#contact">Contact Me</a>
     </div>
 
     <nav class="navbar">
@@ -54,16 +55,20 @@
       <ul class="nav-links">
         <li><a href="#">Home</a></li>
         <li><a href="#about-me">About Me</a></li>
-        <li><a href="#experience">Experience</a></li>
+        <li><a href="#experience">Experiences</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact Me</a></li>
       </ul>
     </nav>
 
     <header class="hero">
       <div class="profile-pic">
-        <img src="images/profile_pic.png" alt="this is me" width="400" height="400" />
+        <img
+          src="images/profile_pic.png"
+          alt="this is me"
+          width="400"
+          height="400"
+        />
       </div>
       <div class="info">
         <h1>Hi, I'm <span>Mostafa Mahmoud</span></h1>
@@ -100,14 +105,18 @@
             ></iconify-icon>
           </a>
         </div>
-        <a
-          href="CV/Mostafa-Mahmoud-Resume.pdf"
-          class="download-btn"
-          download="Mostafa-Mahmoud-Resume.pdf"
-          >Download CV</a
-        >
+        <div class="hero-buttons">
+          <a
+            href="CV/Mostafa-Mahmoud-Resume.pdf"
+            class="download-btn"
+            download="Mostafa-Mahmoud-Resume.pdf"
+            >Download CV</a
+          >
+          <a href="#contact" class="hire-btn">Hire Me</a>
+        </div>
       </div>
     </header>
+
     <section id="about-me" class="about-me">
       <h2>About Me</h2>
       <div class="about-description">
@@ -126,6 +135,18 @@
               system, I can help you design, build, and ship reliable web
               solutions.
             </p>
+
+            <div class="experience-stats">
+              <div class="stat-card">
+                <h3>1+</h3>
+                <p>Years of Experience</p>
+              </div>
+
+              <div class="stat-card">
+                <h3>10+</h3>
+                <p>Projects Completed</p>
+              </div>
+            </div>
           </div>
           <div class="education-section">
             <h4>
@@ -165,116 +186,68 @@
     </section>
 
     <section id="experience" class="experience">
-      <h2>Experience</h2>
+      <h2>Experiences</h2>
       <div class="experience-block">
-        <div class="experience-item">
-          <div class="exp-icon">
-            <iconify-icon icon="mdi:code-braces"></iconify-icon>
+        <div class="experience-row">
+          <div class="experience-item">
+            <h3>Digital Egypt Pioneers Initiative - DEPI</h3>
+            <p class="experience-role">Full Stack .NET Developer</p>
+            <p class="experience-duration">Dec 2025 - Present</p>
+            <p class="experience-location">
+              <iconify-icon icon="mdi:map-marker"></iconify-icon>
+              Zagazig, Sharqia
+            </p>
+            <p class="experience-description">
+              Developed backend applications using C# and ASP.NET Core. Built
+              scalable RESTful APIs using .NET Core Web API. Designed responsive
+              frontend components using HTML, CSS, and JavaScript. Applied MVC
+              architecture in building modern web applications.
+            </p>
           </div>
-          <h3>
-            <a
-              href="https://icpczagazig.org/?fbclid=IwY2xjawMdO7pleHRuA2FlbQIxMABicmlkETFmZG15U0NBZ0VONXVYRDltAR769F2Df7kuSYMAUWf0EwwZfJWQ7xZyyZcOcpGjQAZ4h76vqLAQOpMy7tCeCQ_aem_1d3pNXPj5NaGnYO-ZG0qaQ"
-              target="_blank"
-              >ICPC Zagazig Community</a
-            >
-          </h3>
-          <p class="experience-role">Technical Team Member</p>
-          <p class="experience-duration">Jan 2025 - Present</p>
-          <p class="experience-description">
-            Participated in various competitive programming contests. I enhanced
-            my problem-solving skills and learned advanced algorithms, data
-            structures.
-          </p>
+          <div class="experience-item">
+            <h3>ICPC Zagazig Community</h3>
+            <p class="experience-role">Technical Team Member</p>
+            <p class="experience-duration">Jan 2025 - Present</p>
+            <p class="experience-location">
+              <iconify-icon icon="mdi:map-marker"></iconify-icon>
+              Zagazig, Sharqia
+            </p>
+            <p class="experience-description">
+              Participated in various competitive programming contests. I
+              enhanced my problem-solving skills and learned advanced
+              algorithms, data structures.
+            </p>
+          </div>
         </div>
-        <hr class="experience-separator" />
-        <div class="experience-item">
-          <div class="exp-icon">
-            <iconify-icon icon="mdi:school"></iconify-icon>
+
+        <div class="experience-row">
+          <div class="experience-item">
+            <h3>Information Technology Institute Zagazig</h3>
+            <p class="experience-role">Full Stack .NET Trainee</p>
+            <p class="experience-duration">Jul 2025 - Sep 2025</p>
+            <p class="experience-location">
+              <iconify-icon icon="mdi:map-marker"></iconify-icon>
+              Zagazig, Sharqia
+            </p>
+            <p class="experience-description">
+              Gained hands-on experience in web development and worked on
+              real-world projects. I learned C#, ASP.NET, and SQL Server.
+            </p>
           </div>
-          <h3>
-            <a href="https://www.ieee-zsb.org/chapters/cs" target="_blank"
-              >IEEE-CS Zagazig Student Chapter</a
-            >
-          </h3>
-          <p class="experience-role">Back-End Member</p>
-          <p class="experience-duration">Nov 2024 - Sep 2025</p>
-          <p class="experience-description">
-            Contributed to backend development tasks and collaborated on various
-            projects. I learned MySQL, PHP, Laravel, JavaScript, NodeJs,
-            ExpressJs and MongoDB.
-          </p>
-        </div>
-        <hr class="experience-separator" />
-        <div class="experience-item">
-          <div class="exp-icon">
-            <iconify-icon icon="mdi:briefcase"></iconify-icon>
+          <div class="experience-item">
+            <h3>GDG On-Campus Zagazig</h3>
+            <p class="experience-role">Back-End Core Team Member</p>
+            <p class="experience-duration">Oct 2025 - Present</p>
+            <p class="experience-location">
+              <iconify-icon icon="mdi:map-marker"></iconify-icon>
+              Zagazig, Sharqia
+            </p>
+            <p class="experience-description">
+              Contributed to backend system design and implementation.
+              Collaborated with development teams in building scalable software
+              solutions.
+            </p>
           </div>
-          <h3>
-            <a href="https://www.facebook.com/ITIZagazigBranch" target="_blank"
-              >Information Technology Institute Zagazig</a
-            >
-          </h3>
-          <p class="experience-role">Full Stack .NET Trainee</p>
-          <p class="experience-duration">Jul 2025 - Sep 2025</p>
-          <p class="experience-description">
-            Gained hands-on experience in web development and worked on
-            real-world projects. I learned C#, ASP.NET, and SQL Server.
-          </p>
-        </div>
-        <hr class="experience-separator" />
-        <div class="experience-item">
-          <div class="exp-icon">
-            <iconify-icon icon="mdi:briefcase"></iconify-icon>
-          </div>
-          <h3>Digital Egypt Pioneers Initiative - DEPI</h3>
-          <p class="experience-role">Full-Stack .NET Trainee</p>
-          <p class="experience-duration">12/2025 - Present</p>
-          <p class="experience-location">
-            <iconify-icon icon="mdi:map-marker"></iconify-icon>
-            Zagazig, Sharqia
-          </p>
-          <p class="experience-description">
-            Developed backend applications using C# and ASP.NET Core. Built
-            scalable RESTful APIs using .NET Core Web API. Designed responsive
-            frontend components using HTML, CSS, and JavaScript. Applied MVC
-            architecture in building modern web applications.
-          </p>
-        </div>
-        <hr class="experience-separator" />
-        <div class="experience-item">
-          <div class="exp-icon">
-            <iconify-icon icon="mdi:school"></iconify-icon>
-          </div>
-          <h3>GDG On-Campus Zagazig</h3>
-          <p class="experience-role">Back-End Core Team Member</p>
-          <p class="experience-duration">10/2025 - Present</p>
-          <p class="experience-location">
-            <iconify-icon icon="mdi:map-marker"></iconify-icon>
-            Zagazig, Sharqia
-          </p>
-          <p class="experience-description">
-            Contributed to backend system design and implementation.
-            Collaborated with development teams in building scalable software
-            solutions.
-          </p>
-        </div>
-        <hr class="experience-separator" />
-        <div class="experience-item">
-          <div class="exp-icon">
-            <iconify-icon icon="mdi:code-braces"></iconify-icon>
-          </div>
-          <h3>Zag Eng Family</h3>
-          <p class="experience-role">Back-End .NET Member</p>
-          <p class="experience-duration">10/2025 - Present</p>
-          <p class="experience-location">
-            <iconify-icon icon="mdi:map-marker"></iconify-icon>
-            Zagazig, Sharqia
-          </p>
-          <p class="experience-description">
-            Participated in backend development tasks and technical
-            collaboration. Contributing to building scalable and efficient
-            backend solutions.
-          </p>
         </div>
       </div>
     </section>
@@ -425,34 +398,33 @@
           <div class="service-icon">
             <iconify-icon icon="mdi:code-braces"></iconify-icon>
           </div>
-          <h4>Custom Web Applications</h4>
+          <h4>Custom Web Development</h4>
           <p>
-            Full-stack web applications built to scale. I deliver secure
-            authentication, intuitive dashboards, admin panels, and robust
-            APIs—all optimized for performance and your business goals.
+            I build custom websites and web applications tailored to your unique
+            business needs. From concept to deployment, I deliver clean,
+            performant solutions that help your business grow online.
           </p>
         </div>
         <div class="service-card">
           <div class="service-icon">
             <iconify-icon icon="mdi:api"></iconify-icon>
           </div>
-          <h4>API Design & Integration</h4>
+          <h4>API Development & Integration</h4>
           <p>
-            Enterprise-grade REST APIs designed for reliability and performance.
-            Seamless integration with payment gateways, email services, cloud
-            platforms, and external systems. Full documentation and testing
-            included.
+            Need to connect your systems or build new functionality? I develop
+            robust APIs and integrate third-party services to streamline your
+            business processes and enhance your application's capabilities.
           </p>
         </div>
         <div class="service-card">
           <div class="service-icon">
-            <iconify-icon icon="mdi:tools"></iconify-icon>
+            <iconify-icon icon="mdi:application-cog"></iconify-icon>
           </div>
-          <h4>Application Support & Upgrades</h4>
+          <h4>Maintenance & Optimization</h4>
           <p>
-            Code optimization, performance tuning, bug fixes, and feature
-            development. Minimize downtime, maximize speed, ensure long-term
-            stability and reliability for your application.
+            Keep your application running smoothly with ongoing maintenance,
+            performance improvements, and feature enhancements. I help you get
+            the most out of your existing systems without starting from scratch.
           </p>
         </div>
       </div>
@@ -462,7 +434,7 @@
       <h2>Projects</h2>
       <div class="boxes">
         <div class="box">
-          <h4>Hogwarts-for-programming</h4>
+          <h4>Hogwarts for programming</h4>
           <img
             src="images/proj1.png"
             alt="Hogwarts-for-programming"
@@ -486,7 +458,7 @@
           >
         </div>
         <div class="box">
-          <h4>Balloon-Game</h4>
+          <h4>Balloon Game</h4>
           <img src="images/proj2.png" alt="Balloon-Game" class="proj-image" />
           <p class="proj-description">
             A 2D arcade-style game demonstrating game mechanics and real-time
@@ -502,8 +474,12 @@
           <a href="https://github.com/Mostafa2115/Balloon-Game">Source Code</a>
         </div>
         <div class="box">
-          <h4>E-commerce-Platform</h4>
-          <img src="images/proj3.png" alt="E-commerce-Platform" class="proj-image" />
+          <h4>E-commerce Platform</h4>
+          <img
+            src="images/proj3.png"
+            alt="E-commerce-Platform"
+            class="proj-image"
+          />
           <p class="proj-description">
             A full-featured e-commerce platform with product management,
             shopping cart, secure checkout, and role-based access control.
@@ -523,7 +499,7 @@
           >
         </div>
         <div class="box">
-          <h4>Task-Tracker</h4>
+          <h4>Task Tracker</h4>
           <img src="images/proj5.png" alt="Task-Tracker" class="proj-image" />
           <p class="proj-description">
             A productivity web application with CRUD operations for task
@@ -544,7 +520,7 @@
     </section>
 
     <section class="contact" id="contact">
-      <h2>Contact Me</h2>
+      <h2>Let's Work Together</h2>
       <p class="contact-subtitle">
         Share a brief about your idea and I’ll get back to you within 24 hours.
       </p>
