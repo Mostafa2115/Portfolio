@@ -1,6 +1,6 @@
 tsParticles.load("tsparticles", {
   particles: {
-    number: { value: 50 },
+    number: { value: 80 },
     size: { value: 1 },
     move: {
       enable: true,
@@ -14,13 +14,14 @@ tsParticles.load("tsparticles", {
     color: "transparent",
   },
 });
+
 const typeTarget = document.getElementById("type-target");
 if (typeTarget) {
   const texts = [
-    "Full Stack Developer",
-    "ASP.NET & Laravel",
-    "Software Engineer",
-    "Problem Solver",
+    "Full Stack .NET Developer",
+    "ASP.NET Core & Laravel",
+    "Backend Engineer",
+    "Competitive Programmer",
   ];
 
   let textIndex = 0;
@@ -55,7 +56,6 @@ if (typeTarget) {
     setTimeout(typeText, typingSpeed);
   }
 
-  // Start typing animation
   typeText();
 }
 
@@ -119,5 +119,3 @@ if (!window.__SIDEBAR_INIT__) {
   if (openBtn) openBtn.addEventListener("click", openNav);
   if (closeBtn) closeBtn.addEventListener("click", closeNav);
 }
-
-
