@@ -612,7 +612,6 @@ h3 {
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* New education enhanced styles */
 .education-header {
   display: flex;
   align-items: center;
@@ -1192,6 +1191,10 @@ h3 {
   font-weight: 600;
 }
 
+.other-skills h4 {
+  margin-top: 25px;
+}
+
 .skills-block:hover h4 {
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
@@ -1293,6 +1296,8 @@ h3 {
   position: relative;
   z-index: 2;
   margin: 30px 10px;
+  width: 70px;
+  height: 70px;
 }
 
 .icon-with-text:hover {
@@ -1302,8 +1307,8 @@ h3 {
 }
 
 .icon-with-text img {
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
   transition: all 0.3s ease;
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
 }
@@ -1314,7 +1319,7 @@ h3 {
 }
 
 .icon-with-text span {
-  font-size: 8px;
+  font-size: 5px;
   color: rgba(255, 255, 255, 0.8);
   transition: color 0.3s ease;
   text-align: center;
@@ -2251,7 +2256,7 @@ footer {
     max-width: 100%;
     padding: 30px;
     margin: 0 50px;
-    font-size: 8px;
+    font-size: 6px;
     line-height: 1.3;
     margin-bottom: 10px;
     width: 100%;
@@ -2508,4 +2513,3 @@ footer {
     gap: 8px;
   }
 }
-
