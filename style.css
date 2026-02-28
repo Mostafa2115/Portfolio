@@ -2142,15 +2142,11 @@ footer {
     font-size: 9px;
   }
 
-  .about-content .education-program {
-    font-size: 6px;
+  .about-content .education-program , .about-content .education-duration , .about-content .education-location {
+    font-size: 7px;
     padding: 6px 12px;
   }
 
-  .about-content .education-duration , .about-content .education-location {
-    font-size: 3px;
-    padding: 6px 12px;
-  }
 
 
   .about-me .card-description {
@@ -2280,7 +2276,7 @@ footer {
     max-width: 100%;
     padding: 30px;
     margin: 0 50px;
-    font-size: 6px;
+    font-size: 8px;
     line-height: 1.3;
     margin-bottom: 10px;
     width: 100%;
@@ -2537,3 +2533,4 @@ footer {
     gap: 8px;
   }
 }
+
