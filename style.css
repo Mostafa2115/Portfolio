@@ -2124,18 +2124,32 @@ footer {
     margin-bottom: 20px;
   }
 
-  .about-text .education-section {
+  .about-content .education-section {
     margin-top: 20px;
   }
 
-  .about-text .education-section h4 {
+  .about-content .education-section h4 {
     font-size: 9px;
     padding: 8px 15px;
     margin-bottom: 15px;
   }
 
-  .about-text .education-item {
-    padding: 15px;
+  .about-content .education-item {
+    font-size: 3px;
+  }
+
+  .about-content .education-item h5 {
+    font-size: 9px;
+  }
+
+  .about-content .education-program {
+    font-size: 6px;
+    padding: 6px 12px;
+  }
+
+  .about-content .education-duration , .about-content .education-location {
+    font-size: 3px;
+    padding: 6px 12px;
   }
 
 
@@ -2186,6 +2200,16 @@ footer {
   .icon-grid img {
     width: 75px;
     height: 75px;
+  }
+
+  .icon-with-text span {
+    font-size: 6px;
+  }
+
+  .icon-with-text {
+    width: 55px;
+  height: 55px;
+  font-size: 5px;
   }
 
   .other-skills ul li {
@@ -2256,7 +2280,7 @@ footer {
     max-width: 100%;
     padding: 30px;
     margin: 0 50px;
-    font-size: 8px;
+    font-size: 6px;
     line-height: 1.3;
     margin-bottom: 10px;
     width: 100%;
@@ -2513,4 +2537,3 @@ footer {
     gap: 8px;
   }
 }
-
