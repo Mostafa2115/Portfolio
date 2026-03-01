@@ -1,6 +1,6 @@
 tsParticles.load("tsparticles", {
   particles: {
-    number: { value: 80 },
+    number: { value: 40 },
     size: { value: 1 },
     move: {
       enable: true,
@@ -119,3 +119,4 @@ if (!window.__SIDEBAR_INIT__) {
   if (openBtn) openBtn.addEventListener("click", openNav);
   if (closeBtn) closeBtn.addEventListener("click", closeNav);
 }
+
