@@ -30,7 +30,7 @@
     <nav class="navbar2">
       <a href="#">
         <div class="logo">
-          <img src="images/logo.png" alt="LOGO" width="35" height="35" />
+          <img src="images/logo.ico" alt="LOGO" width="35" height="35" />
         </div>
       </a>
       <button class="open-btn" id="openSidebar" onclick="openNav()">☰</button>
@@ -50,7 +50,7 @@
     <nav class="navbar">
       <a href="#">
         <div class="logo">
-          <img src="images/logo.png" alt="LOGO" width="35" height="35" />
+          <img src="images/logo.ico" alt="LOGO" width="35" height="35" />
         </div>
       </a>
       <ul class="nav-links">
@@ -77,11 +77,16 @@
         <h3 id="type-target" class="subtitle">
           Full Stack Developer | ASP.NET Core & Laravel Expert
         </h3>
+        <div class="available-badge">
+          <span class="pulse-dot"></span>
+          Available for opportunities
+        </div>
         <p>
           I build production-ready web applications, REST APIs, and scalable
           <br />
           admin dashboards using .NET, Laravel, and modern responsive UIs
         </p>
+
         <div class="social-icons">
           <a href="https://www.linkedin.com/in/mostafa-mahmoud-5i"
             ><i class="fab fa-linkedin-in"></i
@@ -107,6 +112,7 @@
             ></iconify-icon>
           </a>
         </div>
+
         <div class="hero-buttons">
           <a
             href="CV/Mostafa-Mahmoud-Resume.pdf"
@@ -275,11 +281,6 @@
                 <img src="https://go-skill-icons.vercel.app/api/icons?i=java" />
                 <span>Java</span>
               </div>
-            </div>
-          </div>
-          <div class="backend-databases">
-            <h4>Backend & Databases</h4>
-            <div class="icon-grid">
               <div class="icon-with-text">
                 <img src="https://go-skill-icons.vercel.app/api/icons?i=php" />
                 <span>PHP</span>
@@ -288,6 +289,11 @@
                 <img src="https://go-skill-icons.vercel.app/api/icons?i=cs" />
                 <span>C#</span>
               </div>
+            </div>
+          </div>
+          <div class="backend-databases">
+            <h4>Backend & Databases</h4>
+            <div class="icon-grid">
               <div class="icon-with-text">
                 <img
                   src="https://go-skill-icons.vercel.app/api/icons?i=laravel"
@@ -380,15 +386,21 @@
         <div class="other-skills">
           <h4>Technical Expertise</h4>
           <ul>
+            <li>Full Stack Web Development</li>
+            <li>API Design & Development</li>
             <li>RESTful API Development</li>
             <li>Database Design & Optimization</li>
             <li>Responsive Web Design</li>
             <li>Version Control with Git</li>
             <li>Agile Development Practices</li>
-            <li>Problem Solving & Debugging</li></li>
+            <li>Problem Solving & Debugging</li>
+            <li>Software Architecture & Design Patterns</li>
           </ul>
           <h4>Soft Skills</h4>
           <ul>
+            <li>Problem Solving</li>
+            <li>Attention to Detail</li>
+            <li>Self-Motivation</li>
             <li>Effective Communication</li>
             <li>Team Collaboration</li>
             <li>Time Management</li>
@@ -529,10 +541,7 @@
     </section>
 
     <section class="contact" id="contact">
-      <h2>Let's Work Together</h2>
-      <p class="contact-subtitle">
-        Share a brief about your idea and I’ll get back to you within 24 hours.
-      </p>
+      <h2>Let's Contact</h2>
       <div class="contact-container">
         <form
           action="https://formsubmit.co/mostafaamahmoud075@gmail.com"
@@ -540,6 +549,7 @@
         >
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
+          <input type="text" name="subject" placeholder="Subject" required />
           <textarea
             name="message"
             placeholder="Your Message"
