@@ -2049,6 +2049,7 @@ footer {
   }
 
   .available-badge {
+    font-size: 8px;
     padding: 4px 10px;
     margin-top: 10px;
   }
@@ -2584,3 +2585,4 @@ footer {
     gap: 8px;
   }
 }
+
