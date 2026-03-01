@@ -2200,7 +2200,7 @@ footer {
   }
 
   .about-content .education-duration , .about-content .education-location {
-    font-size: 3px;
+    font-size: 6px;
     padding: 6px 12px;
   }
 
@@ -2585,4 +2585,5 @@ footer {
     gap: 8px;
   }
 }
+
 
