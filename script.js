@@ -1,19 +1,19 @@
-// tsParticles.load("tsparticles", {
-//   particles: {
-//     number: { value: 20 },
-//     size: { value: 1 },
-//     move: {
-//       enable: true,
-//       speed: 0.2,
-//     },
-//     color: {
-//       value: "#ffffff",
-//     },
-//   },
-//   background: {
-//     color: "transparent",
-//   },
-// });
+tsParticles.load("tsparticles", {
+  particles: {
+    number: { value: 50 },
+    size: { value: 0.5 },
+    move: {
+      enable: true,
+      speed: 0.2,
+    },
+    color: {
+      value: "#ffffff",
+    },
+  },
+  background: {
+    color: "transparent",
+  },
+});
 
 const typeTarget = document.getElementById("type-target");
 if (typeTarget) {
@@ -119,6 +119,7 @@ if (!window.__SIDEBAR_INIT__) {
   if (openBtn) openBtn.addEventListener("click", openNav);
   if (closeBtn) closeBtn.addEventListener("click", closeNav);
 }
+
 
 
 
