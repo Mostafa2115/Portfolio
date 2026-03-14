@@ -185,6 +185,7 @@ h3 {
   box-shadow: 0 10px 32px rgba(134, 134, 134, 0.5);
   animation: float 3s ease-in-out infinite;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255,255,255);
 }
 
 .profile-pic img:hover {
