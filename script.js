@@ -1,10 +1,10 @@
 tsParticles.load("tsparticles", {
   particles: {
-    number: { value: 80 },
+    number: { value: 65 },
     size: { value: 1 },
     move: {
       enable: true,
-      speed: 0.4,
+      speed: 0.2,
     },
     color: {
       value: "#ffffff",
