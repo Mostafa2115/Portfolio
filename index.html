@@ -4,6 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mostafa Mahmoud</title>
+    <meta
+      name="description"
+      content="Mostafa Mahmoud — Full Stack Developer specializing in ASP.NET Core and Laravel. I build production-ready web applications, scalable APIs, and modern dashboards."
+    />
+    <meta name="theme-color" content="#000000" />
+    <meta property="og:title" content="Mostafa Mahmoud — Portfolio" />
+    <meta
+      property="og:description"
+      content="Full Stack Developer specializing in ASP.NET Core and Laravel. Production-ready web apps, scalable APIs, and modern dashboards."
+    />
+    <meta property="og:type" content="website" />
     <link rel="icon" href="images/logo2.ico" sizes="any" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="stylesheet" href="style.css" />
@@ -30,10 +41,23 @@
     <nav class="navbar2">
       <a href="#">
         <div class="logo">
-          <img src="images/logo.ico" alt="LOGO" width="35" height="35" />
+          <img src="images/logo.png" alt="LOGO" width="35" height="35" />
         </div>
       </a>
-      <button class="open-btn" id="openSidebar" onclick="openNav()">☰</button>
+      <div class="nav-actions">
+        <button
+          class="theme-toggle"
+          type="button"
+          id="themeToggle"
+          aria-label="Toggle theme"
+          title="Toggle theme"
+        >
+          <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+        </button>
+        <button class="open-btn" id="openSidebar" onclick="openNav()">
+          ☰
+        </button>
+      </div>
     </nav>
     <div id="mySidebar" class="sidebar">
       <button class="close-btn" id="closeSidebar" onclick="closeNav()">
@@ -43,24 +67,38 @@
       <a href="#about-me">About Me</a>
       <a href="#experience">Experiences</a>
       <a href="#skills">Skills</a>
+      <a href="#services">Services</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </div>
+    <div class="nav-backdrop" id="navBackdrop" hidden></div>
 
     <nav class="navbar">
       <a href="#">
         <div class="logo">
-          <img src="images/logo.ico" alt="LOGO" width="35" height="35" />
+          <img src="images/logo.png" alt="LOGO" width="35" height="35" />
         </div>
       </a>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#about-me">About Me</a></li>
-        <li><a href="#experience">Experiences</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <div class="nav-actions">
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#experience">Experiences</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button
+          class="theme-toggle"
+          type="button"
+          id="themeToggleDesktop"
+          aria-label="Toggle theme"
+          title="Toggle theme"
+        >
+          <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+        </button>
+      </div>
     </nav>
 
     <header class="hero">
@@ -77,10 +115,6 @@
         <h3 id="type-target" class="subtitle">
           Full Stack Developer | ASP.NET Core & Laravel Expert
         </h3>
-        <div class="available-badge">
-          <span class="pulse-dot"></span>
-          Available for opportunities
-        </div>
         <p>
           I build production-ready web applications, REST APIs, and scalable
           <br />
@@ -120,7 +154,7 @@
             download="Mostafa-Mahmoud-Resume.pdf"
             >Download CV</a
           >
-          <a href="#contact" class="hire-btn">Contact Me</a>
+          <a href="#contact" class="hire-btn">Hire Me</a>
         </div>
       </div>
     </header>
@@ -146,12 +180,12 @@
 
             <div class="experience-stats">
               <div class="stat-card">
-                <h3>1+</h3>
+                <h3>2+</h3>
                 <p>Years of Experience</p>
               </div>
 
               <div class="stat-card">
-                <h3>10+</h3>
+                <h3>15+</h3>
                 <p>Projects Completed</p>
               </div>
             </div>
