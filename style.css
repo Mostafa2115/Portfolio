@@ -21,7 +21,7 @@ html {
 }
 
 body[data-theme="light"] {
-  --bg: #474747;
+  --bg: #8d8d8d;
   --bg2: #dbdbdb;
   --text: rgba(12, 12, 16, 0.92);
   --muted: rgba(12, 12, 16, 0.68);
