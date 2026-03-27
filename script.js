@@ -1,19 +1,61 @@
-tsParticles.load("tsparticles", {
-  particles: {
-    number: { value: 65 },
-    size: { value: 1 },
-    move: {
-      enable: true,
-      speed: 0.2,
-    },
-    color: {
-      value: "#ffffff",
-    },
-  },
-  background: {
-    color: "transparent",
-  },
-});
+let __particlesTheme = null;
+async function loadParticlesForTheme(theme) {
+  const next = theme === "light" ? "light" : "dark";
+  if (__particlesTheme === next) return;
+  __particlesTheme = next;
+
+  const color = "#ffffff";
+  try {
+    await tsParticles.load("tsparticles", {
+      particles: {
+        number: { value: 80 },
+        size: { value: 1 },
+        move: {
+          enable: true,
+          speed: 0.2,
+        },
+        color: {
+          value: color,
+        },
+      },
+      background: {
+        color: "transparent",
+      },
+    });
+  } catch {}
+}
+
+function setTheme(nextTheme) {
+  const theme = nextTheme === "light" ? "light" : "dark";
+  document.body.setAttribute("data-theme", theme);
+  loadParticlesForTheme(theme);
+  try {
+    localStorage.setItem("theme", theme);
+  } catch {}
+}
+
+function getPreferredTheme() {
+  try {
+    const saved = localStorage.getItem("theme");
+    if (saved === "light" || saved === "dark") return saved;
+  } catch {}
+  return window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: light)").matches
+    ? "light"
+    : "dark";
+}
+
+setTheme(getPreferredTheme());
+
+const themeToggle = document.getElementById("themeToggle");
+const themeToggleDesktop = document.getElementById("themeToggleDesktop");
+function toggleTheme() {
+  const current = document.body.getAttribute("data-theme") || "dark";
+  setTheme(current === "light" ? "dark" : "light");
+}
+if (themeToggle) themeToggle.addEventListener("click", toggleTheme);
+if (themeToggleDesktop)
+  themeToggleDesktop.addEventListener("click", toggleTheme);
 
 const typeTarget = document.getElementById("type-target");
 if (typeTarget) {
@@ -59,31 +101,26 @@ if (typeTarget) {
   typeText();
 }
 
-const elements = document.querySelectorAll(".box, .experience-item, .cert-box");
+const revealTargets = document.querySelectorAll(
+  "section, .box, .experience-item, .service-card, .skills-block, .other-skills",
+);
 
-window.addEventListener("scroll", () => {
-  elements.forEach((el) => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 100) {
-      el.classList.add("show");
-    } else {
-      el.classList.remove("show");
-    }
-  });
-});
-
-const sections = document.querySelectorAll("section");
-
-window.addEventListener("scroll", () => {
-  sections.forEach((sec) => {
-    const rect = sec.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 100) {
-      sec.classList.add("show");
-    } else {
-      sec.classList.remove("show");
-    }
-  });
-});
+if ("IntersectionObserver" in window) {
+  const io = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          io.unobserve(entry.target);
+        }
+      }
+    },
+    { root: null, threshold: 0.14, rootMargin: "0px 0px -12% 0px" },
+  );
+  revealTargets.forEach((el) => io.observe(el));
+} else {
+  revealTargets.forEach((el) => el.classList.add("show"));
+}
 
 if (!window.__SIDEBAR_INIT__) {
   window.__SIDEBAR_INIT__ = true;
@@ -91,35 +128,63 @@ if (!window.__SIDEBAR_INIT__) {
   const sidebar = document.getElementById("mySidebar");
   const openBtn = document.getElementById("openSidebar");
   const closeBtn = document.getElementById("closeSidebar");
+  const backdrop = document.getElementById("navBackdrop");
+
+  function setBackdropVisible(visible) {
+    if (!backdrop) return;
+    backdrop.hidden = !visible;
+  }
+
+  function setScrollLocked(locked) {
+    document.documentElement.style.overflow = locked ? "hidden" : "";
+  }
 
   function openNav(e) {
     if (e) e.preventDefault();
     if (!sidebar) return;
 
-    sidebar.style.display = "block";
-    sidebar.style.visibility = "visible";
-    sidebar.style.width = "250px";
-    sidebar.style.right = "0";
-    sidebar.style.left = "";
-    sidebar.style.transform = "translateX(0)";
+    sidebar.classList.add("open");
+    setBackdropVisible(true);
+    setScrollLocked(true);
   }
 
   function closeNav(e) {
     if (e) e.preventDefault();
     if (!sidebar) return;
 
-    sidebar.style.transform = "translateX(-100%)";
-    sidebar.style.left = "-250px";
-    sidebar.style.width = "100px";
-    sidebar.style.display = "block";
-    sidebar.style.right = "-250px";
+    sidebar.classList.remove("open");
+    setBackdropVisible(false);
+    setScrollLocked(false);
   }
   window.openNav = openNav;
   window.closeNav = closeNav;
   if (openBtn) openBtn.addEventListener("click", openNav);
   if (closeBtn) closeBtn.addEventListener("click", closeNav);
+  if (backdrop) backdrop.addEventListener("click", closeNav);
+
+  if (sidebar) {
+    sidebar.addEventListener("click", (ev) => {
+      const link = ev.target && ev.target.closest && ev.target.closest("a");
+      if (link) closeNav();
+    });
+  }
+
+  window.addEventListener("keydown", (ev) => {
+    if (ev.key === "Escape") closeNav();
+  });
+
+  const profilePicContainer = document.querySelector(".profile-pic");
+  if (profilePicContainer) {
+    profilePicContainer.addEventListener("mousemove", (e) => {
+      const rect = profilePicContainer.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      const rotateX = (y / rect.height) * 10;
+      const rotateY = (x / rect.width) * 10;
+      profilePicContainer.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+    profilePicContainer.addEventListener("mouseleave", () => {
+      profilePicContainer.style.transform = "";
+    });
+  }
 }
-
-
-
-
