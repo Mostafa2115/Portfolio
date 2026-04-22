@@ -61,7 +61,7 @@ const typeTarget = document.getElementById("type-target");
 if (typeTarget) {
   const texts = [
     "Full Stack .NET Developer",
-    "ASP.NET Core | SQL Server",
+    "ASP.NET Core | Laravel",
     "Backend Engineer",
     "Problem Solver",
   ];
