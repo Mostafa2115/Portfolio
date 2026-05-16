@@ -704,7 +704,7 @@ body[data-theme="light"] .navbar2 {
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  box-shadow: 0 0 32px rgba(255, 255, 255);
+  box-shadow: 0 0 42px rgba(255, 255, 255);
   opacity: 1.5;
   filter: blur(22px);
 }
