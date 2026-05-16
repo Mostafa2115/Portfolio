@@ -709,7 +709,11 @@ body[data-theme="light"] .navbar2 {
   filter: blur(22px);
 }
 
-
+body[data-theme="light"] .profile-ring::before {
+  box-shadow: 0 0 42px rgba(0, 0, 0);
+  opacity: 1.5;
+  filter: blur(22px);
+}
 
 .profile-ring img {
   width: 100%;
