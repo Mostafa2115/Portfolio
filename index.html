@@ -17,31 +17,34 @@
     <meta property="og:type" content="website" />
     <link rel="icon" href="images/logo2.ico" sizes="any" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
   </head>
-  <body id="top">
-    <div id="tsparticles"></div>
-    <nav class="navbar2">
-      <a href="#">
+  <body id="top" data-theme="dark">
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="ambient-glow" aria-hidden="true">
+      <div class="glow-orb glow-orb--1"></div>
+      <div class="glow-orb glow-orb--2"></div>
+    </div>
+    <div id="tsparticles" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+    <nav class="navbar2" aria-label="Mobile navigation">
+      <a href="#top" class="logo-link">
         <div class="logo">
-          <img src="images/logo.png" alt="LOGO" width="35" height="35" />
+          <img
+            src="images/logo.png"
+            alt="Mostafa Mahmoud"
+            width="36"
+            height="36"
+          />
         </div>
       </a>
       <div class="nav-actions">
@@ -54,18 +57,30 @@
         >
           <span class="theme-toggle__icon" aria-hidden="true">◐</span>
         </button>
-        <button class="open-btn" id="openSidebar" onclick="openNav()">
-          ☰
+        <button
+          class="open-btn"
+          id="openSidebar"
+          type="button"
+          aria-label="Open menu"
+        >
+          <span></span>
+          <span></span>
         </button>
       </div>
     </nav>
-    <div id="mySidebar" class="sidebar">
-      <button class="close-btn" id="closeSidebar" onclick="closeNav()">
+
+    <div id="mySidebar" class="sidebar" aria-label="Sidebar menu">
+      <button
+        class="close-btn"
+        id="closeSidebar"
+        type="button"
+        aria-label="Close menu"
+      >
         &times;
       </button>
-      <a href="#">Home</a>
-      <a href="#about-me">About Me</a>
-      <a href="#experience">Experiences</a>
+      <a href="#top">Home</a>
+      <a href="#about-me">About</a>
+      <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#services">Services</a>
       <a href="#projects">Projects</a>
@@ -73,21 +88,26 @@
     </div>
     <div class="nav-backdrop" id="navBackdrop" hidden></div>
 
-    <nav class="navbar">
-      <a href="#">
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="#top" class="logo-link">
         <div class="logo">
-          <img src="images/logo.png" alt="LOGO" width="35" height="35" />
+          <img
+            src="images/logo.png"
+            alt="Mostafa Mahmoud"
+            width="36"
+            height="36"
+          />
         </div>
       </a>
       <div class="nav-actions">
         <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#about-me">About Me</a></li>
-          <li><a href="#experience">Experiences</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#top" data-nav>Home</a></li>
+          <li><a href="#about-me" data-nav>About</a></li>
+          <li><a href="#experience" data-nav>Experience</a></li>
+          <li><a href="#skills" data-nav>Skills</a></li>
+          <li><a href="#services" data-nav>Services</a></li>
+          <li><a href="#projects" data-nav>Projects</a></li>
+          <li><a href="#contact" data-nav>Contact</a></li>
         </ul>
         <button
           class="theme-toggle"
@@ -101,564 +121,695 @@
       </div>
     </nav>
 
-    <header class="hero">
-      <div class="profile-pic">
-        <img
-          src="images/profile_pic4.png"
-          alt="this is me"
-          width="400"
-          height="400"
-        />
-      </div>
-      <div class="info">
-        <h1>Hi, I'm <span>Mostafa Mahmoud</span></h1>
-        <h3 id="type-target" class="subtitle">
-          Full Stack .NET Developer
-        </h3>
-        <p>
-          I build production-ready web applications, RESTful APIs, and scalable
-          <br />
-          admin dashboards using ASP.NET Core, Laravel, and modern responsive UIs
-        </p>
-
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/in/mostafa-mahmoud-5i"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-          <a href="https://github.com/Mostafa2115"
-            ><i class="fab fa-github"></i
-          ></a>
-          <a
-            href="https://www.facebook.com/profile.php?id=100052563858061&mibextid=ZbWKwL"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a href="https://instagram.com/mostafa__.75"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a
-            href="https://codeforces.com/profile/Mostafa3X"
-            target="_blank"
-            rel="noopener"
-          >
-            <iconify-icon
-              icon="simple-icons:codeforces"
-              class="cf-icon"
-            ></iconify-icon>
-          </a>
-        </div>
-
-        <div class="hero-buttons">
-          <a
-            href="CV/Mostafa-Mahmoud-Resume.pdf"
-            class="download-btn"
-            download="Mostafa-Mahmoud-Resume.pdf"
-            >Download CV</a
-          >
-          <a href="#contact" class="hire-btn">Hire Me</a>
-        </div>
-      </div>
-    </header>
-
-    <section id="about-me" class="about-me">
-      <h2>About Me</h2>
-      <div class="about-description">
-        <div class="about-content">
-          <div class="about-text">
-            <p>
-              I'm a computer science student and full stack .NET & Laravel
-              developer who enjoys turning ideas into real, working web
-              applications. I focus on writing clean, maintainable code and
-              building features that actually solve problems for real users.
+    <main>
+      <header class="hero">
+        <div class="hero-inner">
+          <div class="info">
+            <p class="hero-eyebrow">
+              <span class="status-dot"></span>
+              Available for opportunities
             </p>
-            <p>
-              I work mainly with ASP.NET Core and Laravel to build APIs,
-              dashboards, and admin panels, with modern, responsive UIs. Whether
-              you need a new project from scratch or improvements to an existing
-              system, I can help you design, build, and ship reliable web
-              solutions.
+            <h1 class="hero-name">
+              <span class="hero-name-text">Mostafa Mahmoud</span>
+            </h1>
+            <p id="type-target" class="subtitle">Full Stack .NET Developer</p>
+            <p class="hero-desc">
+              I build production-ready web applications, RESTful APIs, and
+              scalable admin dashboards using ASP.NET Core, Laravel, and modern
+              responsive UIs.
             </p>
 
-            <div class="experience-stats">
-              <div class="stat-card">
-                <h3>2+</h3>
-                <p>Years of Experience</p>
+            <div class="social-icons">
+              <a
+                href="https://www.linkedin.com/in/mostafa-mahmoud-5i"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener"
+              >
+                <iconify-icon icon="simple-icons:linkedin"></iconify-icon>
+              </a>
+              <a
+                href="https://github.com/Mostafa2115"
+                aria-label="GitHub"
+                target="_blank"
+                rel="noopener"
+              >
+                <iconify-icon icon="simple-icons:github"></iconify-icon>
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100052563858061&mibextid=ZbWKwL"
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener"
+              >
+                <iconify-icon icon="simple-icons:facebook"></iconify-icon>
+              </a>
+              <a
+                href="https://instagram.com/mostafa__.75"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener"
+              >
+                <iconify-icon icon="simple-icons:instagram"></iconify-icon>
+              </a>
+              <a
+                href="https://codeforces.com/profile/Mostafa3X"
+                aria-label="Codeforces"
+                target="_blank"
+                rel="noopener"
+              >
+                <iconify-icon icon="simple-icons:codeforces"></iconify-icon>
+              </a>
+            </div>
+
+            <div class="hero-buttons">
+              <a
+                href="CV/Mostafa-Mahmoud-Resume.pdf"
+                class="btn btn-outline"
+                download="Mostafa-Mahmoud-Resume.pdf"
+                >Download CV</a
+              >
+              <a href="#contact" class="btn btn-primary">Contact Me</a>
+            </div>
+          </div>
+
+          <div class="profile-pic" data-tilt>
+            <div class="profile-bg" aria-hidden="true"></div>
+            <div class="profile-ring">
+              <img
+                src="images/profile_pic4.png"
+                alt="Mostafa Mahmoud"
+                width="400"
+                height="400"
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section id="about-me" class="about-me section">
+        <div class="section-header">
+          <span class="section-num">01</span>
+          <h2>About Me</h2>
+        </div>
+        <div class="about-description">
+          <div class="about-content">
+            <div class="about-text card">
+              <p>
+                I'm a computer science student and full stack .NET & Laravel
+                developer who enjoys turning ideas into real, working web
+                applications. I focus on writing clean, maintainable code and
+                building features that actually solve problems for real users.
+              </p>
+              <p>
+                I work mainly with ASP.NET Core and Laravel to build APIs,
+                dashboards, and admin panels, with modern, responsive UIs.
+                Whether you need a new project from scratch or improvements to
+                an existing system, I can help you design, build, and ship
+                reliable web solutions.
+              </p>
+
+              <div class="experience-stats">
+                <div class="stat-card">
+                  <h3>2+</h3>
+                  <p>Years of Experience</p>
+                </div>
+                <div class="stat-card">
+                  <h3>15+</h3>
+                  <p>Projects Completed</p>
+                </div>
               </div>
+            </div>
 
-              <div class="stat-card">
-                <h3>15+</h3>
-                <p>Projects Completed</p>
+            <div class="education-section card">
+              <h4>
+                <iconify-icon icon="mdi:school"></iconify-icon>
+                Education
+              </h4>
+              <div class="education-item">
+                <div class="education-header">
+                  <h5>Zagazig University</h5>
+                  <span class="education-badge">Current</span>
+                </div>
+                <p class="education-program">
+                  Faculty of Computer Science and Information
+                </p>
+                <div class="education-details">
+                  <span class="detail-item">
+                    <iconify-icon icon="mdi:graduation-cap"></iconify-icon>
+                    Level 3
+                  </span>
+                  <span class="detail-item">
+                    <iconify-icon icon="mdi:star"></iconify-icon>
+                    GPA 3.5
+                  </span>
+                </div>
+                <p class="education-duration">
+                  <iconify-icon icon="mdi:calendar-range"></iconify-icon>
+                  10/2024 – present
+                </p>
+                <p class="education-location">
+                  <iconify-icon icon="mdi:map-marker"></iconify-icon>
+                  Zagazig, Sharqia
+                </p>
               </div>
             </div>
           </div>
-          <div class="education-section">
-            <h4>
-              <iconify-icon icon="mdi:school"></iconify-icon>
-              Education
-            </h4>
-            <div class="education-item">
-              <div class="education-header">
-                <h5>Zagazig University</h5>
-                <span class="education-badge">Current</span>
+        </div>
+      </section>
+
+      <section id="experience" class="experience section">
+        <div class="section-header">
+          <span class="section-num">02</span>
+          <h2>Experience</h2>
+        </div>
+        <div class="experience-block">
+          <div class="experience-row">
+            <article class="experience-item card">
+              <div class="exp-meta">
+                <span class="exp-date">Dec 2025 – Present</span>
               </div>
-              <p class="education-program">
-                Faculty of Computer Science and Information
-              </p>
-              <div class="education-details">
-                <span class="detail-item">
-                  <iconify-icon icon="mdi:graduation-cap"></iconify-icon>
-                  Level 3
-                </span>
-                <span class="detail-item">
-                  <iconify-icon icon="mdi:star"></iconify-icon>
-                  GPA 3.5
-                </span>
-              </div>
-              <p class="education-duration">
-                <iconify-icon icon="mdi:calendar-range"></iconify-icon>
-                10/2024 – present
-              </p>
-              <p class="education-location">
+              <h3>Digital Egypt Pioneers Initiative — DEPI</h3>
+              <p class="experience-role">Full Stack .NET Developer</p>
+              <p class="experience-location">
                 <iconify-icon icon="mdi:map-marker"></iconify-icon>
                 Zagazig, Sharqia
               </p>
-            </div>
+              <p class="experience-description">
+                Developed backend applications using C# and ASP.NET Core. Built
+                scalable RESTful APIs using .NET Core Web API. Designed
+                responsive frontend components using HTML, CSS, and JavaScript.
+                Applied MVC architecture in building modern web applications.
+              </p>
+            </article>
+            <article class="experience-item card">
+              <div class="exp-meta">
+                <span class="exp-date">Jan 2025 – Present</span>
+              </div>
+              <h3>ICPC Zagazig Community</h3>
+              <p class="experience-role">Technical Team Member</p>
+              <p class="experience-location">
+                <iconify-icon icon="mdi:map-marker"></iconify-icon>
+                Zagazig, Sharqia
+              </p>
+              <p class="experience-description">
+                Participated in various competitive programming contests.
+                Enhanced problem-solving skills and learned advanced algorithms
+                and data structures.
+              </p>
+            </article>
+          </div>
+
+          <div class="experience-row">
+            <article class="experience-item card">
+              <div class="exp-meta">
+                <span class="exp-date">Jul 2025 – Sep 2025</span>
+              </div>
+              <h3>Information Technology Institute Zagazig</h3>
+              <p class="experience-role">Full Stack .NET Trainee</p>
+              <p class="experience-location">
+                <iconify-icon icon="mdi:map-marker"></iconify-icon>
+                Zagazig, Sharqia
+              </p>
+              <p class="experience-description">
+                Gained hands-on experience in web development and worked on
+                real-world projects. Learned C#, ASP.NET, and SQL Server.
+              </p>
+            </article>
+            <article class="experience-item card">
+              <div class="exp-meta">
+                <span class="exp-date">Oct 2025 – Present</span>
+              </div>
+              <h3>GDG On-Campus Zagazig</h3>
+              <p class="experience-role">Back-End Core Team Member</p>
+              <p class="experience-location">
+                <iconify-icon icon="mdi:map-marker"></iconify-icon>
+                Zagazig, Sharqia
+              </p>
+              <p class="experience-description">
+                Contributed to backend system design and implementation.
+                Collaborated with development teams in building scalable
+                software solutions.
+              </p>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="experience" class="experience">
-      <h2>Experiences</h2>
-      <div class="experience-block">
-        <div class="experience-row">
-          <div class="experience-item">
-            <h3>Digital Egypt Pioneers Initiative - DEPI</h3>
-            <p class="experience-role">Full Stack .NET Developer</p>
-            <p class="experience-duration">Dec 2025 - Present</p>
-            <p class="experience-location">
-              <iconify-icon icon="mdi:map-marker"></iconify-icon>
-              Zagazig, Sharqia
-            </p>
-            <p class="experience-description">
-              Developed backend applications using C# and ASP.NET Core. Built
-              scalable RESTful APIs using .NET Core Web API. Designed responsive
-              frontend components using HTML, CSS, and JavaScript. Applied MVC
-              architecture in building modern web applications.
-            </p>
-          </div>
-          <div class="experience-item">
-            <h3>ICPC Zagazig Community</h3>
-            <p class="experience-role">Technical Team Member</p>
-            <p class="experience-duration">Jan 2025 - Present</p>
-            <p class="experience-location">
-              <iconify-icon icon="mdi:map-marker"></iconify-icon>
-              Zagazig, Sharqia
-            </p>
-            <p class="experience-description">
-              Participated in various competitive programming contests. I
-              enhanced my problem-solving skills and learned advanced
-              algorithms, data structures.
-            </p>
-          </div>
+      <section id="skills" class="skills section">
+        <div class="section-header">
+          <span class="section-num">03</span>
+          <h2>Skills</h2>
         </div>
-
-        <div class="experience-row">
-          <div class="experience-item">
-            <h3>Information Technology Institute Zagazig</h3>
-            <p class="experience-role">Full Stack .NET Trainee</p>
-            <p class="experience-duration">Jul 2025 - Sep 2025</p>
-            <p class="experience-location">
-              <iconify-icon icon="mdi:map-marker"></iconify-icon>
-              Zagazig, Sharqia
-            </p>
-            <p class="experience-description">
-              Gained hands-on experience in web development and worked on
-              real-world projects. I learned C#, ASP.NET, and SQL Server.
-            </p>
-          </div>
-          <div class="experience-item">
-            <h3>GDG On-Campus Zagazig</h3>
-            <p class="experience-role">Back-End Core Team Member</p>
-            <p class="experience-duration">Oct 2025 - Present</p>
-            <p class="experience-location">
-              <iconify-icon icon="mdi:map-marker"></iconify-icon>
-              Zagazig, Sharqia
-            </p>
-            <p class="experience-description">
-              Contributed to backend system design and implementation.
-              Collaborated with development teams in building scalable software
-              solutions.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" class="skills">
-      <h2>Skills</h2>
-      <div class="skills-container">
-        <div class="skills-block">
-          <div class="languages">
-            <h4>Technical Languages</h4>
-            <div class="icon-grid">
-              <div class="icon-with-text">
-                <img src="https://go-skill-icons.vercel.app/api/icons?i=cpp" />
-                <span>C++</span>
-              </div>
-              <div class="icon-with-text">
-                <img
-                  src="https://go-skill-icons.vercel.app/api/icons?i=python"
-                />
-                <span>Python</span>
-              </div>
-               <div class="icon-with-text">
-                <img src="https://go-skill-icons.vercel.app/api/icons?i=js" />
-                <span>JavaScript</span>
-              </div>
-              <div class="icon-with-text">
-                <img src="https://go-skill-icons.vercel.app/api/icons?i=php" />
-                <span>PHP</span>
-              </div>
-              <div class="icon-with-text">
-                <img src="https://go-skill-icons.vercel.app/api/icons?i=cs" />
-                <span>C#</span>
-              </div>
-            </div>
-          </div>
-          <div class="backend-databases">
-            <h4>Backend & Databases</h4>
-            <div class="icon-grid">
-              <div class="icon-with-text">
-                <img
-                  src="https://go-skill-icons.vercel.app/api/icons?i=laravel"
-                />
-                <span>Laravel</span>
-              </div>
-              <div class="icon-with-text">
-                <img
-                  src="https://go-skill-icons.vercel.app/api/icons?i=dotnet"
-                />
-                <span>.NET</span>
-              </div>
-              <div class="icon-with-text">
-                <img
-                  src="https://go-skill-icons.vercel.app/api/icons?i=mysql"
-                />
-                <span>MySQL</span>
-              </div>
-              <div class="icon-with-text">
-                <img
-                  src="https://go-skill-icons.vercel.app/api/icons?i=sqlserver"
-                />
-                <span>SQL Server</span>
+        <div class="skills-container">
+          <div class="skills-block card card-shine">
+            <div class="languages skill-group">
+              <h4>Technical Languages</h4>
+              <div class="icon-grid">
+                <div class="skill-item" data-stagger>
+                  <div class="skill-icon-wrap">
+                    <iconify-icon icon="simple-icons:cplusplus"></iconify-icon>
+                  </div>
+                  <span>C++</span>
+                </div>
+                <div class="skill-item" data-stagger>
+                  <div class="skill-icon-wrap">
+                    <iconify-icon icon="simple-icons:python"></iconify-icon>
+                  </div>
+                  <span>Python</span>
+                </div>
+                <div class="skill-item" data-stagger>
+                  <div class="skill-icon-wrap">
+                    <iconify-icon icon="simple-icons:javascript"></iconify-icon>
+                  </div>
+                  <span>JavaScript</span>
+                </div>
+                <div class="skill-item" data-stagger>
+                  <div class="skill-icon-wrap">
+                    <iconify-icon icon="simple-icons:php"></iconify-icon>
+                  </div>
+                  <span>PHP</span>
+                </div>
+                <div class="skill-item" data-stagger>
+                  <div class="skill-icon-wrap">
+                    <iconify-icon icon="simple-icons:csharp"></iconify-icon>
+                  </div>
+                  <span>C#</span>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="frontend">
-            <h4>Frontend</h4>
-            <div class="icon-grid">
-              <div class="icon-with-text">
-                <img src="https://go-skill-icons.vercel.app/api/icons?i=html" />
-                <span>HTML</span>
+            <div class="backend-databases skill-group">
+              <h4>Backend & Databases</h4>
+              <div class="icon-grid">
+                <div class="skill-item" data-stagger>
+                  <div class="skill-icon-wrap">
+                    <iconify-icon icon="simple-icons:laravel"></iconify-icon>
+                  </div>
+                  <span>Laravel</span>
+                </div>
+                <div class="skill-item" data-stagger>
+                  <div class="skill-icon-wrap">
+                    <iconify-icon icon="simple-icons:dotnet"></iconify-icon>
+                  </div>
+                  <span>.NET</span>
+                </div>
+                <div class="skill-item" data-stagger>
+                  <div class="skill-icon-wrap">
+                    <iconify-icon icon="simple-icons:mysql"></iconify-icon>
+                  </div>
+                  <span>MySQL</span>
+                </div>
+                <div class="skill-item" data-stagger>
+                  <div class="skill-icon-wrap">
+                    <iconify-icon
+                      icon="simple-icons:microsoftsqlserver"
+                    ></iconify-icon>
+                  </div>
+                  <span>SQL Server</span>
+                </div>
               </div>
-              <div class="icon-with-text">
-                <img src="https://go-skill-icons.vercel.app/api/icons?i=css" />
-                <span>CSS</span>
+            </div>
+            <div class="frontend skill-group">
+              <h4>Frontend</h4>
+              <div class="icon-grid">
+                <div class="skill-item" data-stagger>
+                  <div class="skill-icon-wrap">
+                    <iconify-icon icon="simple-icons:html5"></iconify-icon>
+                  </div>
+                  <span>HTML</span>
+                </div>
+                <div class="skill-item" data-stagger>
+                  <div class="skill-icon-wrap">
+                    <iconify-icon icon="simple-icons:css3"></iconify-icon>
+                  </div>
+                  <span>CSS</span>
+                </div>
+                <div class="skill-item" data-stagger>
+                  <div class="skill-icon-wrap">
+                    <iconify-icon
+                      icon="simple-icons:tailwindcss"
+                    ></iconify-icon>
+                  </div>
+                  <span>Tailwind</span>
+                </div>
+                <div class="skill-item" data-stagger>
+                  <div class="skill-icon-wrap">
+                    <iconify-icon icon="simple-icons:bootstrap"></iconify-icon>
+                  </div>
+                  <span>Bootstrap</span>
+                </div>
               </div>
-              <div class="icon-with-text">
-                <img
-                  src="https://go-skill-icons.vercel.app/api/icons?i=tailwind"
-                />
-                <span>Tailwind CSS</span>
-              </div>
-              <div class="icon-with-text">
-                <img
-                  src="https://go-skill-icons.vercel.app/api/icons?i=bootstrap"
-                />
-                <span>Bootstrap</span>
+            </div>
+            <div class="tools skill-group">
+              <h4>Tools</h4>
+              <div class="icon-grid">
+                <div class="skill-item" data-stagger>
+                  <div class="skill-icon-wrap">
+                    <iconify-icon icon="simple-icons:git"></iconify-icon>
+                  </div>
+                  <span>Git</span>
+                </div>
+                <div class="skill-item" data-stagger>
+                  <div class="skill-icon-wrap">
+                    <iconify-icon icon="simple-icons:github"></iconify-icon>
+                  </div>
+                  <span>GitHub</span>
+                </div>
+                <div class="skill-item" data-stagger>
+                  <div class="skill-icon-wrap">
+                    <iconify-icon icon="simple-icons:postman"></iconify-icon>
+                  </div>
+                  <span>Postman</span>
+                </div>
+                <div class="skill-item" data-stagger>
+                  <div class="skill-icon-wrap">
+                    <iconify-icon icon="simple-icons:swagger"></iconify-icon>
+                  </div>
+                  <span>Swagger</span>
+                </div>
+                <div class="skill-item" data-stagger>
+                  <div class="skill-icon-wrap">
+                    <iconify-icon
+                      icon="simple-icons:visualstudiocode"
+                    ></iconify-icon>
+                  </div>
+                  <span>VS Code</span>
+                </div>
+                <div class="skill-item" data-stagger>
+                  <div class="skill-icon-wrap">
+                    <iconify-icon
+                      icon="simple-icons:visualstudio"
+                    ></iconify-icon>
+                  </div>
+                  <span>VS</span>
+                </div>
               </div>
             </div>
           </div>
-          <div class="tools">
-            <h4>Tools</h4>
-            <div class="icon-grid">
-              <div class="icon-with-text">
-                <img src="https://go-skill-icons.vercel.app/api/icons?i=git" />
-                <span>Git</span>
-              </div>
-              <div class="icon-with-text">
-                <img
-                  src="https://go-skill-icons.vercel.app/api/icons?i=github"
-                />
-                <span>GitHub</span>
-              </div>
-              <div class="icon-with-text">
-                <img
-                  src="https://go-skill-icons.vercel.app/api/icons?i=postman"
-                />
-                <span>Postman</span>
-              </div>
-              <div class="icon-with-text">
-                <img
-                  src="https://go-skill-icons.vercel.app/api/icons?i=swagger"
-                />
-                <span>Swagger</span>
-              </div>
-              <div class="icon-with-text">
-                <img
-                  src="https://go-skill-icons.vercel.app/api/icons?i=vscode"
-                />
-                <span>VS Code</span>
-              </div>
-              <div class="icon-with-text">
-                <img
-                  src="https://go-skill-icons.vercel.app/api/icons?i=visualstudio"
-                />
-                <span>Visual Studio</span>
-              </div>
+
+          <div class="other-skills card">
+            <h4>Technical Expertise</h4>
+            <ul class="tag-list">
+              <li>Full Stack Web Development</li>
+              <li>API Design & Development</li>
+              <li>RESTful API Development</li>
+              <li>Database Design & Optimization</li>
+              <li>Responsive Web Design</li>
+              <li>Version Control with Git</li>
+              <li>Agile Development Practices</li>
+              <li>Problem Solving & Debugging</li>
+              <li>Software Architecture & Design Patterns</li>
+            </ul>
+            <h4>Soft Skills</h4>
+            <ul class="tag-list">
+              <li>Problem Solving</li>
+              <li>Attention to Detail</li>
+              <li>Self-Motivation</li>
+              <li>Effective Communication</li>
+              <li>Team Collaboration</li>
+              <li>Time Management</li>
+              <li>Adaptability</li>
+              <li>Critical Thinking</li>
+              <li>Continuous Learning</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="services section">
+        <div class="section-header">
+          <span class="section-num">04</span>
+          <h2>Services</h2>
+        </div>
+        <div class="services-container">
+          <article class="service-card card">
+            <div class="service-icon">
+              <iconify-icon icon="solar:code-square-linear"></iconify-icon>
             </div>
-          </div>
+            <h4>Custom Web Development</h4>
+            <p>
+              I build custom websites and web applications tailored to your
+              unique business needs. From concept to deployment, I deliver
+              clean, performant solutions that help your business grow online.
+            </p>
+          </article>
+          <article class="service-card card">
+            <div class="service-icon">
+              <iconify-icon icon="solar:server-linear"></iconify-icon>
+            </div>
+            <h4>API Development & Integration</h4>
+            <p>
+              Need to connect your systems or build new functionality? I develop
+              robust APIs and integrate third-party services to streamline your
+              business processes and enhance your application's capabilities.
+            </p>
+          </article>
+          <article class="service-card card">
+            <div class="service-icon">
+              <iconify-icon icon="solar:settings-linear"></iconify-icon>
+            </div>
+            <h4>Maintenance & Optimization</h4>
+            <p>
+              Keep your application running smoothly with ongoing maintenance,
+              performance improvements, and feature enhancements. I help you get
+              the most out of your existing systems without starting from
+              scratch.
+            </p>
+          </article>
         </div>
-        <div class="other-skills">
-          <h4>Technical Expertise</h4>
-          <ul>
-            <li>Full Stack Web Development</li>
-            <li>API Design & Development</li>
-            <li>RESTful API Development</li>
-            <li>Database Design & Optimization</li>
-            <li>Responsive Web Design</li>
-            <li>Version Control with Git</li>
-            <li>Agile Development Practices</li>
-            <li>Problem Solving & Debugging</li>
-            <li>Software Architecture & Design Patterns</li>
-          </ul>
-          <h4>Soft Skills</h4>
-          <ul>
-            <li>Problem Solving</li>
-            <li>Attention to Detail</li>
-            <li>Self-Motivation</li>
-            <li>Effective Communication</li>
-            <li>Team Collaboration</li>
-            <li>Time Management</li>
-            <li>Adaptability</li>
-            <li>Critical Thinking</li>
-            <li>Continuous Learning</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="services" class="services">
-      <h2>Services</h2>
-      <div class="services-container">
-        <div class="service-card">
-          <div class="service-icon">
-            <iconify-icon icon="mdi:code-braces"></iconify-icon>
-          </div>
-          <h4>Custom Web Development</h4>
-          <p>
-            I build custom websites and web applications tailored to your unique
-            business needs. From concept to deployment, I deliver clean,
-            performant solutions that help your business grow online.
-          </p>
+      <section class="projects section" id="projects">
+        <div class="section-header">
+          <span class="section-num">05</span>
+          <h2>Projects</h2>
         </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <iconify-icon icon="mdi:api"></iconify-icon>
-          </div>
-          <h4>API Development & Integration</h4>
-          <p>
-            Need to connect your systems or build new functionality? I develop
-            robust APIs and integrate third-party services to streamline your
-            business processes and enhance your application's capabilities.
-          </p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <iconify-icon icon="mdi:application-cog"></iconify-icon>
-          </div>
-          <h4>Maintenance & Optimization</h4>
-          <p>
-            Keep your application running smoothly with ongoing maintenance,
-            performance improvements, and feature enhancements. I help you get
-            the most out of your existing systems without starting from scratch.
-          </p>
-        </div>
-      </div>
-    </section>
+        <div class="boxes">
+          <article class="box card">
+            <div class="box-header">
+              <h4>Hogwarts for Programming</h4>
+              <span class="box-num">01</span>
+            </div>
+            <img
+              src="images/proj1.png"
+              alt="Hogwarts for programming"
+              class="proj-image"
+            />
+            <p class="proj-description">
+              A competitive learning platform where students progress by solving
+              coding challenges. Features user authentication, real-time scoring
+              system, house-based leaderboards, and persistent data management.
+            </p>
+            <ul class="tag-list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>PHP</li>
+              <li>MySQL</li>
+            </ul>
+            <a
+              href="https://github.com/Mostafa2115/Hogwarts-for-programming"
+              class="box-link"
+              target="_blank"
+              rel="noopener"
+            >
+              View Source
+              <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+            </a>
+          </article>
 
-    <section class="projects" id="projects">
-      <h2>Projects</h2>
-      <div class="boxes">
-        <div class="box">
-          <h4>Hogwarts for programming</h4>
-          <img
-            src="images/proj1.png"
-            alt="Hogwarts-for-programming"
-            class="proj-image"
-          />
-          <p class="proj-description">
-            A competitive learning platform where students progress by solving
-            coding challenges. Features user authentication, real-time scoring
-            system, house-based leaderboards, and persistent data management.
-            Built with responsive design for seamless learning experience.
-          </p>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>PHP</li>
-            <li>MySQL</li>
-          </ul>
-          <a href="https://github.com/Mostafa2115/Hogwarts-for-programming"
-            >Source Code</a
+          <article class="box card">
+            <div class="box-header">
+              <h4>Balloon Game</h4>
+              <span class="box-num">02</span>
+            </div>
+            <img src="images/proj2.png" alt="Balloon Game" class="proj-image" />
+            <p class="proj-description">
+              A 2D arcade-style game demonstrating game mechanics and real-time
+              collision detection. Features interactive gameplay with scoring
+              system, power-ups, and difficulty progression.
+            </p>
+            <ul class="tag-list">
+              <li>Java</li>
+              <li>Java Swing</li>
+              <li>OOP</li>
+            </ul>
+            <a
+              href="https://github.com/Mostafa2115/Balloon-Game"
+              class="box-link"
+              target="_blank"
+              rel="noopener"
+            >
+              View Source
+              <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+            </a>
+          </article>
+
+          <article class="box card">
+            <div class="box-header">
+              <h4>E-commerce Platform</h4>
+              <span class="box-num">03</span>
+            </div>
+            <img
+              src="images/proj3.png"
+              alt="E-commerce Platform"
+              class="proj-image"
+            />
+            <p class="proj-description">
+              A full-featured e-commerce platform with product management,
+              shopping cart, secure checkout, and role-based access control.
+              Includes seller dashboard, admin panel, and real-time inventory
+              tracking.
+            </p>
+            <ul class="tag-list">
+              <li>HTML</li>
+              <li>PHP</li>
+              <li>Laravel</li>
+              <li>Supabase</li>
+              <li>Tailwind CSS</li>
+            </ul>
+            <a
+              href="https://github.com/Mostafa2115/E-Commerce-Platform"
+              class="box-link"
+              target="_blank"
+              rel="noopener"
+            >
+              View Source
+              <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+            </a>
+          </article>
+
+          <article class="box card">
+            <div class="box-header">
+              <h4>Task Tracker</h4>
+              <span class="box-num">04</span>
+            </div>
+            <img src="images/proj5.png" alt="Task Tracker" class="proj-image" />
+            <p class="proj-description">
+              A productivity web application with CRUD operations for task
+              management. Features include user authentication, task filtering,
+              status tracking, and priority levels.
+            </p>
+            <ul class="tag-list">
+              <li>HTML</li>
+              <li>PHP</li>
+              <li>Laravel</li>
+              <li>MySQL</li>
+              <li>Tailwind CSS</li>
+            </ul>
+            <a
+              href="https://github.com/Mostafa2115/Task-Tracker"
+              class="box-link"
+              target="_blank"
+              rel="noopener"
+            >
+              View Source
+              <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <div class="section-header">
+          <span class="section-num">06</span>
+          <h2>Contact</h2>
+        </div>
+        <div class="contact-container">
+          <form
+            class="card"
+            action="https://formsubmit.co/mostafaamahmoud075@gmail.com"
+            method="POST"
           >
-        </div>
-        <div class="box">
-          <h4>Balloon Game</h4>
-          <img src="images/proj2.png" alt="Balloon-Game" class="proj-image" />
-          <p class="proj-description">
-            A 2D arcade-style game demonstrating game mechanics and real-time
-            collision detection. Features interactive gameplay with scoring
-            system, power-ups, and difficulty progression. Implemented clean OOP
-            architecture for maintainability and scalability.
-          </p>
-          <ul>
-            <li>Java</li>
-            <li>Java Swing</li>
-            <li>OOP</li>
-          </ul>
-          <a href="https://github.com/Mostafa2115/Balloon-Game">Source Code</a>
-        </div>
-        <div class="box">
-          <h4>E-commerce Platform</h4>
-          <img
-            src="images/proj3.png"
-            alt="E-commerce-Platform"
-            class="proj-image"
-          />
-          <p class="proj-description">
-            A full-featured e-commerce platform with product management,
-            shopping cart, secure checkout, and role-based access control.
-            Includes seller dashboard, admin panel, and real-time inventory
-            tracking. Delivered with responsive design and database
-            optimization.
-          </p>
-          <ul>
-            <li>HTML</li>
-            <li>PHP</li>
-            <li>Laravel</li>
-            <li>Supabase</li>
-            <li>Tailwind CSS</li>
-          </ul>
-          <a href="https://github.com/Mostafa2115/E-Commerce-Platform"
-            >Source Code</a
-          >
-        </div>
-        <div class="box">
-          <h4>Task Tracker</h4>
-          <img src="images/proj5.png" alt="Task-Tracker" class="proj-image" />
-          <p class="proj-description">
-            A productivity web application with CRUD operations for task
-            management. Features include user authentication, task filtering,
-            status tracking, and priority levels. Built with clean UI/UX and
-            optimized database queries for fast performance.
-          </p>
-          <ul>
-            <li>HTML</li>
-            <li>PHP</li>
-            <li>Laravel</li>
-            <li>MySQL</li>
-            <li>Tailwind CSS</li>
-          </ul>
-          <a href="https://github.com/Mostafa2115/Task-Tracker">Source Code</a>
-        </div>
-      </div>
-    </section>
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <input type="text" name="subject" placeholder="Subject" required />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <button type="submit" class="btn btn-primary submit">
+              Send Message
+            </button>
+          </form>
 
-    <section class="contact" id="contact">
-      <h2>Let's Contact</h2>
-      <div class="contact-container">
-        <form
-          action="https://formsubmit.co/mostafaamahmoud075@gmail.com"
-          method="POST"
-        >
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <input type="text" name="subject" placeholder="Subject" required />
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            required
-          ></textarea>
-          <button type="submit" class="submit">Send</button>
-        </form>
-        <div class="contact-info">
-          <div class="info-item">
-            <iconify-icon icon="mdi:email" class="info-icon"></iconify-icon>
-            <span>mostafaamahmoud075@gmail.com</span>
-          </div>
-          <div class="info-item">
-            <iconify-icon icon="mdi:phone" class="info-icon"></iconify-icon>
-            <span>+20 114 701 7170</span>
-          </div>
-          <div class="info-item">
-            <iconify-icon
-              icon="mdi:map-marker"
-              class="info-icon"
-            ></iconify-icon>
-            <span>Zagazig, Egypt</span>
-          </div>
-          <div class="contact-social">
-            <a href="mailto:mostafaamahmoud075@gmail.com" aria-label="Email">
-              <iconify-icon icon="mdi:email" class="social-icon"></iconify-icon>
-            </a>
-            <a
-              href="https://github.com/Mostafa2115"
-              aria-label="GitHub"
-              target="_blank"
-              rel="noopener"
-            >
+          <div class="contact-info card">
+            <div class="info-item">
+              <iconify-icon icon="mdi:email" class="info-icon"></iconify-icon>
+              <span>mostafaamahmoud075@gmail.com</span>
+            </div>
+            <div class="info-item">
+              <iconify-icon icon="mdi:phone" class="info-icon"></iconify-icon>
+              <span>+20 114 701 7170</span>
+            </div>
+            <div class="info-item">
               <iconify-icon
-                icon="mdi:github"
-                class="social-icon"
+                icon="mdi:map-marker"
+                class="info-icon"
               ></iconify-icon>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/mostafa-mahmoud-5i"
-              aria-label="LinkedIn"
-              target="_blank"
-              rel="noopener"
-            >
-              <iconify-icon
-                icon="mdi:linkedin"
-                class="social-icon"
-              ></iconify-icon>
-            </a>
-            <a
-              href="https://www.facebook.com/profile.php?id=100052563858061&mibextid=ZbWKwL"
-              aria-label="Facebook"
-              target="_blank"
-              rel="noopener"
-            >
-              <iconify-icon
-                icon="mdi:facebook"
-                class="social-icon"
-              ></iconify-icon>
-            </a>
+              <span>Zagazig, Egypt</span>
+            </div>
+            <div class="contact-social">
+              <a href="mailto:mostafaamahmoud075@gmail.com" aria-label="Email">
+                <iconify-icon
+                  icon="mdi:email"
+                  class="social-icon"
+                ></iconify-icon>
+              </a>
+              <a
+                href="https://github.com/Mostafa2115"
+                aria-label="GitHub"
+                target="_blank"
+                rel="noopener"
+              >
+                <iconify-icon
+                  icon="mdi:github"
+                  class="social-icon"
+                ></iconify-icon>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/mostafa-mahmoud-5i"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener"
+              >
+                <iconify-icon
+                  icon="mdi:linkedin"
+                  class="social-icon"
+                ></iconify-icon>
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100052563858061&mibextid=ZbWKwL"
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener"
+              >
+                <iconify-icon
+                  icon="mdi:facebook"
+                  class="social-icon"
+                ></iconify-icon>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <footer>
       <div class="footer-inner">
-        <div class="footer-left">
-          <p>© 2025 Mostafa Mahmoud. All rights reserved.</p>
-        </div>
+        <p>© 2026 Mostafa Mahmoud. All rights reserved.</p>
       </div>
-      <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
+      <a href="#top" class="back-to-top" aria-label="Back to top">
+        <iconify-icon icon="solar:arrow-up-linear"></iconify-icon>
+      </a>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
