@@ -1,25 +1,74 @@
-let __particlesTheme = null;
+let __particlesKey = null;
+
+function isMobileViewport() {
+  return window.matchMedia("(max-width: 768px)").matches;
+}
+
+function isSmallMobileViewport() {
+  return window.matchMedia("(max-width: 480px)").matches;
+}
+
+function getParticleCount() {
+  if (isSmallMobileViewport()) return 72;
+  if (isMobileViewport()) return 80;
+  return 95;
+}
 
 async function loadParticlesForTheme(theme) {
-  const next = theme === "light" ? "light" : "dark";
-  if (__particlesTheme === next) return;
-  __particlesTheme = next;
+  const mobile = isMobileViewport();
+  const small = isSmallMobileViewport();
+  const next = `${theme}-${small ? "sm" : mobile ? "md" : "lg"}`;
+  if (__particlesKey === next) return;
+  __particlesKey = next;
 
-  const color = theme === "light" ? "#000000" : "#ffffff";
+  const colors =
+    theme === "light"
+      ? ["#000000", "#171717", "#404040", "#737373", "#ffffff"]
+      : ["#ffffff", "#e5e5e5", "#a3a3a3", "#d4d4d4", "#fafafa"];
+
+  const linkColor =
+    theme === "light" ? "rgba(0, 0, 0, 0.18)" : "rgba(255, 255, 255, 0.16)";
 
   try {
     await tsParticles.load("tsparticles", {
       particles: {
-        number: { value: 40 },
-        size: { value: { min: 0.5, max: 3.2 } },
-        move: { enable: true, speed: 0.15 },
-        opacity: { value: 0.5 },
-        color: { value: color },
+        number: { value: getParticleCount() },
+        size: { value: { min: 0.3, max: 2.6 } },
+        move: { enable: true, speed: 0.18, direction: "none", random: true },
+        opacity: { value: { min: 0.15, max: 0.8 } },
+        color: { value: colors },
+        links: {
+          enable: true,
+          distance: 130,
+          color: linkColor,
+          opacity: 0.35,
+          width: 1,
+        },
+      },
+      interactivity: {
+        events: {
+          onHover: { enable: true, mode: "grab" },
+        },
+        modes: {
+          grab: { distance: 140, links: { opacity: 0.5 } },
+        },
       },
       background: { color: "transparent" },
     });
   } catch {}
 }
+
+let __particlesResizeTimer;
+window.addEventListener(
+  "resize",
+  () => {
+    clearTimeout(__particlesResizeTimer);
+    __particlesResizeTimer = setTimeout(() => {
+      loadParticlesForTheme(document.body.getAttribute("data-theme") || "dark");
+    }, 200);
+  },
+  { passive: true },
+);
 
 function setTheme(nextTheme) {
   const theme = nextTheme === "light" ? "light" : "dark";
@@ -55,7 +104,6 @@ if (themeToggle) themeToggle.addEventListener("click", toggleTheme);
 if (themeToggleDesktop)
   themeToggleDesktop.addEventListener("click", toggleTheme);
 
-/* Typing effect */
 const typeTarget = document.getElementById("type-target");
 if (typeTarget) {
   const texts = [
@@ -124,7 +172,6 @@ function onScroll() {
 window.addEventListener("scroll", onScroll, { passive: true });
 onScroll();
 
-/* Active nav link */
 const navLinks = document.querySelectorAll("[data-nav]");
 
 function setActiveNav(id) {
@@ -331,3 +378,46 @@ document.querySelectorAll(".box").forEach((card) => {
     card.style.transform = "";
   });
 });
+
+(function initPageLoader() {
+  const loader = document.getElementById("pageLoader");
+  if (!loader) return;
+
+  const bar = loader.querySelector(".page-loader__bar");
+  const barFill = loader.querySelector(".page-loader__bar-fill");
+  const status = loader.querySelector(".page-loader__status");
+  const minDuration = prefersReducedMotion ? 450 : 1500;
+  const start = performance.now();
+  let finished = false;
+  let progress = 0;
+
+  const progressTimer = setInterval(() => {
+    if (finished) return;
+    progress = Math.min(progress + 4 + Math.random() * 10, 94);
+    if (barFill) barFill.style.width = `${progress}%`;
+    if (bar) bar.setAttribute("aria-valuenow", String(Math.round(progress)));
+  }, 100);
+
+  function finishLoader() {
+    if (finished) return;
+    finished = true;
+    clearInterval(progressTimer);
+
+    if (barFill) barFill.style.width = "100%";
+    if (bar) bar.setAttribute("aria-valuenow", "100");
+    if (status) status.textContent = "Ready";
+
+    loader.classList.add("is-done");
+    document.body.classList.remove("is-loading");
+
+    const removeDelay = prefersReducedMotion ? 220 : 580;
+    setTimeout(() => loader.remove(), removeDelay);
+  }
+
+  window.addEventListener("load", () => {
+    const elapsed = performance.now() - start;
+    setTimeout(finishLoader, Math.max(0, minDuration - elapsed));
+  });
+
+  setTimeout(finishLoader, prefersReducedMotion ? 900 : 5000);
+})();
