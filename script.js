@@ -109,7 +109,7 @@ if (typeTarget) {
   const texts = [
     "Full Stack .NET Developer",
     "ASP.NET Core & Laravel",
-    "Backend Engineer",
+    "Software Engineer",
     "Problem Solver",
   ];
 
