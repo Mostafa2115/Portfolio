@@ -132,6 +132,7 @@
       <a href="#services">Services</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
+      <a href="#" id="sidebarViewCv" class="sidebar-view-cv">View CV</a>
     </div>
     <div class="nav-backdrop" id="navBackdrop" hidden></div>
 
@@ -155,6 +156,11 @@
           <li><a href="#services" data-nav>Services</a></li>
           <li><a href="#projects" data-nav>Projects</a></li>
           <li><a href="#contact" data-nav>Contact</a></li>
+          <li>
+            <a href="#" id="navViewCv" class="nav-view-cv" aria-label="View CV">
+              View CV
+            </a>
+          </li>
         </ul>
         <button
           class="theme-toggle"
@@ -792,9 +798,6 @@
                 Open to opportunities
               </p>
               <p class="contact-intro__text">
-                Open to internships, freelance projects, and collaborations in
-                full-stack web development. Experienced with ASP.NET Core,
-                Laravel, RESTful APIs, admin dashboards, and responsive UIs.
                 Feel free to reach out about opportunities, projects, or ideas —
                 let's build something great together.
               </p>
@@ -865,6 +868,45 @@
         </div>
       </section>
     </main>
+
+    <div
+      id="cvModal"
+      class="cv-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="cvModalTitle"
+      hidden
+    >
+      <div
+        class="cv-modal__backdrop"
+        id="cvModalBackdrop"
+        aria-hidden="true"
+      ></div>
+      <div class="cv-modal__panel card">
+        <div class="cv-modal__header">
+          <h3 id="cvModalTitle">Resume</h3>
+          <div class="cv-modal__actions">
+            <button
+              type="button"
+              class="cv-modal__close"
+              id="closeCvModal"
+              aria-label="Close resume"
+            >
+              &times;
+            </button>
+          </div>
+        </div>
+        <div class="cv-modal__body">
+          <iframe
+            id="cvFrame"
+            class="cv-modal__iframe"
+            title="Mostafa Mahmoud — Resume"
+            src="about:blank"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
 
     <footer>
       <div class="footer-inner">
