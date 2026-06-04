@@ -109,6 +109,7 @@ if (typeTarget) {
   const texts = [
     "Full Stack .NET Developer",
     "ASP.NET Core & Laravel",
+    "Backend Enthusiast",
     "Software Engineer",
     "Problem Solver",
   ];
@@ -378,6 +379,39 @@ document.querySelectorAll(".box").forEach((card) => {
     card.style.transform = "";
   });
 });
+
+(function initCvModal() {
+  const CV_URL = "CV/Mostafa-Mahmoud-Resume.pdf";
+  const modal = document.getElementById("cvModal");
+  const openBtn = document.getElementById("openCvModal");
+  const closeBtn = document.getElementById("closeCvModal");
+  const backdrop = document.getElementById("cvModalBackdrop");
+  const frame = document.getElementById("cvFrame");
+
+  if (!modal || !openBtn) return;
+
+  let lastFocus = null;
+
+  function openCvModal() {
+    lastFocus = document.activeElement;
+    window.open(CV_URL, "_blank", "noopener,noreferrer");
+  }
+
+  function closeCvModal() {
+    modal.hidden = true;
+    document.documentElement.style.overflow = "";
+    if (frame) frame.src = "about:blank";
+    lastFocus?.focus?.();
+  }
+
+  openBtn.addEventListener("click", openCvModal);
+  closeBtn?.addEventListener("click", closeCvModal);
+  backdrop?.addEventListener("click", closeCvModal);
+
+  window.addEventListener("keydown", (ev) => {
+    if (ev.key === "Escape" && !modal.hidden) closeCvModal();
+  });
+})();
 
 (function initPageLoader() {
   const loader = document.getElementById("pageLoader");
