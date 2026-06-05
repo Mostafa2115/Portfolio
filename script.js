@@ -383,18 +383,31 @@ document.querySelectorAll(".box").forEach((card) => {
 (function initCvModal() {
   const CV_URL = "CV/Mostafa-Mahmoud-Resume.pdf";
   const modal = document.getElementById("cvModal");
-  const openBtn = document.getElementById("openCvModal");
   const closeBtn = document.getElementById("closeCvModal");
   const backdrop = document.getElementById("cvModalBackdrop");
   const frame = document.getElementById("cvFrame");
 
-  if (!modal || !openBtn) return;
+  // Links/buttons موجودة في الـ HTML
+  const navViewCv = document.getElementById("navViewCv");
+  const sidebarViewCv = document.getElementById("sidebarViewCv");
+  const openBtns = [navViewCv, sidebarViewCv].filter(Boolean);
+
+  if (!modal || openBtns.length === 0) return;
 
   let lastFocus = null;
 
-  function openCvModal() {
+  function openCvModal(e) {
+    // يمنع التنقّل إلى href="#"
+    if (e) e.preventDefault();
+
     lastFocus = document.activeElement;
-    window.open(CV_URL, "_blank", "noopener,noreferrer");
+    modal.hidden = false;
+
+    // افتح الـ PDF داخل الـ iframe
+    if (frame) frame.src = CV_URL;
+
+    // Lock scroll
+    document.documentElement.style.overflow = "hidden";
   }
 
   function closeCvModal() {
@@ -404,7 +417,7 @@ document.querySelectorAll(".box").forEach((card) => {
     lastFocus?.focus?.();
   }
 
-  openBtn.addEventListener("click", openCvModal);
+  openBtns.forEach((btn) => btn.addEventListener("click", openCvModal));
   closeBtn?.addEventListener("click", closeCvModal);
   backdrop?.addEventListener("click", closeCvModal);
 
