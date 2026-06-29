@@ -128,6 +128,7 @@
       <a href="#top">Home</a>
       <a href="#about-me">About</a>
       <a href="#experience">Experience</a>
+      <a href="#volunteering">Volunteering</a>
       <a href="#skills">Skills</a>
       <a href="#services">Services</a>
       <a href="#projects">Projects</a>
@@ -147,21 +148,20 @@
           />
         </div>
       </a>
+      <ul class="nav-links">
+        <li><a href="#top" data-nav>Home</a></li>
+        <li><a href="#about-me" data-nav>About</a></li>
+        <li><a href="#experience" data-nav>Experience</a></li>
+        <li><a href="#volunteering" data-nav>Volunteering</a></li>
+        <li><a href="#skills" data-nav>Skills</a></li>
+        <li><a href="#services" data-nav>Services</a></li>
+        <li><a href="#projects" data-nav>Projects</a></li>
+        <li><a href="#contact" data-nav>Contact</a></li>
+      </ul>
       <div class="nav-actions">
-        <ul class="nav-links">
-          <li><a href="#top" data-nav>Home</a></li>
-          <li><a href="#about-me" data-nav>About</a></li>
-          <li><a href="#experience" data-nav>Experience</a></li>
-          <li><a href="#skills" data-nav>Skills</a></li>
-          <li><a href="#services" data-nav>Services</a></li>
-          <li><a href="#projects" data-nav>Projects</a></li>
-          <li><a href="#contact" data-nav>Contact</a></li>
-          <li>
-            <a href="#" id="navViewCv" class="nav-view-cv" aria-label="View CV">
-              View CV
-            </a>
-          </li>
-        </ul>
+        <a href="#" id="navViewCv" class="nav-view-cv" aria-label="View CV">
+          View CV
+        </a>
         <button
           class="theme-toggle"
           type="button"
@@ -246,15 +246,45 @@
             </div>
           </div>
 
-          <div class="profile-pic" data-tilt>
+          <div class="profile-pic">
             <div class="profile-bg" aria-hidden="true"></div>
-            <div class="profile-ring">
+            <div
+              class="profile-ring"
+              aria-label="Profile with floating tech icons"
+            >
               <img
                 src="images/profile_pic.png"
                 alt="Mostafa Mahmoud"
                 width="400"
                 height="400"
               />
+              <div
+                class="floating-tech-badge badge-continuity text-badge"
+                title="Continuity & Consistency"
+              >
+                <iconify-icon icon="solar:infinity-linear"></iconify-icon>
+                <span>Continuity</span>
+              </div>
+              <div
+                class="floating-tech-badge badge-dotnet icon-badge"
+                title="ASP.NET Core"
+              >
+                <iconify-icon icon="simple-icons:dotnet"></iconify-icon>
+              </div>
+              <div
+                class="floating-tech-badge badge-sql icon-badge"
+                title="SQL Server"
+              >
+                <iconify-icon
+                  icon="simple-icons:microsoftsqlserver"
+                ></iconify-icon>
+              </div>
+              <div
+                class="floating-tech-badge badge-csharp icon-badge"
+                title="C#"
+              >
+                <iconify-icon icon="simple-icons:csharp"></iconify-icon>
+              </div>
             </div>
           </div>
         </div>
@@ -347,60 +377,95 @@
                 Zagazig, Sharqia
               </p>
               <p class="experience-description">
-                Developed backend applications using C# and ASP.NET Core. Built
-                scalable RESTful APIs using .NET Core Web API. Designed
-                responsive frontend components using HTML, CSS, and JavaScript.
-                Applied MVC architecture in building modern web applications.
+                Developed backend services using C# and ASP.NET MVC, building
+                RESTful APIs and implementing database operations with Entity
+                Framework Core and SQL Server. Applied MVC Architecture,
+                Dependency Injection, and SOLID principles. Built responsive
+                interfaces with HTML, CSS, JavaScript, and Bootstrap.
               </p>
             </article>
             <article class="experience-item card">
               <div class="exp-meta">
+                <span class="exp-date">Jul 2025 – Sep 2025</span>
+              </div>
+              <h3>ITI — Information Technology Institute (Zagazig)</h3>
+              <p class="experience-role">Web Development using .NET Trainee</p>
+              <p class="experience-location">
+                <iconify-icon icon="mdi:map-marker"></iconify-icon>
+                Zagazig, Sharqia
+              </p>
+              <p class="experience-description">
+                Developed backend functionality using C# and ASP.NET MVC with
+                Entity Framework data access layers. Built dynamic web
+                applications following MVC design patterns, working with LINQ,
+                database relationships, and CRUD operations across the full
+                software development lifecycle.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="volunteering" class="experience section">
+        <div class="section-header">
+          <span class="section-num">03</span>
+          <h2>Volunteering</h2>
+        </div>
+        <div class="experience-block">
+          <div class="experience-row">
+            <article class="experience-item card">
+              <div class="exp-meta">
                 <span class="exp-date">Jan 2025 – Present</span>
               </div>
-              <h3>ICPC Zagazig Community</h3>
+              <h3>ICPC Zagazig University Community</h3>
               <p class="experience-role">Technical Team Member</p>
               <p class="experience-location">
                 <iconify-icon icon="mdi:map-marker"></iconify-icon>
                 Zagazig, Sharqia
               </p>
               <p class="experience-description">
-                Participated in various competitive programming contests.
-                Enhanced problem-solving skills and learned advanced algorithms
-                and data structures.
-              </p>
-            </article>
-          </div>
-
-          <div class="experience-row">
-            <article class="experience-item card">
-              <div class="exp-meta">
-                <span class="exp-date">Jul 2025 – Sep 2025</span>
-              </div>
-              <h3>Information Technology Institute Zagazig</h3>
-              <p class="experience-role">Full Stack .NET Trainee</p>
-              <p class="experience-location">
-                <iconify-icon icon="mdi:map-marker"></iconify-icon>
-                Zagazig, Sharqia
-              </p>
-              <p class="experience-description">
-                Gained hands-on experience in web development and worked on
-                real-world projects. Learned C#, ASP.NET, and SQL Server.
+                Solved algorithmic and competitive programming problems covering
+                data structures and algorithms. Applied problem-solving
+                techniques to optimize solutions for time and memory constraints
+                through regular contests and training sessions.
               </p>
             </article>
             <article class="experience-item card">
               <div class="exp-meta">
                 <span class="exp-date">Oct 2025 – Present</span>
               </div>
-              <h3>GDG On-Campus Zagazig</h3>
-              <p class="experience-role">Back-End Core Team Member</p>
+              <h3>Zag Eng Family</h3>
+              <p class="experience-role">Back End .NET Member</p>
               <p class="experience-location">
                 <iconify-icon icon="mdi:map-marker"></iconify-icon>
                 Zagazig, Sharqia
               </p>
               <p class="experience-description">
-                Contributed to backend system design and implementation.
-                Collaborated with development teams in building scalable
-                software solutions.
+                Participated in backend development activities and technical
+                workshops focused on .NET technologies. Collaborated on
+                developing and improving backend components and APIs, enhancing
+                skills in ASP.NET Core, database design, and software
+                architecture.
+              </p>
+            </article>
+          </div>
+          <div class="experience-row">
+            <article class="experience-item card">
+              <div class="exp-meta">
+                <span class="exp-date">Oct 2025 – Present</span>
+              </div>
+              <h3>GDG On-Campus Zagazig</h3>
+              <p class="experience-role">Back End Core Team Member</p>
+              <p class="experience-location">
+                <iconify-icon icon="mdi:map-marker"></iconify-icon>
+                Zagazig, Sharqia
+              </p>
+              <p class="experience-description">
+                Contributed to the design and development of backend
+                applications using modern software engineering practices.
+                Collaborated on scalable, maintainable backend solutions and
+                participated in technical discussions, code reviews, and
+                knowledge-sharing sessions.
               </p>
             </article>
           </div>
@@ -409,154 +474,101 @@
 
       <section id="skills" class="skills section">
         <div class="section-header">
-          <span class="section-num">03</span>
+          <span class="section-num">04</span>
           <h2>Skills</h2>
         </div>
-        <div class="skills-container">
-          <div class="skills-block card card-shine">
-            <div class="development-stack skill-group">
-              <h4>Development Stack</h4>
-              <div class="icon-grid">
-                <div class="skill-item" data-stagger>
-                  <div class="skill-icon-wrap">
-                    <iconify-icon icon="simple-icons:csharp"></iconify-icon>
-                  </div>
-                  <span>C#</span>
-                </div>
-                <div class="skill-item" data-stagger>
-                  <div class="skill-icon-wrap">
-                    <iconify-icon icon="simple-icons:dotnet"></iconify-icon>
-                  </div>
-                  <span>.NET</span>
-                </div>
-                <div class="skill-item" data-stagger>
-                  <div class="skill-icon-wrap">
-                    <iconify-icon
-                      icon="simple-icons:microsoftsqlserver"
-                    ></iconify-icon>
-                  </div>
-                  <span>SQL Server</span>
-                </div>
-                <div class="skill-item" data-stagger>
-                  <div class="skill-icon-wrap">
-                    <iconify-icon icon="simple-icons:cplusplus"></iconify-icon>
-                  </div>
-                  <span>C++</span>
-                </div>
-                <div class="skill-item" data-stagger>
-                  <div class="skill-icon-wrap">
-                    <iconify-icon icon="simple-icons:javascript"></iconify-icon>
-                  </div>
-                  <span>JavaScript</span>
-                </div>
-                <div class="skill-item" data-stagger>
-                  <div class="skill-icon-wrap">
-                    <iconify-icon icon="simple-icons:html5"></iconify-icon>
-                  </div>
-                  <span>HTML</span>
-                </div>
-                <div class="skill-item" data-stagger>
-                  <div class="skill-icon-wrap">
-                    <iconify-icon icon="simple-icons:css3"></iconify-icon>
-                  </div>
-                  <span>CSS</span>
-                </div>
-                <div class="skill-item" data-stagger>
-                  <div class="skill-icon-wrap">
-                    <iconify-icon
-                      icon="simple-icons:tailwindcss"
-                    ></iconify-icon>
-                  </div>
-                  <span>Tailwind</span>
-                </div>
-                <div class="skill-item" data-stagger>
-                  <div class="skill-icon-wrap">
-                    <iconify-icon icon="simple-icons:bootstrap"></iconify-icon>
-                  </div>
-                  <span>Bootstrap</span>
-                </div>
+        <div class="skills-container skills-block">
+          <div class="skills-grid">
+            <div class="skills-card card card-shine">
+              <div class="skills-card-icon">
+                <iconify-icon icon="solar:database-linear"></iconify-icon>
+              </div>
+              <h3>Backend &amp; Databases</h3>
+              <p>
+                Developing backend APIs, MVC systems, ORM integrations, and
+                robust database layers with .NET.
+              </p>
+              <div class="skills-list">
+                <span class="skill-item" data-stagger>C#</span>
+                <span class="skill-item" data-stagger>ASP.NET Core</span>
+                <span class="skill-item" data-stagger>RESTful APIs</span>
+                <span class="skill-item" data-stagger>MVC Architecture</span>
+                <span class="skill-item" data-stagger>JWT</span>
+                <span class="skill-item" data-stagger>SQL Server</span>
+                <span class="skill-item" data-stagger
+                  >Entity Framework Core</span
+                >
+                <span class="skill-item" data-stagger>LINQ</span>
               </div>
             </div>
 
-            <div class="tools-and-tech skill-group">
-              <h4>Tools & Technologies</h4>
-              <div class="icon-grid">
-                <div class="skill-item" data-stagger>
-                  <div class="skill-icon-wrap">
-                    <iconify-icon icon="simple-icons:git"></iconify-icon>
-                  </div>
-                  <span>Git</span>
-                </div>
-                <div class="skill-item" data-stagger>
-                  <div class="skill-icon-wrap">
-                    <iconify-icon icon="simple-icons:github"></iconify-icon>
-                  </div>
-                  <span>GitHub</span>
-                </div>
-                <div class="skill-item" data-stagger>
-                  <div class="skill-icon-wrap">
-                    <iconify-icon icon="simple-icons:postman"></iconify-icon>
-                  </div>
-                  <span>Postman</span>
-                </div>
-                <div class="skill-item" data-stagger>
-                  <div class="skill-icon-wrap">
-                    <iconify-icon icon="simple-icons:swagger"></iconify-icon>
-                  </div>
-                  <span>Swagger</span>
-                </div>
-                <div class="skill-item" data-stagger>
-                  <div class="skill-icon-wrap">
-                    <iconify-icon
-                      icon="simple-icons:visualstudiocode"
-                    ></iconify-icon>
-                  </div>
-                  <span>VS Code</span>
-                </div>
-                <div class="skill-item" data-stagger>
-                  <div class="skill-icon-wrap">
-                    <iconify-icon
-                      icon="simple-icons:visualstudio"
-                    ></iconify-icon>
-                  </div>
-                  <span>VS</span>
-                </div>
+            <div class="skills-card card card-shine">
+              <div class="skills-card-icon">
+                <iconify-icon icon="solar:monitor-linear"></iconify-icon>
+              </div>
+              <h3>Frontend Development</h3>
+              <p>
+                Building highly responsive web layouts and client-side logic
+                using modern CSS frameworks and JavaScript.
+              </p>
+              <div class="skills-list">
+                <span class="skill-item" data-stagger>HTML5</span>
+                <span class="skill-item" data-stagger>CSS3</span>
+                <span class="skill-item" data-stagger>JavaScript</span>
+                <span class="skill-item" data-stagger>Bootstrap</span>
+                <span class="skill-item" data-stagger>Tailwind CSS</span>
               </div>
             </div>
-          </div>
 
-          <div class="other-skills card">
-            <h4>Technical Expertise</h4>
-            <ul class="tag-list">
-              <li>Full Stack Web Development</li>
-              <li>API Design & Development</li>
-              <li>RESTful API Development</li>
-              <li>Database Design & Optimization</li>
-              <li>Responsive Web Design</li>
-              <li>Version Control with Git</li>
-              <li>Agile Development Practices</li>
-              <li>Problem Solving & Debugging</li>
-              <li>Software Architecture & Design Patterns</li>
-            </ul>
-            <h4>Soft Skills</h4>
-            <ul class="tag-list">
-              <li>Problem Solving</li>
-              <li>Attention to Detail</li>
-              <li>Self-Motivation</li>
-              <li>Effective Communication</li>
-              <li>Team Collaboration</li>
-              <li>Time Management</li>
-              <li>Adaptability</li>
-              <li>Critical Thinking</li>
-              <li>Continuous Learning</li>
-            </ul>
+            <div class="skills-card card card-shine">
+              <div class="skills-card-icon">
+                <iconify-icon icon="solar:settings-linear"></iconify-icon>
+              </div>
+              <h3>Tools &amp; Concepts</h3>
+              <p>
+                Utilizing source control, development environments, API testing
+                tools, design patterns, and algorithms.
+              </p>
+              <div class="skills-list">
+                <span class="skill-item" data-stagger>Git & GitHub</span>
+                <span class="skill-item" data-stagger>Visual Studio</span>
+                <span class="skill-item" data-stagger>Swagger</span>
+                <span class="skill-item" data-stagger>Postman</span>
+                <span class="skill-item" data-stagger>Clean Architecture</span>
+                <span class="skill-item" data-stagger>OOP</span>
+                <span class="skill-item" data-stagger>SOLID</span>
+                <span class="skill-item" data-stagger>Problem Solving</span>
+                <span class="skill-item" data-stagger>Data Structures</span>
+              </div>
+            </div>
+
+            <div class="skills-card card card-shine">
+              <div class="skills-card-icon">
+                <iconify-icon
+                  icon="solar:users-group-rounded-linear"
+                ></iconify-icon>
+              </div>
+              <h3>Soft Skills</h3>
+              <p>
+                Collaborating effectively in teams, communicating clearly,
+                managing time, and adapting to new challenges.
+              </p>
+              <div class="skills-list">
+                <span class="skill-item" data-stagger>Teamwork</span>
+                <span class="skill-item" data-stagger>Communication</span>
+                <span class="skill-item" data-stagger>Adaptability</span>
+                <span class="skill-item" data-stagger>Critical Thinking</span>
+                <span class="skill-item" data-stagger>Time Management</span>
+                <span class="skill-item" data-stagger>Continuous Learning</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="services" class="services section">
         <div class="section-header">
-          <span class="section-num">04</span>
+          <span class="section-num">05</span>
           <h2>Services</h2>
         </div>
         <div class="services-container">
@@ -599,34 +611,36 @@
 
       <section class="projects section" id="projects">
         <div class="section-header">
-          <span class="section-num">05</span>
+          <span class="section-num">06</span>
           <h2>Projects</h2>
         </div>
         <div class="boxes">
           <article class="box card">
             <div class="box-header">
-              <h4>Hogwarts for Programming</h4>
+              <h4>Matamak</h4>
               <span class="box-num">01</span>
             </div>
             <img
-              src="images/proj1.png"
-              alt="Hogwarts for programming"
+              src="images/matamak.png"
+              alt="Matamak — Restaurant Ordering System"
               class="proj-image"
             />
             <p class="proj-description">
-              A competitive learning platform where students progress by solving
-              coding challenges. Features user authentication, real-time scoring
-              system, house-based leaderboards, and persistent data management.
+              DEPI graduation project — a real-time restaurant ordering and
+              management system with role-based dashboards for customers,
+              cashiers, and admins. Built with Angular and ASP.NET Core Web API
+              using Clean Architecture, SignalR, JWT auth, and SQL Server.
             </p>
             <ul class="tag-list">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>PHP</li>
-              <li>MySQL</li>
-              <li>JavaScript</li>
+              <li>ASP.NET Core</li>
+              <li>Angular</li>
+              <li>SignalR</li>
+              <li>JWT Auth</li>
+              <li>SQL Server</li>
+              <li>Clean Architecture</li>
             </ul>
             <a
-              href="https://github.com/Mostafa2115/Hogwarts-for-programming"
+              href="https://github.com/Mostafa2115/Matamak"
               class="box-link"
               target="_blank"
               rel="noopener"
@@ -635,11 +649,118 @@
               <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
             </a>
           </article>
-
+          <article class="box card">
+            <div class="box-header">
+              <h4>Personal Portfolio</h4>
+              <span class="box-num">02</span>
+            </div>
+            <img
+              src="images/proj3.png"
+              alt="Personal Portfolio"
+              class="proj-image"
+            />
+            <p class="proj-description">
+              A modern, interactive developer portfolio website featuring a
+              cosmic theme with glassmorphic cards, staggered load animations,
+              floating 3D interactive badges, and a custom light/dark theme
+              switch.
+            </p>
+            <ul class="tag-list">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>Responsive Design</li>
+            </ul>
+            <div class="project-links">
+              <a
+                href="https://github.com/Mostafa2115/Portfolio"
+                class="box-link"
+                target="_blank"
+                rel="noopener"
+              >
+                View Source
+                <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+              </a>
+              <a
+                href="https://mostafaamahmoud.vercel.app/"
+                class="box-link"
+                target="_blank"
+                rel="noopener"
+              >
+                Live Demo
+                <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+              </a>
+            </div>
+          </article>
+          <article class="box card">
+            <div class="box-header">
+              <h4>TASWOQ</h4>
+              <span class="box-num">03</span>
+            </div>
+            <img
+              src="images/taswoq.png"
+              alt="TASWOQ E-commerce Platform"
+              class="proj-image"
+            />
+            <p class="proj-description">
+              A modern, fully-featured e-commerce platform designed for seamless
+              online shopping. Features secure JWT authentication, product
+              catalog with advanced search and filtering, and shopping cart
+              management.
+            </p>
+            <ul class="tag-list">
+              <li>ASP.NET Core MVC</li>
+              <li>SQL Server</li>
+              <li>EF Core</li>
+              <li>Bootstrap</li>
+            </ul>
+            <a
+              href="https://github.com/Mostafa2115/TASWOQ"
+              class="box-link"
+              target="_blank"
+              rel="noopener"
+            >
+              View Source
+              <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+            </a>
+          </article>
+          <article class="box card">
+            <div class="box-header">
+              <h4>Taxi Trip Price Prediction</h4>
+              <span class="box-num">04</span>
+            </div>
+            <img
+              src="images/taxi.png"
+              alt="Taxi Trip Price Prediction"
+              class="proj-image"
+            />
+            <p class="proj-description">
+              A machine learning project focused on predicting taxi trip fares.
+              Implements data preprocessing, feature engineering, and regression
+              model training to forecast trip prices with high accuracy.
+            </p>
+            <ul class="tag-list">
+              <li>Python</li>
+              <li>Machine Learning</li>
+              <li>Scikit-Learn</li>
+              <li>Pandas</li>
+              <li>NumPy</li>
+              <li>Data Analysis</li>
+            </ul>
+            <a
+              href="https://github.com/Mostafa2115/Taxi-Trip-Price-Prediction"
+              class="box-link"
+              target="_blank"
+              rel="noopener"
+            >
+              View Source
+              <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+            </a>
+          </article>
           <article class="box card">
             <div class="box-header">
               <h4>Balloon Game</h4>
-              <span class="box-num">02</span>
+              <span class="box-num">05</span>
             </div>
             <img src="images/proj2.png" alt="Balloon Game" class="proj-image" />
             <p class="proj-description">
@@ -662,73 +783,12 @@
               <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
             </a>
           </article>
-
-          <article class="box card">
-            <div class="box-header">
-              <h4>E-commerce Platform</h4>
-              <span class="box-num">03</span>
-            </div>
-            <img
-              src="images/proj3.png"
-              alt="E-commerce Platform"
-              class="proj-image"
-            />
-            <p class="proj-description">
-              A full-featured e-commerce platform with product management,
-              shopping cart, secure checkout, and role-based access control.
-              Includes seller dashboard, admin panel, and real-time inventory
-              tracking.
-            </p>
-            <ul class="tag-list">
-              <li>HTML</li>
-              <li>Laravel</li>
-              <li>Supabase</li>
-              <li>Tailwind CSS</li>
-            </ul>
-            <a
-              href="https://github.com/Mostafa2115/E-Commerce-Platform"
-              class="box-link"
-              target="_blank"
-              rel="noopener"
-            >
-              View Source
-              <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
-            </a>
-          </article>
-
-          <article class="box card">
-            <div class="box-header">
-              <h4>Task Tracker</h4>
-              <span class="box-num">04</span>
-            </div>
-            <img src="images/proj5.png" alt="Task Tracker" class="proj-image" />
-            <p class="proj-description">
-              A productivity web application with CRUD operations for task
-              management. Features include user authentication, task filtering,
-              status tracking, and priority levels.
-            </p>
-            <ul class="tag-list">
-              <li>HTML</li>
-              <li>Laravel</li>
-              <li>MySQL</li>
-              <li>Tailwind CSS</li>
-            </ul>
-            <a
-              href="https://github.com/Mostafa2115/Task-Tracker"
-              class="box-link"
-              target="_blank"
-              rel="noopener"
-            >
-              View Source
-              <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
-            </a>
-          </article>
         </div>
       </section>
 
       <section class="contact section" id="contact">
         <div class="section-header">
-          <span class="section-num">06</span>
+          <span class="section-num">07</span>
           <h2>Contact</h2>
         </div>
         <div class="contact-container">
