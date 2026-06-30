@@ -269,15 +269,15 @@ body.cursor-active .cursor-glow {
 }
 
 
-.section,
-.box {
+.section.reveal-init,
+.box.reveal-init {
   opacity: 0;
   transform: translateY(28px);
   transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
 }
 
-.section.show,
-.box.show {
+.section.reveal-init.show,
+.box.reveal-init.show {
   opacity: 1;
   transform: translateY(0);
 }
@@ -2190,4 +2190,106 @@ body[data-theme="light"] .cv-modal__backdrop {
   .page-loader {
     transition-duration: 0.2s;
   }
+}
+
+/* Certificates Section Styles */
+.cert-filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.cert-filter-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.cert-filter-btn:hover {
+  border-color: var(--border-hover);
+  color: var(--text);
+  transform: translateY(-1px);
+}
+
+.cert-filter-btn.active {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+  box-shadow: 0 0 16px var(--glow-strong);
+}
+
+body[data-theme="light"] .cert-filter-btn.active {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
+
+.cert-card.hidden {
+  display: none !important;
+}
+
+.cert-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.cert-title-group h4 {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.cert-icon {
+  font-size: 26px;
+  color: var(--accent);
+}
+
+.cert-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--text-subtle);
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+.cert-issuer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.cert-issuer iconify-icon {
+  font-size: 15px;
+}
+
+.cert-date {
+  font-variant-numeric: tabular-nums;
+}
+
+.cert-id {
+  font-size: 12px;
+  color: var(--text-subtle);
+  font-family: monospace;
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
 }
