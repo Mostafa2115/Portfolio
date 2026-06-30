@@ -148,6 +148,9 @@ if (typeTarget) {
 const revealTargets = document.querySelectorAll(".section, .box");
 
 if ("IntersectionObserver" in window) {
+  // Add initialization class to enable transitions only if observer is active
+  revealTargets.forEach((el) => el.classList.add("reveal-init"));
+
   const io = new IntersectionObserver(
     (entries) => {
       for (const entry of entries) {
@@ -157,11 +160,9 @@ if ("IntersectionObserver" in window) {
         }
       }
     },
-    { threshold: 0.1, rootMargin: "0px 0px -8% 0px" },
+    { threshold: 0.01, rootMargin: "0px 0px -4% 0px" },
   );
   revealTargets.forEach((el) => io.observe(el));
-} else {
-  revealTargets.forEach((el) => el.classList.add("show"));
 }
 
 const navbars = document.querySelectorAll(".navbar, .navbar2");
@@ -466,4 +467,72 @@ document.querySelectorAll(".box").forEach((card) => {
   });
 
   setTimeout(finishLoader, prefersReducedMotion ? 900 : 5000);
+})();
+
+/* Certificates Modal & Filtering logic */
+(function initCertModal() {
+  const modal = document.getElementById("certModal");
+  const closeBtn = document.getElementById("closeCertModal");
+  const backdrop = document.getElementById("certModalBackdrop");
+  const imgContainer = document.getElementById("certImageContainer");
+  const img = document.getElementById("certImage");
+  const title = document.getElementById("certModalTitle");
+  const downloadBtn = document.getElementById("certDownloadBtn");
+  
+  if (!modal) return;
+  
+  window.openCertModal = function(fileUrl, fileTitle) {
+    // If the file is a PDF, dynamically change it to show the image version (.png)
+    if (fileUrl.toLowerCase().endsWith(".pdf")) {
+      fileUrl = fileUrl.substring(0, fileUrl.length - 4) + ".png";
+    }
+    
+    title.textContent = fileTitle;
+    if (downloadBtn) {
+      downloadBtn.href = fileUrl;
+    }
+    
+    if (img) img.src = fileUrl;
+    if (imgContainer) imgContainer.hidden = false;
+    
+    modal.hidden = false;
+    document.documentElement.style.overflow = "hidden";
+  };
+  
+  function closeCertModal() {
+    modal.hidden = true;
+    document.documentElement.style.overflow = "";
+    if (img) img.src = "";
+  }
+  
+  closeBtn?.addEventListener("click", closeCertModal);
+  backdrop?.addEventListener("click", closeCertModal);
+  
+  window.addEventListener("keydown", (ev) => {
+    if (ev.key === "Escape" && !modal.hidden) closeCertModal();
+  });
+})();
+
+(function initCertificateFilters() {
+  const filterBtns = document.querySelectorAll(".cert-filter-btn");
+  const certCards = document.querySelectorAll(".cert-card");
+  
+  if (!filterBtns.length || !certCards.length) return;
+  
+  filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      
+      const filter = btn.dataset.filter;
+      
+      certCards.forEach(card => {
+        if (filter === "all" || card.dataset.category === filter) {
+          card.classList.remove("hidden");
+        } else {
+          card.classList.add("hidden");
+        }
+      });
+    });
+  });
 })();
