@@ -107,10 +107,11 @@ if (themeToggleDesktop)
 const typeTarget = document.getElementById("type-target");
 if (typeTarget) {
   const texts = [
-    "Full Stack .NET Developer",
-    "ASP.NET Core | SQL Server",
+    "Full-Stack .NET Developer",
+    "ASP.NET Core & SQL Server",
+    "React.js Learner",
     "Software Engineer",
-    "Problem Solver"
+    "Competitive Programmer"
   ];
 
   let textIndex = 0;
@@ -262,6 +263,24 @@ function updateScrollProgress() {
 }
 window.addEventListener("scroll", updateScrollProgress, { passive: true });
 updateScrollProgress();
+
+const timelineProgressBar = document.getElementById("timelineProgress");
+const timelineSection = document.querySelector(".timeline");
+function updateTimelineProgress() {
+  if (!timelineProgressBar || !timelineSection) return;
+  const rect = timelineSection.getBoundingClientRect();
+  const viewHeight = window.innerHeight;
+  const startThreshold = viewHeight * 0.65;
+  const endThreshold = viewHeight * 0.35;
+  const totalHeight = rect.height;
+  const scrolled = startThreshold - rect.top;
+  let percentage = (scrolled / (totalHeight - (startThreshold - endThreshold))) * 100;
+  percentage = Math.max(0, Math.min(percentage, 100));
+  timelineProgressBar.style.height = `${percentage}%`;
+}
+window.addEventListener("scroll", updateTimelineProgress, { passive: true });
+window.addEventListener("resize", updateTimelineProgress, { passive: true });
+updateTimelineProgress();
 
 const cursorGlow = document.getElementById("cursorGlow");
 const prefersReducedMotion = window.matchMedia(
@@ -478,36 +497,36 @@ document.querySelectorAll(".box").forEach((card) => {
   const img = document.getElementById("certImage");
   const title = document.getElementById("certModalTitle");
   const downloadBtn = document.getElementById("certDownloadBtn");
-  
+
   if (!modal) return;
-  
-  window.openCertModal = function(fileUrl, fileTitle) {
+
+  window.openCertModal = function (fileUrl, fileTitle) {
     // If the file is a PDF, dynamically change it to show the image version (.png)
     if (fileUrl.toLowerCase().endsWith(".pdf")) {
       fileUrl = fileUrl.substring(0, fileUrl.length - 4) + ".png";
     }
-    
+
     title.textContent = fileTitle;
     if (downloadBtn) {
       downloadBtn.href = fileUrl;
     }
-    
+
     if (img) img.src = fileUrl;
     if (imgContainer) imgContainer.hidden = false;
-    
+
     modal.hidden = false;
     document.documentElement.style.overflow = "hidden";
   };
-  
+
   function closeCertModal() {
     modal.hidden = true;
     document.documentElement.style.overflow = "";
     if (img) img.src = "";
   }
-  
+
   closeBtn?.addEventListener("click", closeCertModal);
   backdrop?.addEventListener("click", closeCertModal);
-  
+
   window.addEventListener("keydown", (ev) => {
     if (ev.key === "Escape" && !modal.hidden) closeCertModal();
   });
@@ -516,17 +535,17 @@ document.querySelectorAll(".box").forEach((card) => {
 (function initCertificateFilters() {
   const filterBtns = document.querySelectorAll(".cert-filter-btn");
   const certCards = document.querySelectorAll(".cert-card");
-  
+
   if (!filterBtns.length || !certCards.length) return;
-  
-  filterBtns.forEach(btn => {
+
+  filterBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
-      filterBtns.forEach(b => b.classList.remove("active"));
+      filterBtns.forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
-      
+
       const filter = btn.dataset.filter;
-      
-      certCards.forEach(card => {
+
+      certCards.forEach((card) => {
         if (filter === "all" || card.dataset.category === filter) {
           card.classList.remove("hidden");
         } else {

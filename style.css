@@ -22,9 +22,9 @@
   --glow-strong: rgba(255, 255, 255, 0.28);
   --shadow: 0 24px 64px rgba(0, 0, 0, 0.55);
   --shadow-glow: 0 0 40px rgba(255, 255, 255, 0.08);
-  --radius: 16px;
-  --radius-sm: 10px;
-  --radius-lg: 24px;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --radius-lg: 20px;
   --nav-h: 72px;
   --max-w: 1280px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -759,22 +759,35 @@ body[data-theme="light"] .nav-view-cv {
 }
 
 .subtitle {
-  font-size: clamp(18px, 2.5vw, 24px);
-  font-weight: 600;
-  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.8vw, 28px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
   margin-bottom: 20px;
   min-height: 1.4em;
+  display: inline-flex;
+  align-items: center;
 }
 
-body[data-theme="light"] .subtitle {
-  color: var(--accent);
+#type-target {
+  background: linear-gradient(135deg, var(--text) 30%, var(--text-muted) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 .subtitle::after {
-  content: "|";
-  animation: blink 0.8s step-end infinite;
-  margin-left: 2px;
-  color: var(--text-subtle);
+  content: "";
+  display: inline-block;
+  width: 3.5px;
+  height: 1.1em;
+  background-color: var(--accent);
+  margin-left: 8px;
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--glow-strong);
+  flex-shrink: 0;
 }
 
 @keyframes blink {
@@ -878,7 +891,8 @@ body[data-theme="light"] .subtitle {
   transform: translateZ(15px);
 }
 
-/* Floating Tech Badges */
+/*
+=== Floating Tech Badges (Removed as requested) ===
 .floating-tech-badge {
   position: absolute;
   background: var(--card);
@@ -905,7 +919,6 @@ body[data-theme="light"] .subtitle {
   transition: color 0.3s ease, transform 0.3s var(--ease);
 }
 
-/* Text Badges Modifier (Pill shape for roles/philosophy) */
 .floating-tech-badge.text-badge {
   width: auto;
   height: auto;
@@ -923,7 +936,6 @@ body[data-theme="light"] .subtitle {
   font-size: 22px;
 }
 
-/* Icon Badges Modifier (Larger size for tech skill icons) */
 .floating-tech-badge.icon-badge {
   width: 58px;
   height: 58px;
@@ -934,29 +946,27 @@ body[data-theme="light"] .subtitle {
   font-size: 28px;
 }
 
-/* Individual Badge Placements & 3D Parallax Animations */
 .badge-continuity {
   top: 18%;
-  left: -14%; /* Sits exactly on the top-left curve of the border */
+  left: -14%;
   animation: float-continuity 3.8s ease-in-out infinite alternate;
 }
 .badge-dotnet {
   top: 18%;
-  right: -6%; /* Sits exactly on the top-right curve of the border */
+  right: -6%;
   animation: float-dotnet 4s ease-in-out infinite alternate;
 }
 .badge-sql {
   bottom: 18%;
-  left: -6%; /* Sits exactly on the bottom-left curve of the border */
+  left: -6%;
   animation: float-sql 4.2s ease-in-out infinite alternate;
 }
 .badge-csharp {
   bottom: 18%;
-  right: -6%; /* Sits exactly on the bottom-right curve of the border */
+  right: -6%;
   animation: float-csharp 3.5s ease-in-out infinite alternate;
 }
 
-/* Hover Theme Colors & Glow Effects (Matching the site's cosmic accent system) */
 .floating-tech-badge:hover {
   background: var(--card-hover);
   border-color: var(--accent);
@@ -972,7 +982,6 @@ body[data-theme="light"] .subtitle {
   color: var(--accent);
 }
 
-/* Bobbing / Floating Keyframes with staggered Z depths */
 @keyframes float-csharp {
   0% { transform: translate3d(0, 0, 42px); }
   100% { transform: translate3d(0, -10px, 42px); }
@@ -990,7 +999,6 @@ body[data-theme="light"] .subtitle {
   100% { transform: translate3d(3px, -9px, 48px); }
 }
 
-/* Responsiveness: Scale down badges and adjust positioning on smaller screens */
 @media (max-width: 768px) {
   .floating-tech-badge.text-badge {
     padding: 8px 14px;
@@ -1012,7 +1020,6 @@ body[data-theme="light"] .subtitle {
     font-size: 20px;
   }
   
-  /* Stagger animations but at lower translateZ so they don't break clipping bounds on small viewports */
   @keyframes float-csharp {
     0% { transform: translate3d(0, 0, 22px); }
     100% { transform: translate3d(0, -6px, 22px); }
@@ -1030,14 +1037,12 @@ body[data-theme="light"] .subtitle {
     100% { transform: translate3d(1px, -5px, 23px); }
   }
   
-  /* Placements exactly on the border curve on mobile */
-  .badge-continuity { left: -14%; top: 18%; } /* Shifted slightly to the left on mobile to prevent overlapping */
+  .badge-continuity { left: -14%; top: 18%; }
   .badge-dotnet { right: -4%; top: 18%; }
   .badge-sql { left: -4%; bottom: 18%; }
   .badge-csharp { right: -4%; bottom: 18%; }
-  
-  /* Hover inherits basic theme colors without scaling */
 }
+*/
 
 
 
@@ -1099,6 +1104,127 @@ body[data-theme="light"] .subtitle {
   font-weight: 600;
   color: var(--text-muted);
   margin: 0;
+}
+
+/* Engineering Focus Section */
+.engineering-focus {
+  margin-bottom: 32px;
+  padding-top: 24px;
+  border-top: 1px dashed var(--border);
+}
+
+.focus-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+
+.focus-title iconify-icon {
+  font-size: 20px;
+  color: var(--accent);
+}
+
+.focus-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.focus-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.focus-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--card-hover);
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: border-color 0.25s, transform 0.25s var(--ease), background 0.25s;
+}
+
+.focus-icon iconify-icon {
+  font-size: 18px;
+  transition: transform 0.25s var(--ease);
+}
+
+.focus-item:hover .focus-icon {
+  border-color: var(--accent);
+  background: var(--glow);
+  transform: scale(1.05);
+}
+
+.focus-item:hover .focus-icon iconify-icon {
+  transform: rotate(5deg) scale(1.1);
+}
+
+.focus-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.focus-details h5 {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.focus-details p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin: 0 !important;
+}
+
+.engineering-focus:last-child {
+  margin-bottom: 0;
+}
+
+.about-education-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.stats-section {
+  padding: 32px;
+}
+
+.stat-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--glow);
+  color: var(--accent);
+  margin-bottom: 14px;
+  font-size: 22px;
+  transition: transform 0.25s var(--ease), background-color 0.25s ease;
+}
+
+.stat-card:hover .stat-icon {
+  transform: scale(1.08) translateY(-2px);
+  background: var(--glow-strong);
+  color: var(--accent);
 }
 
 .education-section {
@@ -1190,25 +1316,237 @@ body[data-theme="light"] .subtitle {
   margin-top: 8px;
 }
 
-
-.experience-block {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+.education-skills {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--border);
 }
 
-.experience-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
+.education-skills h6 {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.edu-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.edu-skill-item {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  background: var(--card-hover);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.edu-skill-item:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+
+/* Timeline Container */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+/* Central timeline line (track) */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: var(--border);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Timeline progress bar fill (glow light running down) */
+.timeline-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 0%; /* updated by JS */
+  background: linear-gradient(to bottom, transparent, var(--accent) 70%, var(--accent));
+  transform: translateX(-50%);
+  z-index: 1;
+  box-shadow: 0 0 14px var(--accent), 0 0 4px var(--accent);
+  pointer-events: none;
+  transition: height 0.1s linear;
+}
+
+/* Timeline item wrapper */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 0 20px 32px 20px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+/* Left side items */
+.timeline-item.left {
+  left: 0;
+}
+
+/* Right side items */
+.timeline-item.right {
+  left: 50%;
+}
+
+/* Timeline dot (point) */
+.timeline-dot {
+  position: absolute;
+  top: 12px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 3px solid var(--accent);
+  z-index: 3;
+  box-shadow: 0 0 10px var(--glow-strong);
+  transition: transform 0.25s var(--ease), background-color 0.25s ease;
+}
+
+/* Stagger hover effect on dot when card is hovered */
+.timeline-item:hover .timeline-dot {
+  transform: scale(1.2);
+  background-color: var(--accent);
+}
+
+.timeline-item.left .timeline-dot {
+  right: -8px;
+}
+
+.timeline-item.right .timeline-dot {
+  left: -8px;
+}
+
+/* Horizontal connector line segment */
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 19px;
+  height: 2px;
+  width: 20px;
+  background: var(--border);
+  z-index: 1;
+  transition: background-color 0.25s ease;
+}
+
+.timeline-item:hover::after {
+  background: var(--accent);
+}
+
+.timeline-item.left::after {
+  right: 0;
+}
+
+.timeline-item.right::after {
+  left: 0;
+}
+
+/* Badges for Training and Volunteering */
+.exp-type-badge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 12px;
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.exp-type-badge.training {
+  background: rgba(59, 130, 246, 0.15); /* Modern blue HSL-friendly */
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.exp-type-badge.volunteering {
+  background: rgba(16, 185, 129, 0.15); /* Modern green HSL-friendly */
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+/* Light Theme overrides for badges */
+body[data-theme="light"] .exp-type-badge.training {
+  background: rgba(59, 130, 246, 0.08);
+  color: #1d4ed8;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+body[data-theme="light"] .exp-type-badge.volunteering {
+  background: rgba(16, 185, 129, 0.08);
+  color: #047857;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+/* Timeline Responsiveness */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px;
+    transform: none;
+  }
+  
+  .timeline-progress-bar {
+    left: 20px !important;
+    transform: none;
+  }
+  
+  .timeline-item {
+    width: 100%;
+    padding-left: 48px;
+    padding-right: 0;
+    padding-bottom: 32px;
+  }
+  
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0;
+  }
+  
+  .timeline-dot {
+    left: 12px !important;
+    right: auto !important;
+  }
+  
+  .timeline-item::after {
+    left: 20px !important;
+    right: auto !important;
+    width: 28px;
+  }
 }
 
 .experience-item {
-  padding: 28px;
+  padding: 24px 28px;
 }
 
 .exp-meta {
-  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
 }
 
 .exp-date {
@@ -1246,10 +1584,10 @@ body[data-theme="light"] .subtitle {
 }
 
 
-/* Skills Grid - 3 cards per row */
+/* Skills Grid - 2 cards per row */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 
