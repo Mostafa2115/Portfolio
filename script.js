@@ -9,9 +9,9 @@ function isSmallMobileViewport() {
 }
 
 function getParticleCount() {
-  if (isSmallMobileViewport()) return 72;
-  if (isMobileViewport()) return 80;
-  return 95;
+  if (isSmallMobileViewport()) return 110;
+  if (isMobileViewport()) return 160;
+  return 240;
 }
 
 async function loadParticlesForTheme(theme) {
@@ -23,34 +23,47 @@ async function loadParticlesForTheme(theme) {
 
   const colors =
     theme === "light"
-      ? ["#000000", "#171717", "#404040", "#737373", "#ffffff"]
+      ? ["#000000", "#171717", "#404040", "#737373", "#555555"]
       : ["#ffffff", "#e5e5e5", "#a3a3a3", "#d4d4d4", "#fafafa"];
-
-  const linkColor =
-    theme === "light" ? "rgba(0, 0, 0, 0.18)" : "rgba(255, 255, 255, 0.16)";
 
   try {
     await tsParticles.load("tsparticles", {
       particles: {
         number: { value: getParticleCount() },
-        size: { value: { min: 0.3, max: 2.6 } },
-        move: { enable: true, speed: 0.18, direction: "none", random: true },
-        opacity: { value: { min: 0.15, max: 0.8 } },
+        size: { value: { min: 0.4, max: 2.2 } },
+        move: { 
+          enable: true, 
+          speed: 0.12, 
+          direction: "none", 
+          random: true,
+          straight: false,
+          outModes: { default: "out" }
+        },
+        opacity: { 
+          value: { min: 0.15, max: 0.85 },
+          animation: {
+            enable: true,
+            speed: 0.6,
+            minimumValue: 0.15,
+            sync: false
+          }
+        },
         color: { value: colors },
         links: {
-          enable: true,
-          distance: 130,
-          color: linkColor,
-          opacity: 0.35,
-          width: 1,
+          enable: false
         },
       },
       interactivity: {
         events: {
-          onHover: { enable: true, mode: "grab" },
+          onHover: { enable: true, mode: "bubble" },
         },
         modes: {
-          grab: { distance: 140, links: { opacity: 0.5 } },
+          bubble: { 
+            distance: 150, 
+            duration: 2, 
+            size: 3.5, 
+            opacity: 0.9 
+          },
         },
       },
       background: { color: "transparent" },
@@ -109,9 +122,8 @@ if (typeTarget) {
   const texts = [
     "Full-Stack .NET Developer",
     "ASP.NET Core & SQL Server",
-    "React.js Learner",
-    "Software Engineer",
-    "Competitive Programmer"
+    "Scalable API Architect",
+    "Software Engineer"
   ];
 
   let textIndex = 0;
@@ -555,3 +567,4 @@ document.querySelectorAll(".box").forEach((card) => {
     });
   });
 })();
+
