@@ -30,21 +30,29 @@ async function loadParticlesForTheme(theme) {
     await tsParticles.load("tsparticles", {
       particles: {
         number: { value: getParticleCount() },
-        size: { value: { min: 0.4, max: 2.2 } },
+        size: { 
+          value: { min: 0.25, max: 1.3 },
+          animation: {
+            enable: true,
+            speed: 1,
+            minimumValue: 0.2,
+            sync: false
+          }
+        },
         move: { 
           enable: true, 
-          speed: 0.12, 
-          direction: "none", 
-          random: true,
+          speed: { min: 0.35, max: 0.9 }, 
+          direction: "right", 
+          random: false,
           straight: false,
           outModes: { default: "out" }
         },
         opacity: { 
-          value: { min: 0.15, max: 0.85 },
+          value: { min: 0.15, max: 0.8 },
           animation: {
             enable: true,
-            speed: 0.6,
-            minimumValue: 0.15,
+            speed: 0.8,
+            minimumValue: 0.1,
             sync: false
           }
         },
@@ -59,9 +67,9 @@ async function loadParticlesForTheme(theme) {
         },
         modes: {
           bubble: { 
-            distance: 150, 
-            duration: 2, 
-            size: 3.5, 
+            distance: 120, 
+            duration: 1.5, 
+            size: 2.2, 
             opacity: 0.9 
           },
         },
@@ -544,27 +552,247 @@ document.querySelectorAll(".box").forEach((card) => {
   });
 })();
 
-(function initCertificateFilters() {
+/* Certificates Filtering & Show More / Show Less */
+(function initCertificates() {
   const filterBtns = document.querySelectorAll(".cert-filter-btn");
-  const certCards = document.querySelectorAll(".cert-card");
+  const certCards = Array.from(document.querySelectorAll(".cert-card"));
+  const showMoreBtn = document.getElementById("showMoreCertsBtn");
+  const actionsContainer = showMoreBtn?.closest(".certs-actions");
 
-  if (!filterBtns.length || !certCards.length) return;
+  if (!certCards.length) return;
+
+  const INITIAL_COUNT = 4;
+  let currentFilter = "all";
+  let isExpanded = false;
+
+  function updateCertificates() {
+    const matchingCards = certCards.filter((card) => {
+      return currentFilter === "all" || card.dataset.category === currentFilter;
+    });
+
+    // Hide cards that don't match the active filter
+    certCards.forEach((card) => {
+      if (!matchingCards.includes(card)) {
+        card.classList.add("hidden");
+        card.classList.remove("is-collapsed");
+      }
+    });
+
+    const totalMatching = matchingCards.length;
+
+    // Show/hide matching cards based on isExpanded
+    matchingCards.forEach((card, index) => {
+      card.classList.remove("hidden");
+      if (!isExpanded && index >= INITIAL_COUNT) {
+        card.classList.add("is-collapsed");
+      } else {
+        card.classList.remove("is-collapsed");
+        if (card.classList.contains("reveal-init")) {
+          card.classList.add("show");
+        }
+      }
+    });
+
+    // Update Show More button state
+    if (actionsContainer && showMoreBtn) {
+      if (totalMatching <= INITIAL_COUNT) {
+        actionsContainer.classList.add("is-hidden");
+      } else {
+        actionsContainer.classList.remove("is-hidden");
+        const btnText = showMoreBtn.querySelector(".show-more-text");
+        if (isExpanded) {
+          showMoreBtn.classList.add("expanded");
+          showMoreBtn.setAttribute("aria-expanded", "true");
+          if (btnText) btnText.textContent = "Show Less";
+        } else {
+          showMoreBtn.classList.remove("expanded");
+          showMoreBtn.setAttribute("aria-expanded", "false");
+          if (btnText) {
+            btnText.textContent = `Show More (+${totalMatching - INITIAL_COUNT})`;
+          }
+        }
+      }
+    }
+  }
 
   filterBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
       filterBtns.forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
-
-      const filter = btn.dataset.filter;
-
-      certCards.forEach((card) => {
-        if (filter === "all" || card.dataset.category === filter) {
-          card.classList.remove("hidden");
-        } else {
-          card.classList.add("hidden");
-        }
-      });
+      currentFilter = btn.dataset.filter || "all";
+      isExpanded = false;
+      updateCertificates();
     });
+  });
+
+  if (showMoreBtn) {
+    showMoreBtn.addEventListener("click", () => {
+      isExpanded = !isExpanded;
+      updateCertificates();
+
+      if (!isExpanded) {
+        const certSection = document.getElementById("certificates");
+        if (certSection) {
+          const rect = certSection.getBoundingClientRect();
+          if (rect.top < 0) {
+            certSection.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      }
+    });
+  }
+
+  updateCertificates();
+})();
+
+/* Projects Show More / Show Less */
+(function initProjectsShowMore() {
+  const projectCards = Array.from(
+    document.querySelectorAll("#projects .project-card, #projects .box"),
+  );
+  const showMoreBtn = document.getElementById("showMoreProjectsBtn");
+  const actionsContainer = showMoreBtn?.closest(".projects-actions");
+
+  if (!projectCards.length) return;
+
+  const INITIAL_COUNT = 2;
+  let isExpanded = false;
+
+  function updateProjects() {
+    const totalProjects = projectCards.length;
+
+    projectCards.forEach((card, index) => {
+      if (!isExpanded && index >= INITIAL_COUNT) {
+        card.classList.add("is-collapsed");
+      } else {
+        card.classList.remove("is-collapsed");
+        if (card.classList.contains("reveal-init")) {
+          card.classList.add("show");
+        }
+      }
+    });
+
+    if (actionsContainer && showMoreBtn) {
+      if (totalProjects <= INITIAL_COUNT) {
+        actionsContainer.classList.add("is-hidden");
+      } else {
+        actionsContainer.classList.remove("is-hidden");
+        const btnText = showMoreBtn.querySelector(".show-more-text");
+        if (isExpanded) {
+          showMoreBtn.classList.add("expanded");
+          showMoreBtn.setAttribute("aria-expanded", "true");
+          if (btnText) btnText.textContent = "Show Less";
+        } else {
+          showMoreBtn.classList.remove("expanded");
+          showMoreBtn.setAttribute("aria-expanded", "false");
+          if (btnText) {
+            btnText.textContent = `Show More (+${totalProjects - INITIAL_COUNT})`;
+          }
+        }
+      }
+    }
+  }
+
+  if (showMoreBtn) {
+    showMoreBtn.addEventListener("click", () => {
+      isExpanded = !isExpanded;
+      updateProjects();
+
+      if (!isExpanded) {
+        const projSection = document.getElementById("projects");
+        if (projSection) {
+          const rect = projSection.getBoundingClientRect();
+          if (rect.top < 0) {
+            projSection.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      }
+    });
+  }
+
+  updateProjects();
+})();
+
+/* Contact Form Submission Handler */
+(function initContactForm() {
+  const form = document.getElementById("contactForm");
+  const statusDiv = document.getElementById("contactFormStatus");
+  const submitBtn = document.getElementById("contactSubmitBtn");
+
+  if (!form) return;
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const nameInput = form.querySelector('[name="name"]');
+    const emailInput = form.querySelector('[name="email"]');
+    const subjectInput = form.querySelector('[name="subject"]');
+    const messageInput = form.querySelector('[name="message"]');
+
+    const name = nameInput?.value.trim() || "";
+    const email = emailInput?.value.trim() || "";
+    const subject = subjectInput?.value.trim() || "New Portfolio Inquiry";
+    const message = messageInput?.value.trim() || "";
+
+    if (!name || !email || !message) {
+      if (statusDiv) {
+        statusDiv.className = "form-status is-error";
+        statusDiv.innerHTML = `<iconify-icon icon="solar:danger-circle-bold"></iconify-icon> Please fill out all required fields.`;
+      }
+      return;
+    }
+
+    // Set loading state
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<span>Sending...</span> <iconify-icon icon="solar:refresh-circle-linear" class="spin-icon"></iconify-icon>`;
+    }
+    if (statusDiv) {
+      statusDiv.className = "form-status is-loading";
+      statusDiv.innerHTML = `Sending message...`;
+    }
+
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/ajax/mostafaamahmoud075@gmail.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            subject: subject,
+            message: message,
+            _subject: `Portfolio message from ${name}: ${subject}`,
+          }),
+        },
+      );
+
+      const data = await response.json().catch(() => ({}));
+
+      if (response.ok) {
+        if (statusDiv) {
+          statusDiv.className = "form-status is-success";
+          statusDiv.innerHTML = `<iconify-icon icon="solar:check-circle-bold"></iconify-icon> Thank you! Your message has been sent successfully.`;
+        }
+        form.reset();
+      } else {
+        throw new Error(data.message || "Submission failed");
+      }
+    } catch (err) {
+      if (statusDiv) {
+        statusDiv.className = "form-status is-error";
+        statusDiv.innerHTML = `<iconify-icon icon="solar:danger-circle-bold"></iconify-icon> Oops! Could not send message. You can reach me directly at <a href="mailto:mostafaamahmoud075@gmail.com">mostafaamahmoud075@gmail.com</a>`;
+      }
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = `<span class="btn-text">Send Message</span> <iconify-icon icon="solar:plain-bold" class="btn-icon"></iconify-icon>`;
+      }
+    }
   });
 })();
 

@@ -23,7 +23,7 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800&family=Space+Grotesk:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=1.9" />
+    <link rel="stylesheet" href="style.css?v=2.2" />
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
   </head>
   <body id="top" data-theme="dark" class="is-loading">
@@ -265,7 +265,6 @@
           </div>
 
           <div class="profile-pic">
-            <div class="profile-bg" aria-hidden="true"></div>
             <div class="profile-ring" aria-label="Profile picture">
               <img
                 src="images/profile_pic.png"
@@ -440,7 +439,7 @@
                   ></iconify-icon>
                   Training
                 </span>
-                <div class="exp-date">Dec 2025 – Present</div>
+                <div class="exp-date">Dec 2025 – Jul 2026</div>
               </div>
               <h3>Digital Egypt Pioneers Initiative — DEPI</h3>
               <p class="experience-role">Full Stack .NET Developer</p>
@@ -458,18 +457,18 @@
             </article>
           </div>
 
-          <!-- Item 2: GDG On-Campus Zagazig (Volunteering) -->
+          <!-- Item 2: GDG On-Campus Zagazig (Training) -->
           <div class="timeline-item right reveal-init">
             <div class="timeline-dot"></div>
             <article class="experience-item card">
               <div class="exp-meta">
-                <span class="exp-type-badge volunteering">
+                <span class="exp-type-badge training">
                   <iconify-icon
-                    icon="solar:users-group-rounded-linear"
+                    icon="solar:diploma-verified-linear"
                   ></iconify-icon>
-                  Volunteering
+                  Training
                 </span>
-                <div class="exp-date">Oct 2025 – Present</div>
+                <div class="exp-date">Oct 2025 – Jul 2026</div>
               </div>
               <h3>GDG On-Campus Zagazig</h3>
               <p class="experience-role">Back End Core Team Member</p>
@@ -487,18 +486,18 @@
             </article>
           </div>
 
-          <!-- Item 3: Zag Eng Family (Volunteering) -->
+          <!-- Item 3: Zag Eng Family (Training) -->
           <div class="timeline-item left reveal-init">
             <div class="timeline-dot"></div>
             <article class="experience-item card">
               <div class="exp-meta">
-                <span class="exp-type-badge volunteering">
+                <span class="exp-type-badge training">
                   <iconify-icon
-                    icon="solar:users-group-rounded-linear"
+                    icon="solar:diploma-verified-linear"
                   ></iconify-icon>
-                  Volunteering
+                  Training
                 </span>
-                <div class="exp-date">Oct 2025 – Present</div>
+                <div class="exp-date">Oct 2025 – Jul 2026</div>
               </div>
               <h3>Zag Eng Family</h3>
               <p class="experience-role">Back End .NET Member</p>
@@ -1369,6 +1368,18 @@
             </div>
           </article>
         </div>
+
+        <div class="section-actions certs-actions">
+          <button
+            type="button"
+            id="showMoreCertsBtn"
+            class="btn-show-more"
+            aria-expanded="false"
+          >
+            <span class="show-more-text">Show More</span>
+            <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
+          </button>
+        </div>
       </section>
 
       <section class="projects section" id="projects">
@@ -1377,7 +1388,7 @@
           <h2>Projects</h2>
         </div>
         <div class="boxes">
-          <article class="box card">
+          <article class="box card project-card">
             <div class="box-header">
               <h4>Matamak</h4>
               <span class="box-num">01</span>
@@ -1411,7 +1422,7 @@
               <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
             </a>
           </article>
-          <article class="box card">
+          <article class="box card project-card">
             <div class="box-header">
               <h4>Personal Portfolio</h4>
               <span class="box-num">02</span>
@@ -1454,7 +1465,7 @@
               </a>
             </div>
           </article>
-          <article class="box card">
+          <article class="box card project-card">
             <div class="box-header">
               <h4>TASWOQ</h4>
               <span class="box-num">03</span>
@@ -1486,7 +1497,7 @@
               <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
             </a>
           </article>
-          <article class="box card">
+          <article class="box card project-card">
             <div class="box-header">
               <h4>Taxi Trip Price Prediction</h4>
               <span class="box-num">04</span>
@@ -1519,7 +1530,7 @@
               <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
             </a>
           </article>
-          <article class="box card">
+          <article class="box card project-card">
             <div class="box-header">
               <h4>Balloon Game</h4>
               <span class="box-num">05</span>
@@ -1545,6 +1556,18 @@
               <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
             </a>
           </article>
+        </div>
+
+        <div class="section-actions projects-actions">
+          <button
+            type="button"
+            id="showMoreProjectsBtn"
+            class="btn-show-more"
+            aria-expanded="false"
+          >
+            <span class="show-more-text">Show More</span>
+            <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
+          </button>
         </div>
       </section>
       <section id="services" class="services section">
@@ -1668,9 +1691,17 @@
           <div class="contact-form-col">
             <form
               class="card contact-form"
+              id="contactForm"
               action="https://formsubmit.co/mostafaamahmoud075@gmail.com"
               method="POST"
             >
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <input
+                type="hidden"
+                name="_subject"
+                value="New message from Portfolio"
+              />
               <div class="form-group">
                 <label for="contact-name">Your Name *</label>
                 <input
@@ -1698,7 +1729,6 @@
                   id="contact-subject"
                   name="subject"
                   placeholder="Subject"
-                  required
                 />
               </div>
               <div class="form-group">
@@ -1707,12 +1737,26 @@
                   id="contact-message"
                   name="message"
                   placeholder="Your Message"
+                  rows="4"
                   required
                 ></textarea>
               </div>
-              <button type="submit" class="btn btn-primary submit">
-                Send Message
+              <button
+                type="submit"
+                id="contactSubmitBtn"
+                class="btn btn-primary submit"
+              >
+                <span class="btn-text">Send Message</span>
+                <iconify-icon
+                  icon="solar:plain-bold"
+                  class="btn-icon"
+                ></iconify-icon>
               </button>
+              <div
+                id="contactFormStatus"
+                class="form-status"
+                aria-live="polite"
+              ></div>
             </form>
           </div>
         </div>
@@ -1838,6 +1882,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-    <script src="script.js?v=1.3"></script>
+    <script src="script.js?v=2.1"></script>
   </body>
 </html>
