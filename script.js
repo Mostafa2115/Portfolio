@@ -128,10 +128,11 @@ if (themeToggleDesktop)
 const typeTarget = document.getElementById("type-target");
 if (typeTarget) {
   const texts = [
+    "Software Engineer",
     "Full-Stack .NET Developer",
     "ASP.NET Core & SQL Server",
     "Scalable API Architect",
-    "Software Engineer"
+    "React Learner"
   ];
 
   let textIndex = 0;
