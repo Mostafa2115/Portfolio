@@ -29,9 +29,9 @@
   --max-w: 1280px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --grid-color: rgba(255, 255, 255, 0.06);
-  --profile-backlight: radial-gradient(ellipse 60% 50% at 50% 46%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.28) 30%, rgba(255, 255, 255, 0.09) 55%, rgba(255, 255, 255, 0.015) 75%, transparent 88%);
+  --profile-backlight: radial-gradient(ellipse 66% 50% at 50% 48%, rgba(255, 255, 255, 0.46) 0%, rgba(255, 255, 255, 0.24) 32%, rgba(255, 255, 255, 0.08) 60%, rgba(255, 255, 255, 0.015) 80%, transparent 92%);
   --profile-glow-filter: blur(24px);
-  --profile-glow-opacity: 0.95;
+  --profile-glow-opacity: 0.90;
 }
 body[data-theme="light"],
 [data-theme="light"] {
@@ -49,11 +49,11 @@ body[data-theme="light"],
   --accent-inverse: #ffffff;
   --glow: rgba(0, 0, 0, 0.08);
   --glow-strong: rgba(0, 0, 0, 0.16);
-  --shadow: 0 24px 64px rgba(0, 0, 0, 0.1);
-  --shadow-glow: 0 0 40px rgba(0, 0, 0, 0.06);
+  --shadow: 0 24px 64px rgba(0, 0, 0, 0.12);
+  --shadow-glow: 0 0 40px rgba(0, 0, 0, 0.07);
   --grid-color: rgba(0, 0, 0, 0.07);
-  --profile-backlight: radial-gradient(ellipse 60% 50% at 50% 46%, rgba(0, 0, 0, 0.36) 0%, rgba(0, 0, 0, 0.18) 30%, rgba(0, 0, 0, 0.06) 55%, rgba(0, 0, 0, 0.01) 75%, transparent 88%);
-  --profile-glow-filter: blur(26px);
+  --profile-backlight: radial-gradient(ellipse 66% 50% at 50% 48%, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.18) 32%, rgba(0, 0, 0, 0.06) 60%, rgba(0, 0, 0, 0.01) 80%, transparent 92%);
+  --profile-glow-filter: blur(24px);
   --profile-glow-opacity: 0.88;
 }
 *,
@@ -811,11 +811,11 @@ body[data-theme="light"] .nav-view-cv {
 }
 .profile-glow {
   position: absolute;
-  top: 4%;
+  top: 6%;
   left: 50%;
   transform: translateX(-50%);
   width: 126%;
-  height: 118%;
+  height: 112%;
   border-radius: 50%;
   background: var(--profile-backlight);
   filter: var(--profile-glow-filter);
@@ -842,7 +842,7 @@ body[data-theme="light"] .nav-view-cv {
   transform: translateZ(24px) scale(1.025) translateY(-4px);
 }
 .profile-pic:hover .profile-glow {
-  transform: translateX(-50%) scale(1.06);
+  transform: translateX(-50%) scale(1.03);
   opacity: 1;
 }
 /*
