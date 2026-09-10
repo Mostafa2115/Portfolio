@@ -29,9 +29,9 @@
   --max-w: 1280px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --grid-color: rgba(255, 255, 255, 0.06);
-  --profile-backlight: radial-gradient(ellipse 66% 50% at 50% 48%, rgba(255, 255, 255, 0.46) 0%, rgba(255, 255, 255, 0.24) 32%, rgba(255, 255, 255, 0.08) 60%, rgba(255, 255, 255, 0.015) 80%, transparent 92%);
+  --profile-backlight: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.56) 0%, rgba(255, 255, 255, 0.28) 38%, rgba(255, 255, 255, 0.09) 65%, rgba(255, 255, 255, 0.015) 85%, transparent 95%);
   --profile-glow-filter: blur(24px);
-  --profile-glow-opacity: 0.90;
+  --profile-glow-opacity: 0.94;
 }
 body[data-theme="light"],
 [data-theme="light"] {
@@ -52,9 +52,9 @@ body[data-theme="light"],
   --shadow: 0 24px 64px rgba(0, 0, 0, 0.12);
   --shadow-glow: 0 0 40px rgba(0, 0, 0, 0.07);
   --grid-color: rgba(0, 0, 0, 0.07);
-  --profile-backlight: radial-gradient(ellipse 66% 50% at 50% 48%, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.18) 32%, rgba(0, 0, 0, 0.06) 60%, rgba(0, 0, 0, 0.01) 80%, transparent 92%);
+  --profile-backlight: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.22) 38%, rgba(0, 0, 0, 0.07) 65%, rgba(0, 0, 0, 0.015) 85%, transparent 95%);
   --profile-glow-filter: blur(24px);
-  --profile-glow-opacity: 0.88;
+  --profile-glow-opacity: 0.90;
 }
 *,
 *::before,
@@ -811,11 +811,12 @@ body[data-theme="light"] .nav-view-cv {
 }
 .profile-glow {
   position: absolute;
-  top: 6%;
+  top: -6%;
   left: 50%;
   transform: translateX(-50%);
-  width: 126%;
-  height: 112%;
+  width: 118%;
+  height: 118%;
+  aspect-ratio: 1;
   border-radius: 50%;
   background: var(--profile-backlight);
   filter: var(--profile-glow-filter);
@@ -837,13 +838,6 @@ body[data-theme="light"] .nav-view-cv {
   mask-image: none;
   transition: transform 0.35s var(--ease), filter 0.35s ease;
   pointer-events: auto;
-}
-.profile-pic:hover .profile-img {
-  transform: translateZ(24px) scale(1.025) translateY(-4px);
-}
-.profile-pic:hover .profile-glow {
-  transform: translateX(-50%) scale(1.03);
-  opacity: 1;
 }
 /*
 === Floating Tech Badges (Removed as requested) ===
